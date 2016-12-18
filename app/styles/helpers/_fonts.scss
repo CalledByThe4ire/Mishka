@@ -1,0 +1,49 @@
+// Fonts
+
+@font-face {
+  font-family:	'Open Sans';
+  src: url('../fonts/OpenSans.woff2') format('woff'),
+       url('../fonts/OpenSans.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:	'Open Sans';
+  src: url('../fonts/OpenSansBold.woff2') format('woff'),
+       url('../fonts/OpenSansBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:	'Verdana';
+  src: url('../fonts/Verdana.woff2') format('woff'),
+  url('../fonts/Verdana.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:	'Verdana';
+  src: url('../fonts/VerdanaBold.woff2') format('woff'),
+  url('../fonts/VerdanaBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:	'Tahoma';
+  src: url('../fonts/Tahoma.woff2') format('woff'),
+  url('../fonts/Tahoma.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:	'Tahoma';
+  src: url('../fonts/TahomaBold.woff2') format('woff'),
+  url('../fonts/TahomaBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}

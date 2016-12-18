@@ -1,0 +1,56 @@
+// Variables
+// ==========================================================================
+
+// == Colors
+//
+
+$color-primary:            #000000 !default;
+$color-secondary:          #63d1bb !default;
+
+$text-color:               $color-primary !default;
+
+$bg-body:                  #ffffff !default;
+
+$link-color:               $color-primary !default;
+$link-color--hover:        opacify($color-primary, 0.6) !default;
+$link-color--down:         opacify($color-primary, 0.3) !default;
+
+// == Typography
+//
+$font-size:                1.5rem !default;
+
+$font-family--sans-serif:  'Open Sans', Verdana, Tahoma, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--serif:       Georgia, 'Times New Roman', Times, serif;
+$font-family--monospace:   'Courier New', Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+
+$font-family:              $font-family--sans-serif !default;
+
+// == Media queries breakpoints
+//
+$mobile:                   'only screen and (max-width: 319px)';
+$tablet:                   'only screen and (min-width: 320px) and (max-width: 767px)';
+$desktop:                  'only screen and (min-width: 1150px)';
+
+$retina2x:                 '(min-resolution: 1.5dppx)';
+
+// mobile + tablet
+$portable:                 'only screen and (max-width: 1149px)';
+// tablet + desktop:  more than mobile
+$tab-desk:                 'only screen and (min-width: 768px)';
+
+// == Container sizes
+//
+$container--min:           26rem !default; // 260px
+$container--mid:           66.8rem !default; // 668px
+$container--max:           105rem !default; // 1050px
+
+// == Paddings and margins
+//
+$offset--mobile:           3rem !default;
+$offset--tablet:           5rem !default;
+$offset--desktop:          5rem !default;
+
+// == Lost
+// https://github.com/peterramsing/lost
+@lost flexbox              flex
+@lost gutter               50px
