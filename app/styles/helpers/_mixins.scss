@@ -63,3 +63,12 @@
 	background-image: url('../images/' + $image + '@2x.' + $ext);
   }
 }
+
+// Ensures that the container will not collapse when all its children are floated
+@mixin clearfix() {
+	&:after {
+		display: table;
+		clear: both;
+		content: '';
+	}
+}
