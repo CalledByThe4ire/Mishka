@@ -1,6 +1,14 @@
+include ../blocks/container/container
+include ../blocks/page-header/page-header
+
 extends ../blocks/layout-default/layout-default
+
+block variables
+	- bodyClass = '--index';
 
 block head
 	- var pageTitle = 'Mishka';
 
 block content
+	+container
+		+page-header
