@@ -1,4 +1,23 @@
 .container {
 	display: block;
+	@include clearfix();
 	@include container();
+
+	@media #{$mobile} {
+		@include with-layout($small) {
+			@include show-grid();
+		}
+	}
+
+	@media #{$tablet} {
+		@include with-layout($medium) {
+			@include show-grid();
+		}
+	}
+
+	@media #{$desktop} {
+		@include with-layout($large) {
+			@include show-grid();
+		}
+	}
 }
