@@ -2,7 +2,7 @@
 
 $small: (
 		columns:  2,
-		gutter: 0,
+		gutters: 0,
 		column-width: 130px,
 		global-box-sizing: border-box,
 		debug: (image: show)
@@ -10,7 +10,7 @@ $small: (
 
 $medium: (
 		columns: 4,
-		gutter: 0,
+		gutters: 0,
 		column-width: 167px,
 		global-box-sizing: border-box,
 		debug: (image: show)
@@ -18,7 +18,7 @@ $medium: (
 
 $large: (
 		columns: 6,
-		gutter: 0,
+		gutters: 0,
 		column-width: 175px,
 		global-box-sizing: border-box,
 		debug: (image: show)
