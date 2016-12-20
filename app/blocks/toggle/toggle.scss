@@ -1,0 +1,10 @@
+.toggle {
+	display: block;
+	&--open {
+		width: 20px;
+		height: 14px;
+	}
+	&--close {
+		@include size(21px);
+	}
+}
