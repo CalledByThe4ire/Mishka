@@ -1,6 +1,9 @@
 .logo {
-	display: block;
+	display: none;
 	width: 86px;
 	height: 35px;
 	color: #000;
+	&--visible {
+		display: block;
+	}
 }
