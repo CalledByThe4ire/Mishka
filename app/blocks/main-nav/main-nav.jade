@@ -1,0 +1,9 @@
+include ../logo/logo
+
+mixin main-nav(list)
+	+b('nav').main-nav&attributes(attributes)
+		+logo
+		+e('ul').list&attributes(attributes)
+			each item in list
+				+e.item #{item}
+		+logo(class='logo--visible')
