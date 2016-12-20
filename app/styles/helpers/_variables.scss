@@ -28,13 +28,14 @@ $font-family:              $font-family--sans-serif !default;
 // == Media queries breakpoints
 //
 $mobile:                   'only screen and (max-width: 767px)';
-$tablet:                   'only screen and (min-width: 768px) and (max-width: 1149px)';
+$tablet:                   'only screen and (min-width: 768px) and (max-width: 1149 px)';
 $desktop:                  'only screen and (min-width: 1150px)';
 
-$retina2x:                 '(min-resolution: 1.5dppx)';
+$retina2x:                  '(min-resolution: 1.5dppx)';
 
 // mobile + tablet
 $portable:                 'only screen and (max-width: 1149px)';
+
 // tablet + desktop:  more than mobile
 $tab-desk:                 'only screen and (min-width: 768px)';
 
