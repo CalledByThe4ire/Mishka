@@ -1,6 +1,23 @@
 .main-nav {
-	display: block;
+	display: none;
+
+	&--visible {
+		display: block;
+	}
+
+	&__logo {
+		display: none;
+		&--visible {
+			display: block;
+		}
+	}
+
 	&__list {
+		display: none;
 		@include list-clear();
+
+		&--visible {
+			display: block;
+		}
 	}
 }
