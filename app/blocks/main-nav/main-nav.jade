@@ -3,15 +3,17 @@ include ../icon/icon
 mixin main-nav(list)
 	+b('nav').main-nav--visible&attributes(attributes)
 		+e.logo(class='--visible')
-			+icon('logo', 'logo-mobile', true, '86', '35')&attributes(attributes)
-			+e('a')(href='#')
+			+e('a').link(href='#')
+				+icon('logo', 'logo-mobile', true, '86', '35')&attributes(attributes)
+			+e('a').link(href='#')
 				+icon('toggle--close', 'nav-toggle-close', true, '22', '22')&attributes(attributes)
 		+e('ul').list(class='--visible')&attributes(attributes)
 			each item in list
-				+e.item
-					+e('a').link(href=item.href)
+				+e('li').item
+					a(href=item.href)
 						span=item.content
 		+e.logo
-			+icon('logo', 'logo-mobile', true, '86', '35')&attributes(attributes)
-			+e('a')(href='#')
+			+e('a').link(href='#')
+				+icon('logo', 'logo-mobile', true, '86', '35')&attributes(attributes)
+			+e('a').link(href='#')
 				+icon('toggle--open', 'nav-toggle-open', true, '20', '14')&attributes(attributes)

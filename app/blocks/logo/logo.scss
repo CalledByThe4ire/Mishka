@@ -2,4 +2,15 @@
 	display: block;
 	width: 86px;
 	height: 35px;
+	background-color: #ffffff;
+
+	&:hover use {
+		fill: $link-color--hover;
+		transition-duration: 0.3s;
+	}
+
+	&:active use {
+		fill: $link-color--active;
+		transition-duration: 0.3s;
+	}
 }
