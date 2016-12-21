@@ -1,18 +1,22 @@
 [
   {
 	"href": "#",
+	"modClass": "",
 	"content": "Каталог товаров"
   },
   {
 	"href": "#",
+	"modClass": "",
 	"content": "Вязание на заказ"
   },
   {
 	"href": "#",
+	"modClass": "--search",
 	"content": "Поиск по сайту"
   },
   {
 	"href": "#",
+	"modClass": "--cart",
 	"content": "Корзина: пока пуста"
   }
 ]

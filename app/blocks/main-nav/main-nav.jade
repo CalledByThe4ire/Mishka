@@ -9,7 +9,7 @@ mixin main-nav(list)
 				+icon('toggle--close', 'nav-toggle-close', true, '22', '22')&attributes(attributes)
 		+e('ul').list(class='--visible')&attributes(attributes)
 			each item in list
-				+e('li').item
+				+e('li').item(class=item.modClass)
 					a(href=item.href)
 						span=item.content
 		+e.logo
