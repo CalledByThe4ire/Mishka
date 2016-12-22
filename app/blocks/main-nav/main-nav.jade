@@ -6,14 +6,29 @@ mixin main-nav(list)
 			+e('a').link(href='#')
 				+icon('logo', 'logo-mobile', true, '86', '35')&attributes(attributes)
 			+e('a').link(href='#')
-				+icon('toggle--close', 'nav-toggle-close', true, '22', '22')&attributes(attributes)
+				+icon('icon--close', 'nav-toggle-close', true, '22', '22')&attributes(attributes)
 		+e('ul').list(class='--visible')&attributes(attributes)
 			each item in list
-				+e('li').item(class=item.modClass)
-					a(href=item.href)
-						span=item.content
+				case item.modClass
+					when '--search'
+						+e('li').item(class=item.modClass)
+							a(href=item.href)
+								+icon('icon--search', 'nav-search', true, '18', '18')&attributes(attributes)
+								span=item.content
+
+					when '--cart'
+						+e('li').item(class=item.modClass)
+							a(href=item.href)
+								+icon('icon--cart', 'nav-cart', true, '20', '18')&attributes(attributes)
+								span=item.content
+
+					default
+						+e('li').item(class=item.modClass)
+							a(href=item.href)
+								span=item.content
+
 		+e.logo
 			+e('a').link(href='#')
 				+icon('logo', 'logo-mobile', true, '86', '35')&attributes(attributes)
 			+e('a').link(href='#')
-				+icon('toggle--open', 'nav-toggle-open', true, '20', '14')&attributes(attributes)
+				+icon('icon--open', 'nav-toggle-open', true, '20', '14')&attributes(attributes)

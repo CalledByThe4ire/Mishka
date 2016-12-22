@@ -1,3 +1,34 @@
 .icon {
 	display: block;
+
+	use {
+		fill: $link-color;
+	}
+
+	&:hover use {
+		fill: $link-color--hover;
+		transition-duration: 0.3s;
+	}
+
+	&:active use {
+		fill: $link-color--active;
+		transition-duration: 0.3s;
+	}
+
+	&--open {
+		width: 20px;
+		height: 14px;
+	}
+
+	&--close {
+		@include size(21px);
+	}
+
+	&--open,
+	&--close {
+		position: absolute;
+		right: 0;
+		transform: translateY(-50%);
+	}
+
 }
