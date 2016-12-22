@@ -1,6 +1,10 @@
 .toggle {
 	display: block;
 
+	use {
+		fill: $link-color;
+	}
+
 	&:hover use {
 		fill: $link-color--hover;
 		transition-duration: 0.3s;

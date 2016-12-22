@@ -4,6 +4,10 @@
 	height: 35px;
 	background-color: #ffffff;
 
+	use {
+		fill: $link-color;
+	}
+
 	&:hover use {
 		fill: $link-color--hover;
 		transition-duration: 0.3s;

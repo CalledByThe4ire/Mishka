@@ -26,12 +26,6 @@
 		}
 	}
 
-	&__link {
-		&:last-child {
-			margin-right: 30px;
-		}
-	}
-
 	&__list {
 		display: none;
 		@include list-clear();
