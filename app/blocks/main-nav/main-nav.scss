@@ -47,6 +47,26 @@
 		background-color: #ffffff;
 		border-bottom: 1px solid #ececec;
 		outline: 1px dashed green;
+
+		& a:hover span {
+			fill: $link-color--hover;
+			transition-duration: 0.3s;
+		}
+
+		& a:hover span {
+			fill: $link-color--active;
+			transition-duration: 0.3s;
+		}
+
+		& a:hover .icon use {
+			fill: $color-secondary;
+			transition-duration: 0.3s;
+		}
+
+		& a:active .icon use {
+			fill: rgba($color-secondary, 0.3);
+			transition-duration: 0.3s;
+		}
 	}
 
 	&__link,

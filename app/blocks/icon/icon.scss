@@ -5,16 +5,6 @@
 		fill: $link-color;
 	}
 
-	&:hover use {
-		fill: $link-color--hover;
-		transition-duration: 0.3s;
-	}
-
-	&:active use {
-		fill: $link-color--active;
-		transition-duration: 0.3s;
-	}
-
 	&--open {
 		width: 20px;
 		height: 14px;
@@ -45,6 +35,14 @@
 	&--open,
 	&--close {
 		right: 0;
+
+		&:hover use {
+			fill: $link-color--hover;
+		}
+
+		&:active use {
+			fill: $link-color--active;
+		}
 	}
 
 	&--cart,
@@ -52,15 +50,7 @@
 		left: 0;
 
 		use {
-			fill: $link-color--active;
-		}
-
-		&:hover use {
-			fill: $color-secondary;
-		}
-
-		&:active use {
-			fill: rgba($color-secondary, 0.3);
+			fill: rgba($link-color, 0.3);
 		}
 	}
 
