@@ -24,11 +24,44 @@
 		@include size(21px);
 	}
 
+	&--cart {
+		width: 20px;
+		height: 18px;
+	}
+
+	&--search {
+		@include size(18px);
+	}
+
+	&--open,
+	&--close,
+	&--cart,
+	&--search {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
 	&--open,
 	&--close {
-		position: absolute;
 		right: 0;
-		transform: translateY(-50%);
+	}
+
+	&--cart,
+	&--search {
+		left: 0;
+
+		use {
+			fill: $link-color--active;
+		}
+
+		&:hover use {
+			fill: $color-secondary;
+		}
+
+		&:active use {
+			fill: rgba($color-secondary, 0.3);
+		}
 	}
 
 }

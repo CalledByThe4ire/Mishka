@@ -20,7 +20,6 @@
 	}
 
 	&__link {
-		position: relative;
 		&:first-child {
 			margin-left: auto;
 			margin-right: auto;
@@ -48,5 +47,10 @@
 		background-color: #ffffff;
 		border-bottom: 1px solid #ececec;
 		outline: 1px dashed green;
+	}
+
+	&__link,
+	&__item {
+		position: relative;
 	}
 }
