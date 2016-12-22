@@ -1,5 +1,8 @@
 .toggle {
+	position: absolute;
+	right: 0;
 	display: block;
+	transform: translateY(-50%);
 
 	use {
 		fill: $link-color;
