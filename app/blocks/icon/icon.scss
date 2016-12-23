@@ -3,6 +3,7 @@
 
 	use {
 		fill: $link-color;
+	  	pointer-events: none;
 	}
 
 	&--open {

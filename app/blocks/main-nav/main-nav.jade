@@ -26,9 +26,3 @@ mixin main-nav(list)
 						+e('li').item(class=item.modClass)
 							a(href=item.href)
 								span=item.content
-
-		+e.logo
-			+e('a').link(href='#')
-				+icon('logo', 'logo-mobile', true, '86', '35')&attributes(attributes)
-			+e('a').link(href='#')
-				+icon('icon--open', 'nav-toggle-open', true, '20', '14')&attributes(attributes)
