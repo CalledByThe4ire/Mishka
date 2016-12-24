@@ -1,58 +1,61 @@
 .icon {
-	display: block;
+  display: block;
+
+  use {
+	fill: $link-color;
+	pointer-events: none;
+  }
+
+  &--open {
+	width: 20px;
+	height: 14px;
+  }
+
+  &--close {
+	@include size(21px);
+  }
+
+  &--cart {
+	width: 20px;
+	height: 18px;
+  }
+
+  &--search {
+	@include size(18px);
+  }
+
+  &--open,
+  &--close,
+  &--cart,
+  &--search {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+  }
+
+  &--open,
+  &--close {
+	right: 0;
+
+	&:hover use {
+	  fill: $link-color--hover;
+	}
+
+	&:active use {
+	  fill: $link-color--active;
+	}
+
+	@media#{$tab-desk} {
+	  display: none;
+	}
+  }
+
+  &--cart,
+  &--search {
+	left: 0;
 
 	use {
-		fill: $link-color;
-	  	pointer-events: none;
+	  fill: rgba($link-color, 0.3);
 	}
-
-	&--open {
-		width: 20px;
-		height: 14px;
-	}
-
-	&--close {
-		@include size(21px);
-	}
-
-	&--cart {
-		width: 20px;
-		height: 18px;
-	}
-
-	&--search {
-		@include size(18px);
-	}
-
-	&--open,
-	&--close,
-	&--cart,
-	&--search {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-
-	&--open,
-	&--close {
-		right: 0;
-
-		&:hover use {
-			fill: $link-color--hover;
-		}
-
-		&:active use {
-			fill: $link-color--active;
-		}
-	}
-
-	&--cart,
-	&--search {
-		left: 0;
-
-		use {
-			fill: rgba($link-color, 0.3);
-		}
-	}
-
+  }
 }
