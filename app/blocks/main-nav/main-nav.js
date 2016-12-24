@@ -11,6 +11,11 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	const icon = document.querySelector('.icon');
 	const logo = document.querySelector('.page-header .logo');
 
+	/**
+	 * Скрывает / отображает навигационные ссылки
+	 * для мобильной версии сайта
+	 * @param {MouseEvent} evt
+	 */
 	const toggleMainNavList = function (evt) {
 		evt.preventDefault();
 		const iconPath = '/assets/images/icon.svg#icon_nav-toggle-';
@@ -30,6 +35,13 @@ export default window.addEventListener('DOMContentLoaded', () => {
 		}
 	};
 
+	/**
+	 * Меняет атрибуты у логотипа
+	 * для каждой из ширин viewport'а
+	 * @param {String} width
+	 * @param {String} height
+	 * @param {String} name
+	 */
 	const setLogo = function (width, height, name) {
 		const iconLogoPath = '/assets/images/icon.svg#icon_';
 		logo.classList = 'logo logo--' + name;
