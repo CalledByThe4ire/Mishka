@@ -2,6 +2,8 @@
 
 export default window.addEventListener('DOMContentLoaded', () => {
 
+	const mql = window.matchMedia('only screen and (min-width: 768px)');
+
 	const mainNavList = document.querySelector('.main-nav__list');
 	const icon = document.querySelector('.icon');
 
@@ -26,5 +28,19 @@ export default window.addEventListener('DOMContentLoaded', () => {
 
 	icon.addEventListener('click', function (evt) {
 		toggleMainNavList(evt);
+	});
+
+	if (mql.matches) {
+		if ( !mainNavList.classList.contains('main-nav__list--visible') ) {
+			mainNavList.classList.add('main-nav__list--visible');
+		}
+	}
+
+	window.addEventListener('resize', () => {
+		if (mql.matches) {
+			if ( !mainNavList.classList.contains('main-nav__list--visible') ) {
+				mainNavList.classList.add('main-nav__list--visible');
+			}
+		}
 	});
 });
