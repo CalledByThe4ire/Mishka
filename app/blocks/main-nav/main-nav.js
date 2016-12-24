@@ -2,10 +2,14 @@
 
 export default window.addEventListener('DOMContentLoaded', () => {
 
-	const mql = window.matchMedia('only screen and (min-width: 768px)');
+	const mqlMobile = window.matchMedia('only screen and (max-width: 767px)');
+	const mqlTabDesk = window.matchMedia('only screen and (min-width: 768px)');
+	const mqlTablet = window.matchMedia('only screen and (min-width: 768px) and (max-width: 1149px)');
+	const mqlDesktop = window.matchMedia('only screen and (min-width: 1150px)');
 
 	const mainNavList = document.querySelector('.main-nav__list');
 	const icon = document.querySelector('.icon');
+	const logo = document.querySelector('.page-header .logo');
 
 	const toggleMainNavList = function (evt) {
 		evt.preventDefault();
@@ -26,21 +30,54 @@ export default window.addEventListener('DOMContentLoaded', () => {
 		}
 	};
 
+	const setLogo = function (width, height, name) {
+		const iconLogoPath = '/assets/images/icon.svg#icon_';
+		logo.classList = 'logo logo--' + name;
+		logo.setAttribute('width', width);
+		logo.setAttribute('height', height);
+		logo.querySelector('use').setAttribute('xlink:href', iconLogoPath + 'logo-' + name);
+	};
+
 	icon.addEventListener('click', function (evt) {
 		toggleMainNavList(evt);
 	});
 
-	if (mql.matches) {
-		if ( !mainNavList.classList.contains('main-nav__list--visible') ) {
+	if (mqlTabDesk.matches) {
+		if (!mainNavList.classList.contains('main-nav__list--visible')) {
 			mainNavList.classList.add('main-nav__list--visible');
 		}
 	}
 
+	if (mqlMobile.matches) {
+		setLogo('86px', '35px', 'mobile');
+	}
+
+	if (mqlTablet.matches) {
+		setLogo('114px', '48px', 'tablet');
+	}
+
+	if (mqlDesktop.matches) {
+		setLogo('150px', '74px', 'desktop');
+	}
+
 	window.addEventListener('resize', () => {
-		if (mql.matches) {
-			if ( !mainNavList.classList.contains('main-nav__list--visible') ) {
+		if (mqlTabDesk.matches) {
+			if (!mainNavList.classList.contains('main-nav__list--visible')) {
 				mainNavList.classList.add('main-nav__list--visible');
 			}
 		}
+
+		if (mqlMobile.matches) {
+			setLogo('86px', '35px', 'mobile');
+		}
+
+		if (mqlTablet.matches) {
+			setLogo('114px', '48px', 'tablet');
+		}
+
+		if (mqlDesktop.matches) {
+			setLogo('150px', '74px', 'desktop');
+		}
 	});
+
 });
