@@ -7,7 +7,7 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	const mqlTablet = window.matchMedia('only screen and (min-width: 768px) and (max-width: 1149px)');
 	const mqlDesktop = window.matchMedia('only screen and (min-width: 1150px)');
 
-	const mainNavList = document.querySelector('.main-nav__list');
+	const nav = document.getElementById('nav');
 	const icon = document.querySelector('.icon');
 	const logo = document.querySelector('.page-header .logo');
 
@@ -16,17 +16,16 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	 * для мобильной версии сайта
 	 * @param {MouseEvent} evt
 	 */
-	const toggleMainNavList = function (evt) {
-		evt.preventDefault();
+	const toggleNav = function (evt) {
 		const iconPath = '/assets/images/icon.svg#icon_nav-toggle-';
 		const openMod = 'open';
 		const closeMod = 'close';
 		const visibleMod = 'visible';
 
 		evt.target.classList.toggle('icon--' + closeMod);
-		mainNavList.classList.toggle('main-nav__list--' + visibleMod);
+		nav.classList.toggle('nav--' + visibleMod);
 
-		if (!mainNavList.classList.contains('main-nav__list--' + visibleMod)) {
+		if (!nav.classList.contains('nav--' + visibleMod)) {
 			icon.classList.add('icon--' + openMod);
 			icon.firstElementChild.setAttribute('xlink:href', iconPath + openMod);
 		}else {
@@ -51,12 +50,12 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	};
 
 	icon.addEventListener('click', function (evt) {
-		toggleMainNavList(evt);
+		toggleNav(evt);
 	});
 
 	if (mqlTabDesk.matches) {
-		if (!mainNavList.classList.contains('main-nav__list--visible')) {
-			mainNavList.classList.add('main-nav__list--visible');
+		if (!nav.classList.contains('nav--visible')) {
+			nav.classList.add('nav--visible');
 		}
 	}
 
@@ -74,8 +73,8 @@ export default window.addEventListener('DOMContentLoaded', () => {
 
 	window.addEventListener('resize', () => {
 		if (mqlTabDesk.matches) {
-			if (!mainNavList.classList.contains('main-nav__list--visible')) {
-				mainNavList.classList.add('main-nav__list--visible');
+			if (!nav.classList.contains('nav--visible')) {
+				nav.classList.add('nav--visible');
 			}
 		}
 

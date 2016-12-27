@@ -1,4 +1,36 @@
 .page-header {
 	display: flex;
 	flex-direction: column;
+	background-color: #ffffff;
+
+	&__logo {
+		position: relative;
+		display: none;
+
+		&--visible {
+			display: flex;
+			align-items: center;
+			padding-top: 22px;
+			padding-bottom: 22px;
+			border-bottom: 1px solid #ececec;
+		}
+	}
+
+	&__link {
+		&:first-child {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&__toggle {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+	}
+
+	&__footnote {
+		display: none;
+	}
 }

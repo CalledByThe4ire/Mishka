@@ -1,0 +1,23 @@
+include ../icon/icon
+
+mixin nav(list)
+	+b('nav').nav--visible(id='nav')&attributes(attributes)
+		+e('ul').list&attributes(attributes)
+			each item in list
+				case item.modClass
+					when '--search'
+						+e('li').item(class=item.modClass)
+							+e(a).link(href=item.href)
+								+icon('icon--search', 'nav-search', true, '18', '18')&attributes(attributes)
+								span #{item.content}
+
+					when '--cart'
+						+e('li').item(class=item.modClass)
+							+e(a).link(href=item.href)
+								+icon('icon--cart', 'nav-cart', true, '20', '18')&attributes(attributes)
+								span #{item.content}
+
+					default
+						+e('li').item(class=item.modClass)
+							+e(a).link(href=item.href)
+								span #{item.content}

@@ -1,3 +1,16 @@
+include ../icon/icon
+include ../nav/nav
+
 mixin page-header()
 	+b('header').page-header&attributes(attributes)
-		block
+		+e.logo(class='--visible')
+			+e('a').link(href='#')
+				+icon('logo', 'logo-mobile', true, '86', '35')&attributes(attributes)
+			+e('a').toggle(href='#')
+				+icon('icon--close', 'nav-toggle-close', true, '22', '22')&attributes(attributes)
+
+		+nav(getData('nav'))
+
+		+e.footnote
+			span
+				| Бесплатная доставка по России

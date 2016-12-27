@@ -1,0 +1,56 @@
+.nav {
+	display: none;
+
+	&--visible {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__list {
+		@include list-clear();
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		padding: 27px 0;
+		font-family: Verdana, Arial, sans-serif;
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 700;
+		text-align: center;
+		border-bottom: 1px solid #ececec;
+	}
+
+	&__link {
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		&:hover {
+			fill: $link-color--hover;
+			transition-duration: 0.3s;
+		}
+
+		&:active {
+			fill: $link-color--active;
+			transition-duration: 0.3s;
+		}
+
+		&:hover .icon use {
+			fill: $color-secondary;
+			transition-duration: 0.3s;
+		}
+
+		&:active .icon use {
+			fill: rgba($color-secondary, 0.3);
+			transition-duration: 0.3s;
+		}
+
+		& .icon {
+			padding-right: 25px;
+		}
+	}
+}

@@ -1,2 +1,2 @@
-import '../blocks/main-nav/main-nav.js';
+import '../blocks/page-header/page-header.js';
 

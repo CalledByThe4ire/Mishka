@@ -15,27 +15,8 @@
 		@include size(21px);
 	}
 
-	&--cart {
-		width: 20px;
-		height: 18px;
-	}
-
-	&--search {
-		@include size(18px);
-	}
-
-	&--open,
-	&--close,
-	&--cart,
-	&--search {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-
 	&--open,
 	&--close {
-		right: 0;
 
 		&:hover use {
 			fill: $link-color--hover;
@@ -50,10 +31,17 @@
 		}
 	}
 
+	&--cart {
+		width: 20px;
+		height: 18px;
+	}
+
+	&--search {
+		@include size(18px);
+	}
+
 	&--cart,
 	&--search {
-		left: 0;
-
 		use {
 			fill: rgba($link-color, 0.3);
 		}
