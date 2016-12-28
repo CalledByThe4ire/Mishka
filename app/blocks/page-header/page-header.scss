@@ -1,8 +1,22 @@
 .page-header {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	margin-left: -3rem;
 	margin-right: -3rem;
+	background-color: #f9f9f9;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		@include retina-sprite($hero_mobile_group);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 
 	@media #{$tab-desk} {
 		position: relative;
@@ -38,8 +52,6 @@
 
 			@media #{$desktop} {
 				width: 100%;
-				border-left: 1px solid #ececec;
-				border-right: 1px solid #ececec;
 			}
 		}
 	}
