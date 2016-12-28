@@ -12,6 +12,11 @@
 		flex-wrap: wrap;
 		@include list-clear();
 
+		@media #{$mobile} {
+			position: absolute;
+			width: 100%;
+		}
+
 		@media #{$tab-desk} {
 			flex-direction: row;
 			padding-left: 5rem;
