@@ -1,7 +1,17 @@
 .page-header {
 	display: flex;
 	flex-direction: column;
+	margin-left: -3rem;
+	margin-right: -3rem;
 	background-color: #ffffff;
+
+	@media #{$tab-desk} {
+		position: relative;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-left: -5rem;
+		margin-right: -5rem;
+	}
 
 	&__logo {
 		position: relative;
@@ -12,25 +22,48 @@
 			align-items: center;
 			padding-top: 22px;
 			padding-bottom: 22px;
+			background-color: #ffffff;
 			border-bottom: 1px solid #ececec;
+
+			@media #{$tab-desk} {
+				position: absolute;
+				left: 0;
+				width: calc(50% - 20px);
+				height: 90px;
+				padding-top: 0;
+				padding-bottom: 0;
+			}
 		}
 	}
 
 	&__link {
-		&:first-child {
-			margin-left: auto;
-			margin-right: auto;
+		margin-left: auto;
+		margin-right: auto;
+
+		@media #{$tab-desk} {
+			margin-left: 5rem;
 		}
 	}
 
 	&__toggle {
 		position: absolute;
 		top: 50%;
-		right: 0;
+		right: 3rem;
 		transform: translateY(-50%);
+
+		@media #{$tab-desk} {
+			right: 5rem;
+		}
 	}
 
 	&__footnote {
 		display: none;
+
+		@media #{$tab-desk} {
+			position: absolute;
+			right: 5rem;
+			bottom: 27px;
+			display: block;
+		}
 	}
 }
