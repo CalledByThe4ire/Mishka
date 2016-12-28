@@ -18,5 +18,15 @@
 	"href": "#",
 	"modClass": "--cart",
 	"content": "Корзина: пока пуста"
+  },
+  {
+	"href": "#",
+	"modClass": "",
+	"content": "Новые поступления"
+  },
+  {
+	"href": "#",
+	"modClass": "",
+	"content": "Распродажа"
   }
 ]

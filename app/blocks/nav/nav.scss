@@ -31,17 +31,77 @@
 		text-align: center;
 		border-bottom: 1px solid #ececec;
 
+		&:nth-child(5),
+		&:nth-child(6) {
+			display: none;
+		}
+
 		@media #{$tab-desk} {
-			flex-basis: 25%;
 			justify-content: flex-start;
+		}
+
+		@media #{$tablet} {
 			padding: 20px 0;
 			font-size: 14px;
 			border-bottom: none;
 
-			&--search {
+			&:nth-child(1),
+			&:nth-child(2) {
+				flex-basis: 25%;
+			}
+		}
+
+		@media #{$desktop} {
+			font-size: 16px;
+			border-bottom: none;
+
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(4) {
+				height: 90px;
+				padding-top: 0;
+				padding-bottom: 0;
+				line-height: 90px;
+				border-right: 1px solid #ececec;
+			}
+
+			&:nth-child(1),
+			&:nth-child(5) {
+				flex-basis: 190px;
+			}
+
+			&:nth-child(2),
+			&:nth-child(6) {
+				flex-basis: 475px;
+				padding-left: 35px;
+			}
+
+			&:nth-child(4) {
+				border-right: none;
+			}
+
+			&:nth-child(5),
+			&:nth-child(6) {
+				display: flex;
+				padding: 20px 0;
+				font-size: 14px;
+			}
+		}
+
+		&--search {
+			@media #{$tab-desk} {
+				flex-basis: 80px;
+				justify-content: center;
+
+				& span {
+					display: none;
+				}
+			}
+
+			@media #{$tablet} {
 				align-self: center;
 				order: -2;
-				flex-basis: 80px;
 				justify-content: center;
 				height: 90px;
 				margin-left: calc(50% - 20px);
@@ -51,15 +111,21 @@
 				border-left: 1px solid #ececec;
 				border-right: 1px solid #ececec;
 				border-bottom: 1px solid #ececec;
-
-				& span {
-					display: none;
-				}
 			}
 
-			&--cart {
+			@media #{$desktop} {
+				order: 0;
+			}
+		}
+
+		&--cart {
+			@media #{$tablet} {
 				order: -1;
 				flex-grow: 1;
+				border-bottom: 1px solid #ececec;
+			}
+
+			@media #{$tab-desk} {
 				justify-content: flex-end;
 				height: 90px;
 				padding-top: 0;
@@ -69,7 +135,12 @@
 				margin-right: -5rem;
 				font-size: 16px;
 				background-color: #ffffff;
-				border-bottom: 1px solid #ececec;
+			}
+
+			@media #{$desktop} {
+				flex-grow: 1;
+				order: 0;
+				margin-left: initial;
 			}
 		}
 	}
@@ -110,3 +181,4 @@
 		}
 	}
 }
+

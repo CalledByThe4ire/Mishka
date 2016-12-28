@@ -3,7 +3,6 @@
 	flex-direction: column;
 	margin-left: -3rem;
 	margin-right: -3rem;
-	background-color: #ffffff;
 
 	@media #{$tab-desk} {
 		position: relative;
@@ -27,11 +26,20 @@
 
 			@media #{$tab-desk} {
 				position: absolute;
-				left: 0;
-				width: calc(50% - 20px);
 				height: 90px;
 				padding-top: 0;
 				padding-bottom: 0;
+			}
+
+			@media #{$tablet} {
+				left: 0;
+				width: calc(50% - 20px);
+			}
+
+			@media #{$desktop} {
+				width: 100%;
+				border-left: 1px solid #ececec;
+				border-right: 1px solid #ececec;
 			}
 		}
 	}
@@ -40,8 +48,13 @@
 		margin-left: auto;
 		margin-right: auto;
 
-		@media #{$tab-desk} {
+		@media #{$tablet} {
 			margin-left: 5rem;
+		}
+
+		@media #{$desktop} {
+			justify-content: center;
+			z-index: 10;
 		}
 	}
 
@@ -50,10 +63,6 @@
 		top: 50%;
 		right: 3rem;
 		transform: translateY(-50%);
-
-		@media #{$tab-desk} {
-			right: 5rem;
-		}
 	}
 
 	&__footnote {
@@ -62,8 +71,15 @@
 		@media #{$tab-desk} {
 			position: absolute;
 			right: 5rem;
-			bottom: 27px;
 			display: block;
+		}
+
+		@media #{$tablet} {
+			bottom: 27px;
+		}
+
+		@media #{$desktop} {
+			bottom: 20px;
 		}
 	}
 }
