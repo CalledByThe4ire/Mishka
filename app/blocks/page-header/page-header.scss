@@ -29,20 +29,17 @@
 	&__logo {
 		position: relative;
 		display: none;
+		height: 80px;
+		background-color: #ffffff;
+		border-bottom: 1px solid #ececec;
 
 		&--visible {
 			display: flex;
 			align-items: center;
-			padding-top: 22px;
-			padding-bottom: 22px;
-			background-color: #ffffff;
-			border-bottom: 1px solid #ececec;
 
 			@media #{$tab-desk} {
 				position: absolute;
 				height: 90px;
-				padding-top: 0;
-				padding-bottom: 0;
 			}
 
 			@media #{$tablet} {
