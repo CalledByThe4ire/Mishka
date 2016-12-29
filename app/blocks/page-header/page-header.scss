@@ -15,7 +15,7 @@
 		bottom: 0;
 		left: 0;
 		display: block;
-		background-image: url('/assets/images/hero-mobile@2x.png');
+		background-image: url('../images/hero-mobile@2x.png');
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -31,10 +31,7 @@
 
 		&::before {
 			top: 90px;
-			background-image: url('/assets/images/hero-tab-desk.png');
-			@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-				background-image: url('/assets/images/hero-tab-desk@2x.png');
-			}
+			@include retinaBackground(hero-tab-desk);
 		}
 	}
 
