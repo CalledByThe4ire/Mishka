@@ -90,3 +90,37 @@
 		line-height: 57px;
 	}
 }
+
+// Set button properties
+@mixin btn($padding-x: 30px, $padding-y: 15px) {
+	display: inline-block;
+	@include padding-x($padding-x);
+	@include padding-y($padding-y);
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	font: inherit;
+	text-decoration: none;
+	cursor: pointer;
+	user-select: none;
+
+	&:hover,
+	&--hover {
+		text-decoration: none;
+	}
+
+	&:active,
+	&--active,
+	&:focus {
+		text-decoration: none;
+		outline: 0;
+		box-shadow: none;
+	}
+
+	&:disabled,
+	&--disabled {
+		cursor: not-allowed;
+		pointer-events: none;
+	}
+
+}
