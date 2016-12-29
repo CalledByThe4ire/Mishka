@@ -11,17 +11,17 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	const icon = document.querySelector('.icon');
 	const logo = document.querySelector('.page-header .logo');
 
+	const iconPath = '/assets/images/icon.svg#icon_nav-toggle-';
+	const openMod = 'open';
+	const closeMod = 'close';
+	const visibleMod = 'visible';
+
 	/**
 	 * Скрывает / отображает навигационные ссылки
 	 * для мобильной версии сайта
 	 * @param {MouseEvent} evt
 	 */
 	const toggleNav = function (evt) {
-		const iconPath = '/assets/images/icon.svg#icon_nav-toggle-';
-		const openMod = 'open';
-		const closeMod = 'close';
-		const visibleMod = 'visible';
-
 		evt.target.classList.toggle('icon--' + closeMod);
 		nav.classList.toggle('nav--' + visibleMod);
 
@@ -54,13 +54,17 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	});
 
 	if (mqlTabDesk.matches) {
-		if (!nav.classList.contains('nav--visible')) {
-			nav.classList.add('nav--visible');
+		if (!nav.classList.contains('nav--' + visibleMod)) {
+			nav.classList.add('nav--' + visibleMod);
 		}
 	}
 
 	if (mqlMobile.matches) {
 		setLogo('86px', '35px', 'mobile');
+
+		if (icon.classList.contains('icon--' + openMod)) {
+			nav.classList.remove('nav--' + visibleMod);
+		}
 	}
 
 	if (mqlTablet.matches) {
@@ -73,13 +77,17 @@ export default window.addEventListener('DOMContentLoaded', () => {
 
 	window.addEventListener('resize', () => {
 		if (mqlTabDesk.matches) {
-			if (!nav.classList.contains('nav--visible')) {
-				nav.classList.add('nav--visible');
+			if (!nav.classList.contains('nav--' + visibleMod)) {
+				nav.classList.add('nav--' + visibleMod);
 			}
 		}
 
 		if (mqlMobile.matches) {
 			setLogo('86px', '35px', 'mobile');
+
+			if (icon.classList.contains('icon--' + openMod)) {
+				nav.classList.remove('nav--' + visibleMod);
+			}
 		}
 
 		if (mqlTablet.matches) {
