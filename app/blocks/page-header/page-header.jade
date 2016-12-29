@@ -1,5 +1,6 @@
 include ../icon/icon
 include ../nav/nav
+include ../btn/btn
 
 mixin page-header()
 	+b('header').page-header&attributes(attributes)
@@ -17,3 +18,7 @@ mixin page-header()
 
 		+e('h1').heading
 			| Милые штуки ручной<br>работы для дома
+
+		+e.btn-wrapper
+			+btn(class='--left')
+			+btn(class='--right')
