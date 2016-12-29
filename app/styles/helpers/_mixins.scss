@@ -72,3 +72,21 @@
 		content: '';
 	}
 }
+
+// Set heading (h1) size
+@mixin heading--big() {
+	font-family: Verdana, sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 30px;
+
+	@media #{$tablet} {
+		font-size: 40px;
+		line-height: 50px;
+	}
+
+	@media #{$desktop} {
+		font-size: 50px;
+		line-height: 57px;
+	}
+}
