@@ -93,7 +93,7 @@
 
 // Set button properties
 @mixin btn($padding-x: 30px, $padding-y: 15px) {
-	display: inline-block;
+	display: flex;
 	@include padding-x($padding-x);
 	@include padding-y($padding-y);
 	text-align: center;

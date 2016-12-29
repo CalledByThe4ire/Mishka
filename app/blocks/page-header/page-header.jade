@@ -21,6 +21,8 @@ mixin page-header()
 
 		+e.btn-container
 			+btn(class='--left')
-				| Предметы интерьера
+				+e.txt Предметы<br>интерьера
+				+icon('icon--interior', 'page-header-interior', true, '42', '64')&attributes(attributes)
 			+btn(class='--right')
-				| Детские игрушки
+				+e.txt Детские<br>игрушки
+				+icon('icon--toy', 'page-header-toy', true, '60', '60')&attributes(attributes)

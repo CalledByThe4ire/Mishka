@@ -1,3 +1,60 @@
 .btn {
-	@include btn();
+	@include btn(30px, 20px);
+	justify-content: space-between;
+	font-family: Tahoma, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+	color: #ffffff;
+	text-align: left;
+
+	@media #{$tab-desk} {
+		flex-basis: 50%;
+		@include padding-x(35px);
+		@include padding-y(28px);
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	&--left {
+		background-color: $color-secondary;
+	}
+
+	&--right {
+		background-color: desaturate($color-secondary, 10%);
+	}
+
+	& .icon,
+	&__txt {
+		align-self: center;
+	}
+
+	& .icon {
+		opacity: 0.5;
+	}
+
+	&:hover {
+		padding-bottom: 32px;
+	}
+
+	&:hover &__txt,
+	&:hover .icon {
+		position: relative;
+		top: -5px;
+	}
+
+	&:hover .icon {
+		opacity: 0.7;
+		transition-duration: 0.3s;
+	}
+
+	&:hover &__txt {
+		color: #ffffff;
+	}
+
+	&:active .icon,
+	&:active &__txt {
+		opacity: 0.3;
+		transition-duration: 0.3s;
+	}
 }

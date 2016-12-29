@@ -46,4 +46,21 @@
 			fill: rgba($link-color, 0.3);
 		}
 	}
+
+	&--interior {
+		width: 42px;
+		height: 64px;
+	}
+
+	&--toy {
+		width: 60px;
+		height: 60px;
+	}
+
+	&--interior,
+	&--toy {
+		use {
+			fill: #149080;
+		}
+	}
 }
