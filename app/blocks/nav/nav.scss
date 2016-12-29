@@ -11,6 +11,7 @@
 		flex-direction: column;
 		flex-wrap: wrap;
 		@include list-clear();
+		background-color: #ffffff;
 
 		@media #{$mobile} {
 			position: absolute;
