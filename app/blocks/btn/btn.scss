@@ -33,10 +33,6 @@
 		opacity: 0.5;
 	}
 
-	&:hover {
-		padding-bottom: 32px;
-	}
-
 	&:hover &__txt,
 	&:hover .icon {
 		position: relative;
@@ -56,5 +52,9 @@
 	&:active &__txt {
 		opacity: 0.3;
 		transition-duration: 0.3s;
+	}
+
+	&:hover {
+		padding-bottom: 25px;
 	}
 }

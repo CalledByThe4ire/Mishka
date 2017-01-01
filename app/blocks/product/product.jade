@@ -1,0 +1,25 @@
+mixin product()
+	+b.product&attributes(attributes)
+		+e('h1').heading
+			| #{item.heading}
+		+e.tag
+			| #{item.tag}
+		+e.description
+			| #{item.description}
+		+e('table').features
+			thead
+				tr
+					th Цвет:
+					th Диаметр:
+					th Высота:
+			tbody
+				tr
+					+e('td').feature #{item.color}
+					+e('td').feature #{item.diameter}
+					+e('td').feature #{item.height}
+		+e.price
+			| #{item.price}
+		+e('a').btn
+			| Заказать
+
+

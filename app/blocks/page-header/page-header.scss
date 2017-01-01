@@ -143,6 +143,10 @@
 		@media #{$tab-desk} {
 			top: auto;
 			flex-direction: row;
+
+			&:hover .btn {
+				padding-bottom: 33px;
+			}
 		}
 
 		@media #{$tablet} {
