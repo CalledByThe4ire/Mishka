@@ -1,7 +1,7 @@
 include ../icon/icon
 
 mixin nav(list)
-	+b('nav').nav--visible(id='nav')&attributes(attributes)
+	+b('nav').nav--visible(id='nav', class='__nav')&attributes(attributes)
 		+e('ul').list&attributes(attributes)
 			each item in list
 				case item.modClass
