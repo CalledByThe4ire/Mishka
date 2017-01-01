@@ -1,11 +1,11 @@
 mixin product(item)
 	+b.product&attributes(attributes)
 		+e('h1').heading
-			| #{item.heading}
+			| !{item.heading}
 		+e.tag
-			| #{item.tag}
+			| !{item.tag}
 		+e.description
-			| #{item.description}
+			| !{item.description}
 		+e('table').features
 			thead
 				tr
@@ -14,11 +14,11 @@ mixin product(item)
 					th Высота:
 			tbody
 				tr
-					+e('td').feature #{item.color}
-					+e('td').feature #{item.diameter}
-					+e('td').feature #{item.height}
+					+e('td').feature !{item.color}
+					+e('td').feature !{item.diameter}
+					+e('td').feature !{item.height}
 		+e.price
-			| #{item.price}
+			| !{item.price}
 		+e('a').btn
 			| Заказать
 
