@@ -54,7 +54,7 @@
 
 			&:nth-child(1),
 			&:nth-child(2) {
-				flex-basis: 25%;
+				flex-basis: calc(25% - 10px);
 			}
 		}
 
@@ -92,6 +92,7 @@
 				display: flex;
 				@include padding-y(20px);
 				font-size: 14px;
+				border-right: 1px solid transparent;
 			}
 		}
 
