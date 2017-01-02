@@ -4,6 +4,7 @@
 	flex-direction: column;
 	min-height: 453px;
 	@include margin-x(-3rem);
+	margin-bottom: 16rem;
 	background-color: #fafafa;
 
 	&::before {

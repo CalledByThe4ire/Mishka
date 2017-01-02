@@ -1,3 +1,7 @@
 .featured-goods {
 	display: block;
+
+	&__list {
+		@include list-clear();
+	}
 }

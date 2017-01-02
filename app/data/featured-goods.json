@@ -6,6 +6,13 @@
 	"color": "Тиффани / серый",
 	"diameter": "25&nbsp;см",
 	"height": "15&nbsp;см",
-	"price": "990&nbsp;руб"
+	"price": "990&nbsp;руб",
+	"imgAlt": "Вязаные корзинки",
+	"imgMobile": "assets/images/triple-set-mobile@1x.jpg",
+	"imgMobile2x": "assets/images/triple-set-mobile@2x.jpg",
+	"imgTablet": "assets/images/triple-set-tablet@1x.jpg",
+	"imgTablet2x": "assets/images/triple-set-tablet@2x.jpg",
+	"imgDesktop": "assets/images/triple-set-desktop@1x.jpg",
+	"imgDesktop2x": "assets/images/triple-set-desktop@2x.jpg"
   }
 ]
