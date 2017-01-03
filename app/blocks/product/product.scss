@@ -12,7 +12,7 @@
 		font-family: "Open Sans", Arial, sans-serif;
 		font-weight: 700;
 		font-size: 1.6rem;
-		line-height: 1.6rem;
+		line-height: $leading / 1.875;
 		color: $color-secondary;
 		text-transform: uppercase;
 	}
@@ -20,7 +20,7 @@
 	&__description {
 		margin-bottom: 1.8rem;
 		font-size: 1.4rem;
-		line-height: 2.4rem;
+		line-height: $leading / 1.25;
 		color: #444444;
 	}
 

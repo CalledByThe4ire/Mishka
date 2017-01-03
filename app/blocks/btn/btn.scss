@@ -4,7 +4,7 @@
 	font-family: Tahoma, Arial, sans-serif;
 	font-weight: 700;
 	font-size: 1.8rem;
-	line-height: 2.4rem;
+	line-height: $leading / 1.25;
 	color: #ffffff;
 	text-align: left;
 
@@ -13,7 +13,7 @@
 		@include padding-x(3.5rem);
 		@include padding-y(2.8rem);
 		font-size: 2rem;
-		line-height: 3rem;
+		line-height: $leading;
 	}
 
 	&--left {

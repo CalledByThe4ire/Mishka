@@ -33,7 +33,7 @@
 		@include padding-x(0);
 		font-family: Verdana, Arial, sans-serif;
 		font-size: 1.6rem;
-		line-height: 2.4rem;
+		line-height: $leading / 1.25;
 		font-weight: 700;
 		text-align: center;
 		border-bottom: 1px solid #ececec;
