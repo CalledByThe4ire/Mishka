@@ -41,15 +41,15 @@ $tab-desk:                 'only screen and (min-width: 768px)';
 
 // == Container sizes
 //
-$container--min:           26rem !default; // 260px
-$container--mid:           66.8rem !default; // 668px
-$container--max:           105rem !default; // 1050px
+$container--min:           260px !default;
+$container--mid:           668px !default;
+$container--max:           1050px !default;
 
 // == Paddings and margins
 //
-$offset--mobile:           3rem !default;
-$offset--tablet:           5rem !default;
-$offset--desktop:          5rem !default;
+$offset--mobile:           30px !default;
+$offset--tablet:           50px !default;
+$offset--desktop:          50px !default;
 
 // == Lost
 // https://github.com/peterramsing/lost
