@@ -7,6 +7,10 @@
 	margin-bottom: 16rem;
 	background-color: #fafafa;
 
+	@media #{$tab-desk} {
+		margin-bottom: 3.5rem;
+	}
+
 	&::before {
 		content: "";
 		position: absolute;

@@ -1,27 +1,57 @@
 .product {
+	position: relative;
 	display: flex;
 	flex-direction: column;
+	flex-wrap: wrap;
+
+	@media #{$tab-desk} {
+		flex-direction: row;
+		align-items: center;
+		& > *:not(&__heading):not(&__tag) {
+			flex-basis: calc(50% - 45px);
+			margin-right: calc(50% + 45px);
+		}
+	}
 
 	&__heading {
 		@include heading--big();
 		margin-bottom: 0.5rem;
+
+		@media #{$tab-desk} {
+			margin-right: auto;
+			margin-bottom: 5rem;
+			}
 	}
 
 	&__tag {
 		margin-bottom: 3rem;
-		font-family: "Open Sans", Arial, sans-serif;
+		font-family: $font-family;
 		font-weight: 700;
-		font-size: 1.6rem;
+		font-size: $font-size / 0.875; // 1.6
 		line-height: $leading / 1.875;
 		color: $color-secondary;
 		text-transform: uppercase;
+
+		@media #{$tab-desk} {
+			flex-basis: 15%;
+			margin-right: 3rem;
+			margin-bottom: 5rem;
+			margin-left: auto;
+			text-align: center;
+		}
 	}
 
 	&__description {
 		margin-bottom: 1.8rem;
-		font-size: 1.4rem;
-		line-height: $leading / 1.25;
+		font-size: $font-size;
+		line-height: $leading / 1.25; // 24
 		color: #444444;
+
+		@media #{$tab-desk} {
+			font-size: $font-size / 0.875; // 1.6
+			line-height: $leading;
+			margin-bottom: 3.5rem;
+		}
 	}
 
 	&__features {
@@ -34,27 +64,48 @@
 			@include padding-y(1rem);
 			font-weight: 400;
 		}
+
+		@media #{$tab-desk} {
+			width: calc(50% - 45px);
+			margin-bottom: 5.5rem;
+			font-size: 1.5rem;
+		}
 	}
 
 	&__image {
 		min-width: 100%;
 		margin-bottom: 2rem;
+
+		@media #{$tab-desk} {
+			position: absolute;
+			min-width: initial;
+			width: 50%;
+			height: 80%;
+			bottom: 0;
+			right: 0;
+			margin-bottom: 0;
+			object-fit: cover;
+		}
 	}
 
 	&__price {
 		margin-bottom: 2.5rem;
 		font-family: Verdana, Arial, sans-serif;
-		font-size: 1.6rem;
-		line-height: $leading / 1.25;
+		font-size: $font-size / 0.875; // 1.6
+		line-height: $leading / 1.25; // 24
 		font-weight: 700;
 		color: #444444;
 		text-align: center;
+
+		@media #{$tab-desk} {
+			margin-bottom: 3.5rem;
+		}
 	}
 
 	&__btn {
-		@include btn(17px);
+		@include btn(0, 1.7rem);
 		font-family: $font-family;
-		font-size: 1.6rem;
+		font-size: $font-size / 0.875; // 1.6
 		line-height: 1.6rem;
 		font-weight: 700;
 		color: #444444;

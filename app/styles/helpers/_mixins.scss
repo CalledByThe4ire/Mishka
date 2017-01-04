@@ -94,7 +94,7 @@
 }
 
 // Set button properties
-@mixin btn($padding-x: 30px, $padding-y: 15px) {
+@mixin btn($padding-x: 3rem, $padding-y: 1.5rem) {
 	display: flex;
 	justify-content: center;
 	@include padding-x($padding-x);
