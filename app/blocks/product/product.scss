@@ -7,9 +7,20 @@
 	@media #{$tab-desk} {
 		flex-direction: row;
 		align-items: center;
+	}
+
+	@media #{$tablet} {
 		& > *:not(&__heading):not(&__tag) {
-			flex-basis: calc(50% - 45px);
-			margin-right: calc(50% + 45px);
+			flex-basis: calc(50% - 4.5rem);
+			margin-right: calc(50% + 4.5rem);
+		}
+	}
+
+	@media #{$desktop} {
+		& > *:not(&__heading):not(&__tag) {
+			flex-basis: calc(33.333333333333333% - 6rem);
+			margin-left: 16.666666666666667%;
+			margin-right: 50%;
 		}
 	}
 
@@ -18,9 +29,20 @@
 		margin-bottom: 0.5rem;
 
 		@media #{$tab-desk} {
-			margin-right: auto;
 			margin-bottom: 5rem;
+		}
+
+		@media #{$tablet} {
+			margin-right: auto;
 			}
+
+		@media #{$desktop} {
+			flex-basis: 50%;
+			margin-top: 5rem;
+			margin-right: 33.333333333333333%;
+			letter-spacing: -2px;
+			z-index: 5;
+		}
 	}
 
 	&__tag {
@@ -33,11 +55,21 @@
 		text-transform: uppercase;
 
 		@media #{$tab-desk} {
-			flex-basis: 15%;
-			margin-right: 3rem;
 			margin-bottom: 5rem;
-			margin-left: auto;
 			text-align: center;
+		}
+
+		@media #{$tablet} {
+			flex-basis: 5%;
+			margin-right: 3rem;
+			margin-left: auto;
+		}
+		@media #{$desktop} {
+			order: -5;
+			flex-basis: calc(16.666666666666667% / 2);
+			margin-top: 5rem;
+			margin-right: calc(16.666666666666667% / 2);
+			transform: translateX(50%);
 		}
 	}
 
@@ -50,7 +82,14 @@
 		@media #{$tab-desk} {
 			font-size: $font-size / 0.875; // 1.6
 			line-height: $leading;
+		}
+
+		@media #{$tablet} {
 			margin-bottom: 3.5rem;
+		}
+
+		@media #{$desktop} {
+			margin-bottom: 5rem;
 		}
 	}
 
@@ -66,9 +105,17 @@
 		}
 
 		@media #{$tab-desk} {
-			width: calc(50% - 45px);
 			margin-bottom: 5.5rem;
 			font-size: 1.5rem;
+		}
+
+		@media #{$tablet} {
+			width: calc(50% - 45px);
+		}
+
+		@media #{$desktop} {
+			width: calc(33.333333333333333% - 6rem);
+			margin-bottom: 10.5rem;
 		}
 	}
 
@@ -80,11 +127,18 @@
 			position: absolute;
 			min-width: initial;
 			width: 50%;
-			height: 80%;
 			bottom: 0;
 			right: 0;
 			margin-bottom: 0;
 			object-fit: cover;
+		}
+
+		@media #{$tablet} {
+			height: 80%;
+		}
+
+		@media #{$desktop} {
+			height: 100%;
 		}
 	}
 
@@ -97,8 +151,8 @@
 		color: #444444;
 		text-align: center;
 
-		@media #{$tab-desk} {
-			margin-bottom: 3.5rem;
+		@media #{$tablet} {
+			margin-bottom: 3rem;
 		}
 	}
 

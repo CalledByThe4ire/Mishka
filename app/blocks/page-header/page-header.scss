@@ -7,8 +7,12 @@
 	margin-bottom: 16rem;
 	background-color: #fafafa;
 
-	@media #{$tab-desk} {
+	@media #{$tablet} {
 		margin-bottom: 3.5rem;
+	}
+
+	@media #{$desktop} {
+		margin-bottom: 5.5rem;
 	}
 
 	&::before {
