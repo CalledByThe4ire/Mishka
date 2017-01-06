@@ -1,7 +1,7 @@
 include ../product/product
 
 mixin featured-goods(list)
-	+b.featured-goods&attributes(attributes)
+	+b('section').featured-goods&attributes(attributes)
 		+e('ul').list
 			each item in list
 				+product(item)(class='__item')
