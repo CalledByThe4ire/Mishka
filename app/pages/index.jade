@@ -1,5 +1,6 @@
 include ../blocks/container/container
 include ../blocks/page-header/page-header
+include ../blocks/main-content/main-content
 include ../blocks/featured-goods/featured-goods
 
 extends ../blocks/layout-default/layout-default
@@ -13,4 +14,5 @@ block head
 block content
 	+container
 		+page-header
-		+featured-goods(getData('featured-goods'))
+		+main-content
+			+featured-goods(getData('featured-goods'))
