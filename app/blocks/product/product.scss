@@ -23,7 +23,7 @@
 			& > *:not(&__heading):not(&__tag) {
 				flex-basis: calc(#{span(2)} - 6rem);
 				margin-left: span(1);
-				margin-right: 50%;
+				margin-right: #{percentage(3/6)};
 			}
 		}
 	}
@@ -66,7 +66,7 @@
 		}
 
 		@media #{$tablet} {
-			flex-basis: 5%;
+			flex-basis: #{percentage(0.2/4)};
 			margin-right: 3rem;
 			margin-left: auto;
 		}
@@ -76,7 +76,7 @@
 				flex-basis: calc(#{span(1)} / 2);
 				margin-top: 5rem;
 				margin-right: calc(#{span(1)} / 2);
-				transform: translateX(50%);
+				transform: translateX(#{percentage(3/6)});
 			}
 		}
 	}
@@ -146,11 +146,11 @@
 		}
 
 		@media #{$tablet} {
-			height: 80%;
+			height: #{percentage(3.2/4)};
 		}
 
 		@media #{$desktop} {
-			height: 100%;
+			height: #{percentage(4/4)};
 		}
 	}
 
