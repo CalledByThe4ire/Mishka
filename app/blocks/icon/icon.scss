@@ -63,4 +63,45 @@
 			fill: #149080;
 		}
 	}
+
+	&--flower {
+		width: 32px;
+		height: 37px;
+	}
+
+	&--banknote {
+		width: 47px;
+		height: 27px;
+	}
+
+	&--heart {
+		width: 34px;
+		height: 27px;
+	}
+
+	&--loupe {
+		width: 35px;
+		height: 34px;
+	}
+
+	&--rocket {
+		width: 55px;
+		height: 23px;
+	}
+
+	&--gift {
+		width: 33px;
+		height: 32px;
+	}
+
+	&--flower,
+	&--banknote,
+	&--heart,
+	&--loupe,
+	&--rocket,
+	&--gift {
+		use {
+			fill: $color-secondary;
+		}
+	}
 }

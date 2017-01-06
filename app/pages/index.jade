@@ -2,6 +2,8 @@ include ../blocks/container/container
 include ../blocks/page-header/page-header
 include ../blocks/main-content/main-content
 include ../blocks/featured-goods/featured-goods
+include ../blocks/featured-goods/featured-goods
+include ../blocks/about/about
 
 extends ../blocks/layout-default/layout-default
 
@@ -16,3 +18,4 @@ block content
 		+page-header
 		+main-content
 			+featured-goods(getData('featured-goods'))
+			+about(getData('about'))
