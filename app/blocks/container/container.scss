@@ -2,6 +2,8 @@
 	display: block;
 	@include clearfix();
 	@include container();
+	border-left: 1px solid #ececec;
+	border-right: 1px solid #ececec;
 
 	@media #{$mobile} {
 		@include with-layout($small) {
