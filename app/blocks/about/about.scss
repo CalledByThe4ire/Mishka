@@ -1,5 +1,6 @@
 .about {
 	display: block;
+	margin-bottom: 3rem;
 
 	@media #{$desktop} {
 		@include with-layout($large) {

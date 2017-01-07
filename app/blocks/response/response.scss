@@ -1,0 +1,22 @@
+.response {
+	display: block;
+
+	&__description,
+	&__link {
+		font-family: $font-family;
+		font-size: $font-size;
+		line-height: $leading;
+		color: #444444;
+	}
+
+	&__description {
+		margin-bottom: 2rem;
+	}
+
+	&__author {
+		font-family: Verdana, Arial, sans-serif;
+		font-size: $font-size;
+		line-height: $leading * 0.8;
+		font-weight: 700;
+	}
+}

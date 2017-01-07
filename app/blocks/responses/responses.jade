@@ -1,21 +1,17 @@
+include ../response/response
+
 mixin responses(responses)
 	+b('section').responses&attributes(attributes)
 		+e('header').heading
 			| Отзывы
 		+e('div').container
 			+e('ul').list
-				each response in responses
-					+e.item
-						+e('div').description
-							| !{response.description}
-						+e.author
-							| !{response.author}
-						+e('a').link(href=response.socialLink)
-							| !{response.socialName}
-				+e('div').controls
-					+e('div').control
-						+icon('icon--arrow', 'responses-arrow', true, '50', '26')&attributes(attributes)
-					+e('div').control
-						+icon('icon--arrow', 'responses-arrow', true, '50', '26')&attributes(attributes)
-				+e('a').btn(href='#')
-					| Написать
+				each item in responses
+					+response(item)(class='__item')
+			+e('div').controls
+				+e('div').control
+					+icon('icon--arrow', 'responses-arrow', true, '50', '26')&attributes(attributes)
+				+e('div').control
+					+icon('icon--arrow', 'responses-arrow', true, '50', '26')&attributes(attributes)
+			+e('a').btn(href='#')
+				| Написать
