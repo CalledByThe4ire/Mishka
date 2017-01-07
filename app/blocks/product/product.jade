@@ -18,9 +18,7 @@ mixin product(item)
 					th(scope='row') Высота:
 					+e('td').feature !{item.height}
 		picture
-			source( media='(min-width: 1150px)', srcset=item.imgDesktop + ' 1x, ' + item.imgDesktop2x + '' +
-			' 2x' )
-			source( media='(min-width: 768px)', srcset=item.imgTablet + ' 1x, ' + item.imgTablet2x + ' 2x' )
+			source( media='(min-width: 768px)', srcset=item.imgTabDesk + ' 1x, ' + item.imgTabDesk2x + ' 2x' )
 			+e('img').image(src=item.imgMobile, srcset= item.imgMobile2x + ' 2x', alt=item.imgAlt, title=item.imgAlt)
 		+e.price
 			| Цена: !{item.price}.

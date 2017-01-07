@@ -10,9 +10,7 @@
 	"imgAlt": "Вязаные корзинки",
 	"imgMobile": "assets/images/triple-set-mobile@1x.jpg",
 	"imgMobile2x": "assets/images/triple-set-mobile@2x.jpg",
-	"imgTablet": "assets/images/triple-set-tablet@1x.jpg",
-	"imgTablet2x": "assets/images/triple-set-tablet@2x.jpg",
-	"imgDesktop": "assets/images/triple-set-desktop@1x.jpg",
-	"imgDesktop2x": "assets/images/triple-set-desktop@2x.jpg"
+	"imgTabDesk": "assets/images/triple-set-tab-desk@1x.jpg",
+	"imgTabDesk2x": "assets/images/triple-set-tab-desk@2x.jpg"
   }
 ]

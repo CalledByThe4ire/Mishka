@@ -23,7 +23,7 @@
 		bottom: 0;
 		left: 0;
 		display: block;
-		background-image: url('../images/hero-mobile@2x.png');
+		background-image: url("../images/hero-mobile@2x.png");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -39,7 +39,7 @@
 			position: absolute;
 			bottom: 0;
 			width: 100%;
-			background-image: url('../images/bg-zigzag-fill.svg');
+			background-image: url("../images/page-header-zigzag.svg");
 			background-position: center;
 			background-repeat: repeat-x;
 		}

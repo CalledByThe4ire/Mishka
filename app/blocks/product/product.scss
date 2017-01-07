@@ -31,6 +31,7 @@
 	&__heading {
 		@include heading--big();
 		margin-bottom: 0.5rem;
+		z-index: 5;
 
 		@media #{$tab-desk} {
 			margin-bottom: 5rem;
@@ -45,8 +46,7 @@
 				flex-basis: span(3);
 				margin-top: 5rem;
 				margin-right: span(2);
-				letter-spacing: -2px;
-				z-index: 5;
+				letter-spacing: -1.5px;
 			}
 		}
 	}
@@ -59,6 +59,7 @@
 		line-height: $leading / 1.875;
 		color: $color-secondary;
 		text-transform: uppercase;
+		z-index: 5;
 
 		@media #{$tab-desk} {
 			margin-bottom: 5rem;
@@ -146,11 +147,13 @@
 		}
 
 		@media #{$tablet} {
-			height: #{percentage(3.2/4)};
+			height: calc(#{percentage(4/4)} - 7.5rem);
+			margin-bottom: 7.5rem;
 		}
 
 		@media #{$desktop} {
-			height: #{percentage(4/4)};
+			height: calc(#{percentage(4/4)} - 9.5rem);
+			margin-bottom: 9.5rem;
 		}
 	}
 
@@ -163,13 +166,14 @@
 		color: #444444;
 		text-align: center;
 
-		@media #{$tablet} {
+		@media #{$tab-desk} {
 			margin-bottom: 3rem;
 		}
 	}
 
 	&__btn {
 		@include btn(0, 1.7rem);
+		margin-bottom: 4rem;
 		font-family: $font-family;
 		font-size: $font-size / 0.875; // 1.6
 		line-height: 1.6rem;
@@ -177,5 +181,13 @@
 		color: #444444;
 		text-transform: uppercase;
 		border: 2px solid #444444;
+
+		@media #{$tablet} {
+			margin-bottom: 7.5rem;
+		}
+
+		@media #{$desktop} {
+			margin-bottom: 9.5rem;
+		}
 	}
 }
