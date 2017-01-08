@@ -112,6 +112,7 @@
     "webpack-stream": "^3.1.0"
   },
   "dependencies": {
+    "lory.js": "^2.2.1",
     "susy": "^2.2.12"
   }
 }

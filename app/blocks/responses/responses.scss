@@ -46,6 +46,24 @@
 			margin: auto;
 		}
 
+		&:hover {
+			cursor: pointer;
+			& > .icon--arrow {
+				use {
+					fill: #444444;
+					transition-duration: 0.3s;
+				}
+			}
+		}
+
+		&:active {
+			& > .icon--arrow {
+				use {
+					fill: rgba(#444444, 0.3);
+				}
+			}
+		}
+
 		&:first-child {
 			transform: rotateY(180deg);
 		}
@@ -63,5 +81,17 @@
 		line-height: $leading / 1.875; // 1.6rem
 		color: #444444;
 		text-transform: uppercase;
+
+		&:hover {
+			background-color: #444444;
+			color: #ffffff;
+			transition-duration: 0.3s;
+		}
+
+		&:active {
+			background-color: #444444;
+			color: rgba(#ffffff, 0.3);
+			transition-duration: 0.3s;
+		}
 	}
 }
