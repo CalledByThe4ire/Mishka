@@ -113,6 +113,7 @@
   },
   "dependencies": {
     "lory.js": "^2.2.1",
-    "susy": "^2.2.12"
+    "susy": "^2.2.12",
+    "svg4everybody": "^2.1.4"
   }
 }
