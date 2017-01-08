@@ -4,11 +4,11 @@ mixin responses(responses)
 	+b('section').responses&attributes(attributes)
 		+e('header').heading
 			| Отзывы
-
-		+e('div').container
-			+e('ul').list
-				each item in responses
-					+response(item)(class='__item')
+		+e('div').slider
+			+e('div').container
+				+e('ul').list
+					each item in responses
+						+response(item)(class='__item')
 			+e('div').controls
 				+e('div').control
 					+icon('icon--arrow', 'responses-arrow', true, '50', '26')&attributes(attributes)
