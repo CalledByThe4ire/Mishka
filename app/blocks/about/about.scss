@@ -2,6 +2,10 @@
 	display: block;
 	margin-bottom: 3rem;
 
+	@media #{$tablet} {
+		margin-bottom: 2.5rem;
+	}
+
 	@media #{$desktop} {
 		@include with-layout($large) {
 			@include margin-x(#{span(1)});

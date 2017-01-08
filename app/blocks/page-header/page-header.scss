@@ -125,7 +125,7 @@
 
 		@media #{$tab-desk} {
 			position: absolute;
-			top: 111px;
+			top: 106px;
 			right: 50px;
 			display: block;
 		}
@@ -154,8 +154,10 @@
 		width: 100%;
 
 		@media #{$tab-desk} {
+			left: 5rem;
 			top: auto;
 			flex-direction: row;
+			width: calc(#{percentage(4 / 4)} - 10rem);
 
 			&:hover .btn {
 				padding-bottom: 3.3rem;
