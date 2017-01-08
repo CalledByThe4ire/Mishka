@@ -7,9 +7,9 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	const mqlTablet = window.matchMedia('only screen and (min-width: 768px) and (max-width: 1149px)');
 	const mqlDesktop = window.matchMedia('only screen and (min-width: 1150px)');
 
-	const nav = document.getElementById('nav');
+	const nav = document.querySelector('.js_nav');
+	const logo = document.querySelector('.js_logo');
 	const icon = document.querySelector('.icon');
-	const logo = document.querySelector('.page-header .logo');
 
 	const iconPath = '/assets/images/icon.svg#icon_nav-toggle-';
 	const openMod = 'open';
@@ -43,7 +43,7 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	 */
 	const setLogo = function (width, height, name) {
 		const iconLogoPath = '/assets/images/icon.svg#icon_';
-		logo.classList = 'logo logo--' + name;
+		logo.classList = 'logo js_logo logo--' + name;
 		logo.setAttribute('width', width);
 		logo.setAttribute('height', height);
 		logo.querySelector('use').setAttribute('xlink:href', iconLogoPath + 'logo-' + name);

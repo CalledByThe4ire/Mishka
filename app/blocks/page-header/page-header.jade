@@ -6,9 +6,9 @@ mixin page-header()
 	+b('header').page-header&attributes(attributes)
 		+e.logo(class='--visible')
 			+e('a').link(href='#')
-				+icon('logo', 'logo-mobile', true, '86', '35')&attributes(attributes)
+				+icon('logo', 'logo-mobile', true, '86', '35')(class='js_logo')
 			+e('a').toggle(href='#')
-				+icon('icon--close', 'nav-toggle-close', true, '22', '22')&attributes(attributes)
+				+icon('icon--close', 'nav-toggle-close', true, '22', '22')
 
 		+nav(getData('nav'))
 
