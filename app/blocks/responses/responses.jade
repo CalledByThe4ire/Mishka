@@ -4,15 +4,15 @@ mixin responses(responses)
 	+b('section').responses&attributes(attributes)
 		+e('header').heading
 			| Отзывы
-		+e('div').slider
-			+e('div').container
-				+e('ul').list
+		+e('div').slider(class='js_slider')
+			+e('div').container(class='js_frame')
+				+e('ul').list(class='js_slides')
 					each item in responses
-						+response(item)(class='__item')
+						+response(item)(class='__item js_slide')
 			+e('div').controls
-				+e('div').control
+				+e('div').control--prev(class='js_prev')
 					+icon('icon--arrow', 'responses-arrow', true, '50', '26')&attributes(attributes)
-				+e('div').control
+				+e('div').control--next(class='js_next')
 					+icon('icon--arrow', 'responses-arrow', true, '50', '26')&attributes(attributes)
 			+e('a').btn(href='#')
 				| Написать
