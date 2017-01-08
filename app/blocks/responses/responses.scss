@@ -1,8 +1,61 @@
 .responses {
 	position: relative;
 	display: block;
-	@include margin-x(-3rem);
+	padding-top: 7.5rem;
+	padding-bottom: 7rem;
 	@include padding-x(3rem);
+	@include margin-x(-3rem);
+
+	@media #{$tab-desk} {
+		@include margin-x(-5rem);
+		@include padding-x(5rem);
+	}
+
+	@media #{$desktop} {
+		padding-left: 0;
+		@include with-layout($large) {
+			margin-left: span(1);
+		}
+	}
+
+	&::before {
+		@media #{$tab-desk} {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			height: 100%;
+			@include padding-x(0);
+			background-image: url("../images/responses@2x.jpg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			z-index: -5;
+		}
+
+		@media #{$tablet} {
+			//padding-top: 7.5rem;
+			//padding-bottom: 7rem;
+
+			@include with-layout($medium) {
+				width: calc(#{span(2)} - 35px);
+			}
+		}
+
+		@media #{$desktop} {
+			//padding-top: 7.5rem;
+			//padding-bottom: 7rem;
+
+			@include with-layout($large) {
+				margin-left: calc((-#{span(1)}) - ((5rem * 2) / 6));
+				width: calc(#{span(2)} + (((5rem * 2) / 6)) * 2 );
+			}
+		}
+	}
+
+	@media #{$desktop} {
+	}
 
 	&::after {
 		content: "";
@@ -21,13 +74,33 @@
 	&__heading {
 		@include heading--big();
 		margin-bottom: 2.5rem;
+
+		@media #{$tablet} {
+			margin-bottom: 5.5rem;
+		}
+
+		@media #{$desktop} {
+			margin-bottom: 4.5rem;
+		}
+	}
+
+	&__container {
+		position: relative;
+		font-size: 0;
+		line-height: 0;
+		overflow: hidden;
 	}
 
 	&__list {
 		@include list-clear();
+		display: inline-block;
+		width: percentage(3/1);
 	}
 
 	&__item {
+		position: relative;
+		display: inline-block;
+		width: percentage(1/3);
 		margin-bottom: 2.5rem;
 	}
 
@@ -36,6 +109,27 @@
 		justify-content: space-around;
 		margin-bottom: 4.5rem;
 		border: 1px solid #ececec;
+
+		@media #{$tab-desk} {
+			position: absolute;
+			right: 5rem;
+			bottom: 7rem;
+			margin-bottom: 0;
+			border: none;
+			transform: translateY(-50%);
+		}
+
+		@media #{$tablet} {
+			@include with-layout($medium) {
+				width: calc(#{span(1)} - ((5rem * 2) / 4));
+			}
+		}
+
+		@media #{$desktop} {
+			@include with-layout($large) {
+				width: calc(#{span(1)} + ((5rem * 2) / 6));
+			}
+		}
 	}
 
 	&__control {
@@ -70,6 +164,10 @@
 
 		&:last-child {
 			border-left: 1px solid #ececec;
+
+			@media #{$tablet} {
+				border-left: none;
+			}
 		}
 	}
 
@@ -92,6 +190,24 @@
 			background-color: #444444;
 			color: rgba(#ffffff, 0.3);
 			transition-duration: 0.3s;
+		}
+
+		@media #{$tab-desk} {
+			position: absolute;
+			top: 7.5rem;
+			right: 5rem;
+
+			@media #{$tablet} {
+				@include with-layout($medium) {
+					width: calc(#{span(1)} - ((5rem * 2) / 4));
+				}
+			}
+
+			@media #{$desktop} {
+				@include with-layout($large) {
+					width: calc(#{span(1)} + ((5rem * 2) / 6));
+				}
+			}
 		}
 	}
 }

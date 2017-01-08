@@ -11,9 +11,11 @@
 
 	&__description {
 		margin-bottom: 2rem;
-	}
 
-	&__link {
+		@media #{$tab-desk} {
+			margin-bottom: 1rem;
+			font-size: $font-size / 0.875; // 1.6rem
+		}
 	}
 
 	&__author {

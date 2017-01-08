@@ -1,8 +1,15 @@
 // Basis
 
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
 html {
-min-width: $container--min;
-font-size: 62.5%;
+	box-sizing: border-box;
+	min-width: $container--min;
+	font-size: 62.5%;
 }
 
 body {
