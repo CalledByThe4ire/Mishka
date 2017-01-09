@@ -21,7 +21,7 @@
 
 		@media #{$tab-desk} {
 			flex-direction: row;
-			@include padding-x(5rem);
+			@include padding-x($offset--tablet);
 		}
 	}
 
@@ -145,9 +145,9 @@
 				justify-content: flex-end;
 				height: 90px;
 				@include padding-y(0);
-				padding-right: 5rem;
+				padding-right: $offset--desktop;
 				margin-left: auto;
-				margin-right: -5rem;
+				margin-right: -#{$offset--desktop};
 				font-size: 1.6rem;
 				background-color: #ffffff;
 			}

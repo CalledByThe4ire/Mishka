@@ -1,13 +1,13 @@
 .responses {
 	position: relative;
 	display: block;
-	@include margin-x(-3rem);
+	@include margin-x(-#{$offset--mobile});
 	margin-bottom: 7rem;
-	@include padding-x(3rem);
+	@include padding-x($offset--mobile);
 
 	@media #{$tab-desk} {
-		@include margin-x(-5rem);
-		@include padding-x(5rem);
+		@include margin-x(-#{$offset--desktop});
+		@include padding-x($offset--desktop);
 		padding-top: 7.5rem;
 		padding-bottom: 6.5rem;
 	}
@@ -45,8 +45,8 @@
 		@media #{$desktop} {
 
 			@include with-layout($large) {
-				margin-left: calc((-#{span(1)}) - ((5rem * 2) / 6));
-				width: calc(#{span(2)} + (((5rem * 2) / 6)) * 2 );
+				margin-left: calc((-#{span(1)}) - ((#{$offset--desktop} * 2) / 6));
+				width: calc(#{span(2)} + (((#{$offset--desktop} * 2) / 6)) * 2 );
 			}
 		}
 	}
@@ -126,13 +126,13 @@
 
 		@media #{$tablet} {
 			@include with-layout($medium) {
-				width: calc(#{span(1)} - ((5rem * 2) / 4));
+				width: calc(#{span(1)} - ((#{$offset--tablet} * 2) / 4));
 			}
 		}
 
 		@media #{$desktop} {
 			@include with-layout($large) {
-				width: calc(#{span(1)} + ((5rem * 2) / 6));
+				width: calc(#{span(1)} + ((#{$offset--desktop} * 2) / 6));
 			}
 		}
 	}
@@ -203,17 +203,13 @@
 
 			@media #{$tablet} {
 				@include with-layout($medium) {
-
-					// 5rem * 2 - отступы, 4 — общее кол-во колонок
-					width: calc(#{span(1)} - ((5rem * 2) / 4));
+					width: calc(#{span(1)} - ((#{$offset--tablet} * 2) / 4));
 				}
 			}
 
 			@media #{$desktop} {
 				@include with-layout($large) {
-
-					// 5rem * 2 - отступы, 6 — общее кол-во колонок
-					width: calc(#{span(1)} + ((5rem * 2) / 6));
+					width: calc(#{span(1)} + ((#{$offset--desktop} * 2) / 6));
 				}
 			}
 		}

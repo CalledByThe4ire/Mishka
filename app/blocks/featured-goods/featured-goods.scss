@@ -1,13 +1,13 @@
 .featured-goods {
 	position: relative;
 	display: block;
-	@include margin-x(-3rem);
-	@include padding-x(3rem);
+	@include margin-x(-#{$offset--mobile});
+	@include padding-x($offset--mobile);
 	margin-bottom: 3rem;
 
 	@media #{$tab-desk} {
-		@include margin-x(-5rem);
-		@include padding-x(5rem);
+		@include margin-x(-#{$offset--tablet});
+		@include padding-x($offset--tablet);
 	}
 
 	@media #{$tablet} {

@@ -3,7 +3,7 @@
 	display: flex;
 	flex-direction: column;
 	min-height: 453px;
-	@include margin-x(-3rem);
+	@include margin-x(-#{$offset--mobile});
 	margin-bottom: 16rem;
 	background-color: #fafafa;
 
@@ -57,7 +57,7 @@
 		position: relative;
 		flex-direction: row;
 		flex-wrap: wrap;
-		@include margin-x(-5rem);
+		@include margin-x(-#{$offset--desktop});
 
 		&::before {
 			top: 90px;
@@ -104,7 +104,7 @@
 		@include margin-x(auto);
 
 		@media #{$tablet} {
-			margin-left: 5rem;
+			margin-left: $offset--tablet;
 		}
 
 		@media #{$desktop} {
@@ -126,7 +126,7 @@
 		@media #{$tab-desk} {
 			position: absolute;
 			top: 106px;
-			right: 50px;
+			right: $offset--desktop;
 			display: block;
 		}
 	}
@@ -154,10 +154,10 @@
 		width: 100%;
 
 		@media #{$tab-desk} {
-			left: 5rem;
+			left: $offset--tablet;
 			top: auto;
 			flex-direction: row;
-			width: calc(#{percentage(4 / 4)} - 10rem);
+			width: calc( #{percentage(4 / 4)} - ($offset--tablet * 2));
 
 			&:hover .btn {
 				padding-bottom: 3.3rem;
