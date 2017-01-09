@@ -13,9 +13,9 @@
 	}
 
 	@media #{$desktop} {
-		padding-left: 0;
+		//padding-left: 0;
 		@include with-layout($large) {
-			margin-left: span(1);
+			padding-left: calc(#{span(1)} + #{$offset--desktop} );
 		}
 	}
 
@@ -36,17 +36,15 @@
 		}
 
 		@media #{$tablet} {
-
 			@include with-layout($medium) {
 				width: calc(#{span(2)} - 35px);
 			}
 		}
 
 		@media #{$desktop} {
-
+			margin-left: #{$offset--desktop};
 			@include with-layout($large) {
-				margin-left: calc((-#{span(1)}) - ((#{$offset--desktop} * 2) / 6));
-				width: calc(#{span(2)} + (((#{$offset--desktop} * 2) / 6)) * 2 );
+				width: calc(#{span(2)} - (#{$offset--desktop} * 2) / 3);
 			}
 		}
 	}
@@ -132,7 +130,7 @@
 
 		@media #{$desktop} {
 			@include with-layout($large) {
-				width: calc(#{span(1)} + ((#{$offset--desktop} * 2) / 6));
+				width: calc(#{span(1)} - (#{$offset--desktop} * 2) / 6);
 			}
 		}
 	}
@@ -170,7 +168,7 @@
 		&:last-child {
 			border-left: 1px solid #ececec;
 
-			@media #{$tablet} {
+			@media #{$tab-desk} {
 				border-left: none;
 			}
 		}
@@ -209,7 +207,7 @@
 
 			@media #{$desktop} {
 				@include with-layout($large) {
-					width: calc(#{span(1)} + ((#{$offset--desktop} * 2) / 6));
+					width: calc(#{span(1)} - (#{$offset--desktop} * 2) / 6);
 				}
 			}
 		}
