@@ -91,7 +91,7 @@
 
 			@media #{$tablet} {
 				left: 0;
-				width: calc(50% - 20px);
+				width: calc(#{percentage(2/4)} - 20px);
 			}
 
 			@media #{$desktop} {
@@ -157,7 +157,7 @@
 			left: $offset--tablet;
 			top: auto;
 			flex-direction: row;
-			width: calc( #{percentage(4 / 4)} - ($offset--tablet * 2));
+			width: calc( #{percentage(4 / 4)} - (#{$offset--tablet} * 2));
 
 			&:hover .btn {
 				padding-bottom: 3.3rem;
