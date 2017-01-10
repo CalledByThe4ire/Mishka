@@ -1,12 +1,15 @@
 include ../blocks/page/page
 include ../blocks/container/container
 include ../blocks/page-header/page-header
+
 include ../blocks/main-content/main-content
 include ../blocks/featured-goods/featured-goods
 include ../blocks/featured-goods/featured-goods
 include ../blocks/about/about
 include ../blocks/responses/responses
 include ../blocks/contacts/contacts
+
+include ../blocks/page-footer/page-footer
 
 extends ../blocks/layout-default/layout-default
 
@@ -24,3 +27,4 @@ block content
 			+about(getData('about'))
 			+responses(getData('responses'))
 			+contacts
+		+page-footer
