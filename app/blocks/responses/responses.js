@@ -2,7 +2,8 @@
 
 import {lory} from 'lory.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+export default window.addEventListener('DOMContentLoaded', () => {
+
 	const slider = document.querySelector('.js_slider');
 
 	lory(slider, {
@@ -10,4 +11,5 @@ document.addEventListener('DOMContentLoaded', () => {
 		rewind: true,
 		rewindSpeed: 1200
 	});
+
 });
