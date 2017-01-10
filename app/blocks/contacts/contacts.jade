@@ -2,15 +2,16 @@ include ../icon/icon
 
 mixin contacts()
 	+b.contacts&attributes(attributes)
-		+e('header').heading
-			span Контакты
-			+icon('icon--flag', 'contacts-flag', '47', '82', false)
-		+e('div').e-mail
-			span e-mail:
-			a(href='mailto:info@mimimishkashop.ru') info@mimimishkashop.ru
-		+e('div').address
-			span адрес:
-			span г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101
+		+e('div').container
+			+e('header').heading
+				span Контакты
+				+icon('icon--flag', 'contacts-flag', '47', '82', false)
+			+e('div').e-mail
+				span e-mail:
+				a(href='mailto:info@mimimishkashop.ru') info@mimimishkashop.ru
+			+e('div').address
+				span адрес:
+				span г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101
 		+e('a').btn Напишите нам
 		+e('div').map(class='js_map')
 

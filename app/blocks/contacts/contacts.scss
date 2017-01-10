@@ -4,8 +4,34 @@
 	flex-direction: column;
 	flex-wrap: wrap;
 
-	@media #{$tab-desk} {
+	@media #{$tablet} {
+		margin-bottom: 5.5rem;
+	}
+
+	@media #{$desktop} {
+		margin-bottom: 10.5rem;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+
+		@media #{$tab-desk} {
+			flex-direction: row;
+		}
+
+		@media #{$desktop} {
+			flex-direction: column;
+			@include with-layout($large) {
+				flex-basis: #{span(3)};
+			}
+		}
+	}
+
+	@media #{$desktop} {
 		flex-direction: row;
+		justify-content: space-between;
 	}
 
 	&__heading {
@@ -14,31 +40,24 @@
 
 		@media #{$tab-desk} {
 			display: flex;
+			align-items: center;
 		}
 
 		@media #{$tablet} {
 			justify-content: space-between;
 			flex-basis: percentage(4/4);
 			margin-bottom: 3.5rem;
-
-			& span {
-				align-self: center;
-			}
 		}
 
 		@media #{$desktop} {
 			@include with-layout($large) {
-				flex-basis: #{span(3)};
-				padding-left: #{span(1)};
-				margin-right: #{span(3)};
 			}
-			margin-bottom: 5rem;
-
 			& span {
+				order: 5;
 				@include with-layout($large) {
 					flex-basis: #{span(2)};
+					margin-left: #{span(2)};
 				}
-				order: 5;
 			}
 		}
 	}
@@ -54,7 +73,6 @@
 			position: absolute;
 			@include with-layout($large) {
 				width: #{span(1)};
-				margin-left: -#{span(1)};
 			}
 		}
 	}
@@ -83,11 +101,8 @@
 
 		@media #{$desktop} {
 			@include with-layout($large) {
-				flex-basis: #{span(2)};
-				margin-left: #{span(1)};
-				margin-right: #{span(3)};
+				margin-left: #{span(2)};
 			}
-			margin-bottom: 5.5rem;
 		}
 	}
 
@@ -99,12 +114,13 @@
 
 	&__btn {
 		@include btn();
+		order: 5;
+		margin-bottom: 4rem;
 		border: 2px solid $color-primary;
 		font-size: $font-size / 0.875; // 1.6rem
 		line-height: $leading / 1.875; // 1.6rem
-		color: #444444;
+		color: $text-color;
 		text-transform: uppercase;
-		order: 5;
 
 		&:hover {
 			background-color: $color-primary;
@@ -126,18 +142,17 @@
 		}
 
 		@media #{$desktop} {
-			order: initial;
+			position: absolute;
 			@include with-layout($large) {
-				//flex-basis: #{span(2)};
-				margin-left: #{span(1)};
-				margin-right: #{span(3)};
+				left: #{span(1)};
 			}
+			bottom: 0;
 		}
 	}
 
 	&__map {
 		flex-basis: 100%;
-		height: 457px;
+		min-height: 457px;
 		background-image: url("../images/map-tablet@1x.jpg");
 		background-position: center;
 		background-repeat: no-repeat;
@@ -153,13 +168,11 @@
 		}
 
 		@media #{$desktop} {
-			position: absolute;
-			right: 0;
-			bottom: 0;
+			margin-top: -7rem;
 			@include with-layout($large) {
-				width: #{span(3)};
+				flex-basis: #{span(3)};
 			}
-			margin-bottom: 0;
 		}
+
 	}
 }
