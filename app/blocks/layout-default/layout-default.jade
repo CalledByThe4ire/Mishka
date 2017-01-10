@@ -12,7 +12,6 @@ html(lang='ru')
 	include ../head/head
 	+page(class=bodyClass)
 		block content
-		//if bodyClass === '--index'
-		//	script( src="https://maps.googleapis.com/maps/api/js?&language=ru-RU&key=AIzaSyCRhKzTU_gWL9NdrYPeIDeKZSf85QDdoh4&callback=initMap", async,
-		//	defer)
 		+scripts(['app.min.js'])
+		if bodyClass === '--index'
+			script(src="https://maps.googleapis.com/maps/api/js?&language=ru-RU&key=AIzaSyCRhKzTU_gWL9NdrYPeIDeKZSf85QDdoh4&callback=initMap")
