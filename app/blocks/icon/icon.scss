@@ -110,7 +110,12 @@
 		height: 26px;
 
 		use {
-			fill: $color-primary;
+			fill: $link-color;
 		}
+	}
+
+	&--flag {
+		width: 47px;
+		height: 82px;
 	}
 }

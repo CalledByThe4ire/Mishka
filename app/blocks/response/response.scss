@@ -6,7 +6,7 @@
 		font-family: $font-family;
 		font-size: $font-size;
 		line-height: $leading;
-		color: #444444;
+		color: $text-color;
 	}
 
 	&__description {
@@ -30,5 +30,7 @@
 		font-size: $font-size;
 		line-height: $leading * 0.8;
 		font-weight: 700;
+		color: $link-color;
+
 	}
 }

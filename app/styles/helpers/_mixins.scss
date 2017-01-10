@@ -81,6 +81,7 @@
 	font-weight: 700;
 	font-size: 24px;
 	line-height: 30px;
+	color: #000000;
 
 	@media #{$tablet} {
 		font-size: 40px;
@@ -93,8 +94,43 @@
 	}
 }
 
+// Set link behaviour
+@mixin link() {
+	position: relative;
+	align-self: baseline;
+	color: $color-primary;
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: calc( #{percentage(2/2)} - 10px );
+		height: 1px;
+		padding-right: 1rem;
+		background-color: $color-secondary;
+	}
+
+	&:active {
+		color: $color-secondary;
+
+		&::after {
+			background-color: rgba($color-secondary, 0.3);
+			transition-duration: .3s;
+		}
+	}
+
+	&:hover {
+		color: $color-secondary;
+	}
+
+	&:active {
+		color: rgba($color-secondary, 0.3);
+	}
+}
+
 // Set button properties
-@mixin btn($padding-x: 3rem, $padding-y: 1.5rem) {
+@mixin btn($padding-x: 4.5rem, $padding-y: 1.5rem) {
 	display: flex;
 	justify-content: center;
 	@include padding-x($padding-x);

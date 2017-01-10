@@ -8,13 +8,13 @@ mixin nav(list)
 					when '--search'
 						+e('li').item(class=item.modClass)
 							+e(a).link(href=item.href)
-								+icon('icon--search', 'nav-search', true, '18', '18')&attributes(attributes)
+								+icon('icon--search', 'nav-search', '18', '18', true)&attributes(attributes)
 								span #{item.content}
 
 					when '--cart'
 						+e('li').item(class=item.modClass)
 							+e(a).link(href=item.href)
-								+icon('icon--cart', 'nav-cart', true, '20', '18')&attributes(attributes)
+								+icon('icon--cart', 'nav-cart', '20', '18', true)&attributes(attributes)
 								span #{item.content}
 
 					default

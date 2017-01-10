@@ -41,7 +41,6 @@
 		flex-direction: column;
 		min-height: 9.3rem;
 		margin-bottom: 3rem;
-
 		@media #{$tablet} {
 			min-height: 9.5rem;
 			margin-bottom: 6rem;
@@ -113,7 +112,7 @@
 			font-size: $font-size / 0.875; //1.6rem
 			line-height: 1.875rem; //1.6rem
 			font-weight: 700;
-			color: $text-color;
+			color: $link-color;
 
 			@media #{$tab-desk} {
 				font-size: $font-size / 0.7; //2rem

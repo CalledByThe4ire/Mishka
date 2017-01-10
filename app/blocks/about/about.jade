@@ -7,6 +7,6 @@ mixin about(list)
 		+e('ul').list&attributes(attributes)
 			each item in list
 				+e('li').item(class='--' + item.name)
-					+icon('icon--' + item.name, 'about-' + item.name, true, item.width, item.height)&attributes(attributes)
+					+icon('icon--' + item.name, 'about-' + item.name, item.width, item.height, true)&attributes(attributes)
 					span !{item.text}
 		block

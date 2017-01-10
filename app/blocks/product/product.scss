@@ -86,7 +86,7 @@
 		margin-bottom: 1.8rem;
 		font-size: $font-size;
 		line-height: $leading / 1.25; // 24
-		color: #444444;
+		color: $text-color;
 
 		@media #{$tab-desk} {
 			font-size: $font-size / 0.875; // 1.6
@@ -163,7 +163,7 @@
 		font-size: $font-size / 0.875; // 1.6
 		line-height: $leading / 1.25; // 24
 		font-weight: 700;
-		color: #444444;
+		color: $text-color;
 		text-align: center;
 
 		@media #{$tab-desk} {
@@ -178,9 +178,9 @@
 		font-size: $font-size / 0.875; // 1.6
 		line-height: 1.6rem;
 		font-weight: 700;
-		color: #444444;
+		color: $text-color;
 		text-transform: uppercase;
-		border: 2px solid #444444;
+		border: 2px solid $color-primary;
 
 		@media #{$tablet} {
 			margin-bottom: 7.5rem;

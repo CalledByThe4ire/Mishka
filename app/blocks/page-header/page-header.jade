@@ -6,9 +6,9 @@ mixin page-header()
 	+b('header').page-header&attributes(attributes)
 		+e.logo(class='--visible')
 			+e('a').link(href='#')
-				+icon('logo', 'logo-mobile', true, '86', '35')(class='js_logo')
+				+icon('logo', 'logo-mobile', '86', '35', true)(class='js_logo')
 			+e('a').toggle(href='#')
-				+icon('icon--close', 'nav-toggle-close', true, '22', '22')
+				+icon('icon--close', 'nav-toggle-close', '22', '22', true)
 
 		+nav(getData('nav'))
 
@@ -22,7 +22,7 @@ mixin page-header()
 		+e.btn-container
 			+btn(class='--left')
 				+e.txt Предметы<br>интерьера
-				+icon('icon--interior', 'page-header-interior', true, '42', '64')&attributes(attributes)
+				+icon('icon--interior', 'page-header-interior', '42', '64', true)
 			+btn(class='--right')
 				+e.txt Детские<br>игрушки
-				+icon('icon--toy', 'page-header-toy', true, '60', '60')&attributes(attributes)
+				+icon('icon--toy', 'page-header-toy', '60', '60', true)
