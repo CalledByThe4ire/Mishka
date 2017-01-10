@@ -1,0 +1,7 @@
+include ../icon/icon
+
+mixin copyright()
+	+b.copyright&attributes(attributes)
+		+e.text Разработано:
+		+e(a).link(href='https://htmlacademy.ru/', target="_blank")
+			+icon('icon--htmlacademy', 'footer-htmlacademy', '27', '34', true)&attributes(attributes)

@@ -9,7 +9,7 @@
 	}
 
 	@media #{$desktop} {
-		margin-bottom: 10.5rem;
+		margin-bottom: 6.5rem;
 	}
 
 	&__container {
@@ -139,6 +139,7 @@
 				flex-basis: calc(#{span(2)} - (#{$offset--desktop} * 2));
 			}
 			@include margin-x(auto);
+			margin-bottom: 0;
 		}
 
 		@media #{$desktop} {

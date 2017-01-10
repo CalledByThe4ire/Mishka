@@ -1,3 +1,24 @@
 .page-footer {
+	position: relative;
 	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	@include margin-x(-3rem);
+	@include padding-x(3rem);
+	background-color: #f1f1f1;
+
+	@media #{$tab-desk} {
+		justify-content: space-between;
+		min-height: 143px;
+		@include margin-x(-5rem);
+		@include padding-x(5rem);
+	}
+
+	&__logo {
+		display: none;
+
+		@media #{$tab-desk} {
+			display: flex;
+		}
+	}
 }

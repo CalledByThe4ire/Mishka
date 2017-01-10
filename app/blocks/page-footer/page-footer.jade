@@ -1,3 +1,13 @@
+include ../icon/icon
+include ../socials/socials
+include ../copyright/copyright
+
 mixin page-footer()
 	+b('footer').page-footer&attributes(attributes)
-		block
+		+e.logo
+			+e(a).link(href='#')
+				+icon('logo--footer', 'logo-footer', '102', '34', true)&attributes(attributes)
+
+		+socials(getData('socials'))
+
+		+copyright
