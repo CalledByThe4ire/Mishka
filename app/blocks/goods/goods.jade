@@ -1,0 +1,8 @@
+mixin goods()
+	+b('ul').goods&attributes(attributes)
+		+e.item(class='--left')
+			span Предметы<br>интерьера
+			+icon('icon--interior', 'page-header-interior', '42', '64', true)
+		+e.item(class='--right')
+			span Детские<br>игрушки
+			+icon('icon--toy', 'page-header-toy', '60', '60', true)

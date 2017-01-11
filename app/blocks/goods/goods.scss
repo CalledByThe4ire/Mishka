@@ -1,0 +1,115 @@
+.goods {
+	@include list-clear();
+	position: absolute;
+	top: 84%;
+	display: flex;
+	flex-direction: column;
+	width: percentage(2 / 2);
+
+	@media #{$tab-desk} {
+		left: $offset--tablet;
+		top: auto;
+		flex-direction: row;
+		width: calc(#{percentage(4 / 4)} - (#{$offset--tablet} * 2));
+
+		&:hover &__item {
+			padding-bottom: 3.3rem;
+		}
+	}
+
+	@media #{$tablet} {
+		bottom: 11px;
+	}
+
+	@media #{$desktop} {
+		bottom: 17px;
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		@include padding-x(3rem);
+		@include padding-y(2rem);
+		font-family: Tahoma, Arial, sans-serif;
+		font-size: $font-size / 0.777777777777778; // 1.8rem
+		line-height: $leading / 1.25; // 2.4rem
+		font-weight: 700;
+		color: #ffffff;
+		text-align: left;
+		white-space: nowrap;
+		vertical-align: middle;
+		text-decoration: none;
+		border: none;
+		cursor: pointer;
+		user-select: none;
+
+		& .icon,
+		span {
+			align-self: center;
+		}
+
+		& .icon {
+			opacity: 0.5;
+		}
+
+		&:hover {
+			& span,
+			& .icon {
+				position: relative;
+				top: -5px;
+			}
+		}
+
+		&:hover {
+			& .icon {
+				opacity: 0.7;
+				transition-duration: 0.3s;
+			}
+		}
+
+		&:hover {
+			span {
+				color: #ffffff;
+			}
+		}
+
+		&:active {
+			& span,
+			& .icon {
+				opacity: 0.3;
+				transition-duration: 0.3s;
+			}
+		}
+
+		&:hover {
+			padding-bottom: 2.5rem;
+		}
+
+		&--left {
+			background-color: $color-secondary;
+
+			&:hover,
+			&:active {
+				background-color: $color-secondary;
+			}
+		}
+
+		&--right {
+			background-color: desaturate($color-secondary, 10%);
+
+			&:hover,
+			&:active {
+				background-color: desaturate($color-secondary, 10%);
+			}
+		}
+
+		@media #{$tab-desk} {
+			width: percentage(2 / 4);
+			@include padding-x(3.5rem);
+			@include padding-y(2.8rem);
+			font-size: $font-size / 0.7; // 2rem
+			line-height: $leading;
+		}
+	}
+}
+

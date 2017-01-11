@@ -1,6 +1,5 @@
 include ../icon/icon
 include ../nav/nav
-include ../btn/btn
 
 mixin page-header()
 	+b('header').page-header&attributes(attributes)
@@ -15,14 +14,4 @@ mixin page-header()
 		+e.footnote
 			span
 				| Бесплатная доставка по России
-
-		+e('h1').heading
-			| Милые штуки ручной<br>работы для дома
-
-		+e.btn-container
-			+btn(class='--left')
-				+e.txt Предметы<br>интерьера
-				+icon('icon--interior', 'page-header-interior', '42', '64', true)
-			+btn(class='--right')
-				+e.txt Детские<br>игрушки
-				+icon('icon--toy', 'page-header-toy', '60', '60', true)
+		block

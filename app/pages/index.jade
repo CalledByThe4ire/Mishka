@@ -1,6 +1,8 @@
 include ../blocks/page/page
 include ../blocks/container/container
 include ../blocks/page-header/page-header
+include ../blocks/lead/lead
+include ../blocks/goods/goods
 
 include ../blocks/main-content/main-content
 include ../blocks/featured-goods/featured-goods
@@ -22,6 +24,9 @@ block head
 block content
 	+container
 		+page-header
+			+lead
+				| Милые штуки ручной<br>работы для дома
+			+goods
 		+main-content
 			+featured-goods(getData('featured-goods'))
 			+about(getData('about'))
