@@ -1,0 +1,98 @@
+{
+  "type": [
+    {
+      "inputType": "radio",
+      "name": "type",
+      "isChecked": true,
+      "isDisabled": false,
+	  "label": "Аксессуар для интерьера"
+    },
+    {
+      "inputType": "radio",
+	  "name": "type",
+	  "isChecked": false,
+	  "isDisabled": false,
+	  "label": "Детская игрушка"
+    }
+  ],
+  "color": [
+    {
+      "inputType": "checkbox",
+	  "name": "color",
+	  "isChecked": true,
+	  "isDisabled": false,
+	  "label": "Белый"
+    },
+	{
+	  "inputType": "checkbox",
+	  "name": "color",
+	  "isChecked": true,
+	  "isDisabled": false,
+	  "label": "Серый"
+	},
+	{
+	  "inputType": "checkbox",
+	  "name": "color",
+	  "isChecked": false,
+	  "isDisabled": false,
+	  "label": "«Тиффани»"
+	},
+	{
+	  "inputType": "checkbox",
+	  "name": "color",
+	  "isChecked": false,
+	  "isDisabled": false,
+	  "label": "Черный"
+	},
+	{
+	  "inputType": "checkbox",
+	  "name": "color",
+	  "isChecked": false,
+	  "isDisabled": false,
+	  "label": "Розовый"
+	},
+	{
+	  "inputType": "checkbox",
+	  "name": "color",
+	  "isChecked": false,
+	  "isDisabled": false,
+	  "label": "Оранжевый"
+	}
+  ],
+  "fullName": [
+    {
+      "inputType": "text",
+      "label": "Фамилия:",
+      "pattern": "^[A-Za-zА-Яа-яЁё\/s]+$",
+      "placeholder": "Укажите фамилию"
+    },
+	{
+	  "inputType": "text",
+	  "label": "Имя:",
+	  "pattern": "^[A-Za-zА-Яа-яЁё\/s]+$",
+	  "placeholder": "Введите ваше имя"
+	},
+	{
+	  "inputType": "text",
+	  "label": "Отчество:",
+	  "pattern": "^[A-Za-zА-Яа-яЁё\/s]+$",
+	  "placeholder": "Отчество, если желаете"
+	}
+  ],
+  "tel": [
+	{
+	  "inputType": "tel",
+	  "label": "",
+	  "pattern": "[0-9]{1} [0-9]{3} [0-9]{3}-[0-9]{2}-[0-9]{2}",
+	  "placeholder": "+7 ХХХ ХХ ХХ"
+	}
+  ],
+  "email": [
+	{
+	  "inputType": "email",
+	  "label": "",
+	  "pattern": "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$",
+	  "placeholder": "Ваш e-mail"
+	}
+  ]
+}

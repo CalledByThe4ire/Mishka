@@ -1,4 +1,6 @@
 include ../blocks/lead/lead
+include ../blocks/intro/intro
+include ../blocks/form/form
 
 extends ../blocks/layout-default/layout-default
 
@@ -11,3 +13,9 @@ block head
 block lead
 	+lead
 		| Вязание на заказ
+block main-content
+	+intro
+		p.
+			Мы будем рады воплотить в&nbsp;жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с&nbsp;вами, чтобы уточнить детали.
+	+form(getData('form'))
+
