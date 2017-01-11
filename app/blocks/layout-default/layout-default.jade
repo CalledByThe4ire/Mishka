@@ -1,17 +1,30 @@
 include ../../vendor/bemto/bemto-settings
 include ../../../node_modules/jade-injected/jade-injected
+
 include ../page/page
+include ../container/container
+include ../page-header/page-header
+include ../main-content/main-content
+include ../page-footer/page-footer
 include ../scripts/scripts
 
-- var bodyClass = '';
-
 block variables
+	- var bodyClass = '';
 
 doctype html
 html(lang='ru')
 	include ../head/head
 	+page(class=bodyClass)
-		block content
+		+container
+			block page-header
+				+page-header
+
+			+main-content
+				block main-content
+
+			block page-footer
+				+page-footer
+
 		+scripts(['app.min.js'])
 		if bodyClass === '--index'
 			script(src="https://maps.googleapis.com/maps/api/js?&language=ru-RU&key=AIzaSyCRhKzTU_gWL9NdrYPeIDeKZSf85QDdoh4&callback=initMap")

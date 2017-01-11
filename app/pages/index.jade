@@ -1,17 +1,9 @@
-include ../blocks/page/page
-include ../blocks/container/container
-include ../blocks/page-header/page-header
 include ../blocks/lead/lead
-include ../blocks/goods/goods
 
-include ../blocks/main-content/main-content
-include ../blocks/featured-goods/featured-goods
 include ../blocks/featured-goods/featured-goods
 include ../blocks/about/about
 include ../blocks/responses/responses
 include ../blocks/contacts/contacts
-
-include ../blocks/page-footer/page-footer
 
 extends ../blocks/layout-default/layout-default
 
@@ -21,15 +13,12 @@ block variables
 block head
 	- var pageTitle = 'Mishka';
 
-block content
-	+container
-		+page-header
-			+lead
-				| Милые штуки ручной<br>работы для дома
-			+goods
-		+main-content
-			+featured-goods(getData('featured-goods'))
-			+about(getData('about'))
-			+responses(getData('responses'))
-			+contacts
-		+page-footer
+block lead
+	+lead
+		| Милые штуки ручной<br>работы для дома
+
+block main-content
+	+featured-goods(getData('featured-goods'))
+	+about(getData('about'))
+	+responses(getData('responses'))
+	+contacts

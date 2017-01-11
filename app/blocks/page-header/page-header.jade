@@ -1,5 +1,6 @@
 include ../icon/icon
 include ../nav/nav
+include ../goods/goods
 
 mixin page-header()
 	+b('header').page-header&attributes(attributes)
@@ -14,4 +15,9 @@ mixin page-header()
 		+e.footnote
 			span
 				| Бесплатная доставка по России
-		block
+
+		block lead
+
+		if bodyClass === '--index'
+			block goods
+				+goods
