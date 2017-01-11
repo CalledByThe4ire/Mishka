@@ -1,15 +1,27 @@
 .lead {
-	@include heading--big;
 	position: absolute;
-	top: 45%;
-	left: 0;
+	top: 80px;
 	right: 0;
-	display: block;
-	transform: translateY(-50%);
-	text-align: center;
-	z-index: 10;
+	bottom: 0;
+	left: 0;
+	display: flex;
 
 	@media #{$tab-desk} {
-		top: 35%;
+		top: 90px;
+	}
+
+	@media #{$tablet} {
+		bottom: 22px;
+	}
+
+	@media #{$desktop} {
+		bottom: 34px;
+	}
+
+	& h1 {
+		@include heading--big;
+		margin: auto;
+		text-align: center;
+		z-index: 10;
 	}
 }

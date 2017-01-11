@@ -1,5 +1,6 @@
 .nav {
 	display: none;
+	height: 100%;
 
 	&--visible {
 		display: block;
@@ -22,6 +23,7 @@
 		@media #{$tab-desk} {
 			flex-direction: row;
 			@include padding-x($offset--tablet);
+			background-color: transparent;
 		}
 	}
 
