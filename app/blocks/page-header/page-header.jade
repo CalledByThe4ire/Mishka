@@ -4,7 +4,7 @@ include ../nav/nav
 mixin page-header()
 	+b('header').page-header&attributes(attributes)
 		+e.logo(class='--visible')
-			+e('a').link(href='#')
+			+e('a').link(href='index.html')
 				+icon('logo', 'logo-mobile', '86', '35', true)(class='js_logo')
 			+e('a').toggle(href='#')
 				+icon('icon--close', 'nav-toggle-close', '22', '22', true)

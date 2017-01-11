@@ -1,0 +1,26 @@
+include ../blocks/page/page
+include ../blocks/container/container
+include ../blocks/page-header/page-header
+include ../blocks/lead/lead
+
+include ../blocks/main-content/main-content
+
+include ../blocks/page-footer/page-footer
+
+extends ../blocks/layout-default/layout-default
+
+block variables
+	- bodyClass = '--form';
+
+block head
+	- var pageTitle = 'Mishka';
+
+block content
+	+container
+		+page-header
+			+lead
+				| Вязание на заказ
+
+		+main-content
+
+		+page-footer
