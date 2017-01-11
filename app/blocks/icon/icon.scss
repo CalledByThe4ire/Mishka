@@ -134,6 +134,20 @@
 		height: 20px;
 	}
 
+	&--facebook,
+	&--instagram,
+	&--twitter {
+		&:hover use {
+			fill: $color-secondary;
+			transition-duration: 0.3s;
+		}
+
+		&:active use {
+			fill: rgba($color-secondary, 0.3);
+			transition-duration: 0.3s;
+		}
+	}
+
 	&--htmlacademy {
 		width: 27px;
 		height: 34px;

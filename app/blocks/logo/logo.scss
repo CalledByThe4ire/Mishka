@@ -33,5 +33,15 @@
 	&--footer {
 		width: 102px;
 		height: 34px;
+
+		&:hover use {
+			fill: $color-secondary;
+			transition-duration: 0.3s;
+		}
+
+		&:active use {
+			fill: rgba($color-secondary, 0.3);
+			transition-duration: 0.3s;
+		}
 	}
 }
