@@ -2,11 +2,11 @@
 	@include btn(3rem, 2rem);
 	justify-content: space-between;
 	font-family: Tahoma, Arial, sans-serif;
-	font-weight: 700;
-	font-size: 1.8rem;
-	line-height: $leading / 1.25;
+	font-size: $font-size / 0.777777777777778; // 1.8rem
+	line-height: $leading / 1.25; // 2.4rem
 	color: #ffffff;
 	text-align: left;
+	border: none;
 
 	@media #{$tab-desk} {
 		flex-basis: 50%;
@@ -18,10 +18,20 @@
 
 	&--left {
 		background-color: $color-secondary;
+
+		&:hover,
+		&:active {
+			background-color: $color-secondary;
+		}
 	}
 
 	&--right {
 		background-color: desaturate($color-secondary, 10%);
+
+		&:hover,
+		&:active {
+			background-color: desaturate($color-secondary, 10%);
+		}
 	}
 
 	& .icon,

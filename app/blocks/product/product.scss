@@ -172,15 +172,27 @@
 	}
 
 	&__btn {
-		@include btn(0, 1.7rem);
+		@include btn();
 		margin-bottom: 4rem;
 		font-family: $font-family;
 		font-size: $font-size / 0.875; // 1.6
-		line-height: 1.6rem;
+		line-height: $leading / 1.875;
 		font-weight: 700;
 		color: $text-color;
 		text-transform: uppercase;
 		border: 2px solid $color-primary;
+
+		&:hover {
+			background-color: $color-primary;
+			color: #ffffff;
+			transition-duration: 0.3s;
+		}
+
+		&:active {
+			background-color: $color-primary;
+			color: rgba(#ffffff, 0.3);
+			transition-duration: 0.3s;
+		}
 
 		@media #{$tablet} {
 			margin-bottom: 7.5rem;

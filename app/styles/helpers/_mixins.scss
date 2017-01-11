@@ -137,22 +137,34 @@
 	@include padding-y($padding-y);
 	white-space: nowrap;
 	vertical-align: middle;
-	font: inherit;
+	font-family: $font-family;
+	font-size: $font-size / 0.875; // 1.6
+	line-height: $leading / 1.875;
+	color: $text-color;
+	font-weight: 700;
+	text-transform: uppercase;
 	text-decoration: none;
+	border: 2px solid $color-primary;
 	cursor: pointer;
 	user-select: none;
 
 	&:hover,
 	&--hover {
+		background-color: $color-primary;
+		color: #ffffff;
 		text-decoration: none;
+		transition-duration: 0.3s;
 	}
 
 	&:active,
 	&--active,
 	&:focus {
+		background-color: $color-primary;
+		color: rgba(#ffffff, 0.3);
 		text-decoration: none;
 		outline: 0;
 		box-shadow: none;
+		transition-duration: 0.3s;
 	}
 
 	&:disabled,

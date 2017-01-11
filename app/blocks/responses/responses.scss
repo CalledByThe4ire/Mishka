@@ -180,23 +180,6 @@
 
 	&__btn {
 		@include btn();
-		border: 2px solid $color-primary;
-		font-size: $font-size / 0.875; // 1.6rem
-		line-height: $leading / 1.875; // 1.6rem
-		color: #444444;
-		text-transform: uppercase;
-
-		&:hover {
-			background-color: $color-primary;
-			color: #ffffff;
-			transition-duration: 0.3s;
-		}
-
-		&:active {
-			background-color: $color-primary;
-			color: rgba(#ffffff, 0.3);
-			transition-duration: 0.3s;
-		}
 
 		@media #{$tab-desk} {
 			position: absolute;
