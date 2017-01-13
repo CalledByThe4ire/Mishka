@@ -1,3 +1,15 @@
 .form {
 	display: block;
+
+	&__fieldset {
+		border-top: 1px solid $color-secondary;
+
+		@media #{$tab-desk} {
+			border-top: none;
+		}
+	}
+
+	&__legend {
+		display: inline-block;
+	}
 }
