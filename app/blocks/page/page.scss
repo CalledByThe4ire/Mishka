@@ -43,13 +43,16 @@
 	&--form {
 		.page-header {
 			min-height: 267px;
+			margin-bottom: 2.5rem;
 
 			@media #{$tablet} {
 				min-height: 316px;
+				margin-bottom: 7rem;
 			}
 
 			@media #{$desktop} {
 				min-height: 345px;
+				margin-bottom: 12rem;
 			}
 		}
 	}
