@@ -3,6 +3,7 @@
 	font-family: $font-family;
 	font-size: $font-size;
 	line-height: $leading / 1.25;
+	margin-bottom: 3.5rem;
 
 	@media #{$tab-desk} {
 		font-size: $font-size / 0.875;
@@ -13,5 +14,9 @@
 		@include with-layout($large) {
 			@include margin-x(#{span(1)});
 		}
+	}
+
+	& p {
+		margin: 0;
 	}
 }

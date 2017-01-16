@@ -1,4 +1,11 @@
+include ../icon/icon
+
 mixin textInput(item, inputType)
 	+b('label')(class=inputType)
-		+e('caption').caption !{item.label}
-		+e('input').input(type=item.inputType, pattern=item.pattern, placeholder=item.placeholder)
+		+e.caption !{item.label}
+		+e('div').container
+			if item.inputType === 'tel'
+				+icon('icon--' + item.inputType, 'form-' + item.inputType, '25', '25', true)&attributes(attributes)
+			if item.inputType === 'email'
+				+icon('icon--' + item.inputType, 'form-' + item.inputType, '32', '22', true)&attributes(attributes)
+			+e('input').input(type=item.inputType, pattern=item.pattern, placeholder=item.placeholder)

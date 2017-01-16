@@ -2,14 +2,260 @@
 	display: block;
 
 	&__fieldset {
+		position: relative;
+		display: flex;
+		flex-direction: column;
 		border-top: 1px solid $color-secondary;
+
+		@media #{$tab-desk} {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		@media #{$tablet} {
+			@include with-layout($medium) {
+				padding-left: #{span(1)};
+			}
+		}
+
+		@media #{$desktop} {
+			@include with-layout($large) {
+				padding-left: #{span(1)};
+				margin-right: #{span(1)};
+			}
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			display: flex;
+			top: -8.5px; // font-size / 2
+			padding-right: 1rem;
+			font-family: $font-family;
+			font-size: 1.7rem;
+			line-height: 1.7rem;
+			font-weight: 700;
+			color: $color-secondary;
+			text-transform: uppercase;
+			background-color: #ffffff;
+
+			@media #{$tab-desk} {
+				position: relative;
+				top: auto;
+				align-self: baseline;
+				padding-right: 0;
+				background-color: transparent;
+			}
+
+			@media #{$tablet} {
+				width: percentage(1/3);
+				margin-left: -#{percentage(1/3)};
+			}
+
+			@media #{$desktop} {
+				justify-content: center;
+				width: percentage(1/5);
+				margin-left: -#{percentage(1/5)};
+				text-align: center;
+			}
+		}
+
+		&--type {
+			margin-bottom: 2rem;
+			padding-top: 3.5rem;
+			padding-bottom: 3.5rem;
+
+			&::before {
+				content: "Тип";
+			}
+
+			@media #{$tab-desk} {
+				margin-bottom: 3.5rem;
+			}
+		}
+
+		&--color {
+			margin-bottom: 1rem;
+			@include padding-y(4.5rem);
+
+			@media #{$tab-desk} {
+				margin-right: 0;
+				margin-bottom: 0;
+				@include padding-y(8rem);
+				background-color: #f1f1f1;
+			}
+
+			@media #{$desktop} {
+				@include with-layout($large) {
+					padding-right: #{span(1)};
+				}
+			}
+
+			&::before {
+				content: "Цвет";
+			}
+		}
+
+		&--full-name {
+			@include padding-y(4rem);
+
+			&::before {
+				content: "ФИО";
+
+				@media #{$tab-desk} {
+					line-height: 5rem;
+				}
+			}
+
+			@media #{$tab-desk} {
+				margin-bottom: 2.5rem;
+			}
+		}
+
+		&--tel {
+			margin-bottom: 3rem;
+			@include padding-y(2rem);
+
+			@media #{$tab-desk} {
+				margin-right: 0;
+				margin-bottom: 0;
+				padding-top: 5rem;
+				padding-bottom: 0;
+				background-color: #f1f1f1;
+
+				.text-field__caption {
+					padding-right: 0;
+				}
+			}
+
+			@media #{$desktop} {
+				@include with-layout($large) {
+					padding-right: #{span(1)};
+				}
+			}
+
+			&::before {
+				content: "Тел";
+
+				@media #{$tab-desk} {
+					line-height: 5rem;
+				}
+			}
+		}
+
+		&--e-mail {
+			margin-bottom: 2rem;
+			@include padding-y(2rem);
+
+			@media #{$tab-desk} {
+				margin-right: 0;
+				margin-bottom: 2.5rem;
+				padding-top: 2.5rem;
+				padding-bottom: 6.5rem;
+				background-color: #f1f1f1;
+
+				.text-field__caption {
+					padding-right: 0;
+				}
+			}
+
+			@media #{$desktop} {
+				@include with-layout($large) {
+					padding-right: #{span(1)};
+				}
+			}
+
+			&::before {
+				content: "E-mail";
+
+				@media #{$tab-desk} {
+					line-height: 5rem;
+				}
+			}
+		}
+
+		&--feedback {
+			margin-bottom: 2rem;
+			@include padding-y(4rem);
+
+			@media #{$tablet} {
+				margin-bottom: 1.5rem;
+			}
+
+			@media #{$desktop} {
+				margin-bottom: 5.5rem;
+			}
+
+			&::before {
+				content: "Доп";
+
+				@media #{$tab-desk} {
+					padding: 1.5rem;
+					line-height: 1.9rem;
+				}
+			}
+		}
+
+		&--submit {
+			display: flex;
+			align-items: center;
+			margin-bottom: 6rem;
+			border-top-color: transparent;
+
+			@media #{$tab-desk} {
+				margin-bottom: 5rem;
+				@include with-layout($medium) {
+					margin-left: -#{span(1)};
+				}
+			}
+
+			@media #{$desktop} {
+				margin-bottom: 9.5rem;
+				@include with-layout($large) {
+					margin-left: 0;
+				}
+			}
+		}
 
 		@media #{$tab-desk} {
 			border-top: none;
 		}
 	}
 
-	&__legend {
-		display: inline-block;
+	& label {
+		cursor: pointer;
+	}
+
+	&__submit {
+		@include btn();
+		width: 100%;
+		background-color: transparent;
+
+		&:focus {
+			color: #ffffff;
+		}
+
+		&:active {
+			color: rgba(#ffffff, 0.3);
+		}
+
+		@media #{$tab-desk} {
+			width: auto;
+			margin-right: auto;
+		}
+	}
+
+	&__footnote {
+		display: none;
+		font-size: $font-size / 0.875;
+		line-height: $leading;
+		text-align: right;
+
+		@media #{$tab-desk} {
+			display: block;
+			width: 50%;
+			padding-left: 1.5rem;
+			margin-left: auto;
+		}
 	}
 }

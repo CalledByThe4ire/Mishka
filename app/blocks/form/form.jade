@@ -6,35 +6,31 @@ mixin form(data)
 	+b('form').form(action='/hello', method='post')&attributes(attributes)
 
 		+e.fieldset--type(role='group')
-			+e.legend Тип
 			each item in data.type
 				+toggleInput(item, 'radio')
 
 		+e.fieldset--color(role='group')
-			+e.legend Цвет
 			each item in data.color
 				+toggleInput(item, 'checkbox')
 
 		+e.fieldset--full-name(role='group')
-			+e.legend ФИО
 			each item in data.fullName
 				+textInput(item, 'text-field')
 
 		+e.fieldset--tel(role='group')
-			+e.legend Тел
 			each item in data.tel
-				+textInput(item, 'tel')
+				+textInput(item, 'text-field')
 
 		+e.fieldset--e-mail(role='group')
-			+e.legend E-mail
 			each item in data.email
-				+textInput(item, 'email')
+				+textInput(item, 'text-field')
 
 		+e.fieldset--feedback(role='group')
-			+e.legend Доп
 				+textarea
 
 		+e.fieldset--submit(role='group')
 			+e('button').submit(type='submit')
 				| Отправить заказ
+			+e('span').footnote
+				| Все поля являются обязательными
 		block

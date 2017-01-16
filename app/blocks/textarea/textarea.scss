@@ -1,3 +1,31 @@
 .textarea {
 	display: block;
+	min-height: 150px;
+	padding: 15px;
+	width: 100%;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 1.7rem;
+	line-height: 1.9rem;
+	color: $link-color;
+	border: 2px solid $color-primary;
+
+	&::placeholder,
+	&:focus::placeholder {
+		color: rgba($color-primary, 0.3);
+	}
+
+	&:focus,
+	&:hover {
+		border-color: $color-secondary;
+		transition-duration: 0.3s;
+	}
+
+	&:invalid {
+		border-color: #f0b1b1;
+		transition-duration: 0.3s;
+	}
+
+	@media #{$tab-desk} {
+		min-height: 140px;
+	}
 }
