@@ -1,28 +1,30 @@
-.goods {
-	@include list-clear();
-	position: absolute;
-	top: 84%;
-	display: flex;
-	flex-direction: column;
-	width: percentage(2 / 2);
+.goods-categories {
+	&__list {
+		@include list-clear();
+		position: absolute;
+		top: 84%;
+		display: flex;
+		flex-direction: column;
+		width: percentage(2 / 2);
 
-	@media #{$tab-desk} {
-		left: $offset--tablet;
-		top: auto;
-		flex-direction: row;
-		width: calc(#{percentage(4 / 4)} - (#{$offset--tablet} * 2));
+		@media #{$tab-desk} {
+			left: $offset--tablet;
+			top: auto;
+			flex-direction: row;
+			width: calc(#{percentage(4 / 4)} - (#{$offset--tablet} * 2));
 
-		&:hover &__item {
-			padding-bottom: 3.3rem;
+			&:hover &__item {
+				padding-bottom: 3.3rem;
+			}
 		}
-	}
 
-	@media #{$tablet} {
-		bottom: 11px;
-	}
+		@media #{$tablet} {
+			bottom: 11px;
+		}
 
-	@media #{$desktop} {
-		bottom: 17px;
+		@media #{$desktop} {
+			bottom: 17px;
+		}
 	}
 
 	&__item {

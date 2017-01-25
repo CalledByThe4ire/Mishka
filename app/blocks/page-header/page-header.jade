@@ -1,6 +1,6 @@
 include ../icon/icon
 include ../nav/nav
-include ../goods/goods
+include ../goods-categories/goods-categories
 
 mixin page-header()
 	+b('header').page-header&attributes(attributes)
@@ -20,4 +20,4 @@ mixin page-header()
 
 		if bodyClass === '--index'
 			block goods
-				+goods
+				+goods-categories
