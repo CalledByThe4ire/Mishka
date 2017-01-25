@@ -21,7 +21,7 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	 * для мобильной версии сайта
 	 * @param {MouseEvent} evt
 	 */
-	const toggleNav = function (evt) {
+	const toggleNav = evt => {
 		evt.target.classList.toggle('icon--' + closeMod);
 		nav.classList.toggle('nav--' + visibleMod);
 
@@ -41,7 +41,7 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	 * @param {String} height
 	 * @param {String} name
 	 */
-	const setLogo = function (width, height, name) {
+	const setLogo = (width, height, name) => {
 		const iconLogoPath = '/assets/images/icon.svg#icon_';
 		logo.classList = 'logo js_logo logo--' + name;
 		logo.setAttribute('width', width);
@@ -49,7 +49,7 @@ export default window.addEventListener('DOMContentLoaded', () => {
 		logo.querySelector('use').setAttribute('xlink:href', iconLogoPath + 'logo-' + name);
 	};
 
-	icon.addEventListener('click', function (evt) {
+	icon.addEventListener('click', evt => {
 		toggleNav(evt);
 	});
 
