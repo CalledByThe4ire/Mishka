@@ -1,8 +1,8 @@
-include ../product/product
+include ../featured-product/featured-product
 
 mixin featured-goods(list)
 	+b('section').featured-goods&attributes(attributes)
 		+e('ul').list
 			each item in list
-				+product(item)(class='__item')
+				+featured-product(item)(class='__item')
 
