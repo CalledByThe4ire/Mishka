@@ -1,8 +1,13 @@
 .goods {
-	display: flex;
-	flex-direction: column;
-
 	&__list {
 		@include list-clear();
+		display: flex;
+		flex-direction: column;
+
+		@media #{$desktop} {
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+		}
 	}
 }

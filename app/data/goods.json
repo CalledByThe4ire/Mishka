@@ -17,7 +17,7 @@
 	"description": "Диаметр 15&nbsp;см, высота 10&nbsp;см",
 	"price": "690&nbsp;руб.",
 	"href": "#",
-	"imgAlt": "Корзинка для&nbsp;белья",
+	"imgAlt": "Корзинка для белья",
 	"imgMobile2x": "assets/images/photo-2-mobile@2x.jpg",
 	"imgTablet": "assets/images/photo-2-tablet@1x.jpg",
 	"imgTablet2x": "assets/images/photo-2-tablet@2x.jpg",
@@ -25,11 +25,11 @@
 	"imgDesktop2x": "assets/images/photo-2-desktop@2x.jpg"
   },
   {
-	"heading": "Большая корзинка для&nbsp;игрушек",
+	"heading": "Большая корзинка<br>для&nbsp;игрушек",
 	"description": "Диаметр 30&nbsp;см, высота 30&nbsp;см",
 	"price": "1&nbsp;500&nbsp;руб.",
 	"href": "#",
-	"imgAlt": "Большая корзинка для&nbsp;игрушек",
+	"imgAlt": "Большая корзинка для игрушек",
 	"imgMobile2x": "assets/images/photo-3-mobile@2x.jpg",
 	"imgTablet": "assets/images/photo-3-tablet@1x.jpg",
 	"imgTablet2x": "assets/images/photo-3-tablet@2x.jpg",
