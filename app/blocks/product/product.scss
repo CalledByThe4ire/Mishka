@@ -1,0 +1,14 @@
+.product {
+	display: flex;
+	flex-direction: column;
+
+	picture {
+		line-height: 0;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		background-color: #fff;
+	}
+}

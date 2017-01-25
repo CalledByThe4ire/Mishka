@@ -1,0 +1,39 @@
+[
+  {
+	"heading": "Зайчик-попрыгайчик",
+	"description": "Рост 30&nbsp;см, вес 200&nbsp;г",
+	"price": "1&nbsp;200&nbsp;руб.",
+	"href": "#",
+	"imgAlt": "Зайчик-попрыгайчик",
+	"imgMobile2x": "assets/images/photo-1-mobile@2x.jpg",
+	"imgTablet": "assets/images/photo-1-tablet@1x.jpg",
+	"imgTablet2x": "assets/images/photo-1-tablet@2x.jpg",
+	"imgDesktop": "assets/images/photo-1-desktop@1x.jpg",
+	"imgDesktop2x": "assets/images/photo-1-desktop@2x.jpg"
+  },
+
+  {
+	"heading": "Корзинка для&nbsp;белья",
+	"description": "Диаметр 15&nbsp;см, высота 10&nbsp;см",
+	"price": "690&nbsp;руб.",
+	"href": "#",
+	"imgAlt": "Корзинка для&nbsp;белья",
+	"imgMobile2x": "assets/images/photo-2-mobile@2x.jpg",
+	"imgTablet": "assets/images/photo-2-tablet@1x.jpg",
+	"imgTablet2x": "assets/images/photo-2-tablet@2x.jpg",
+	"imgDesktop": "assets/images/photo-2-desktop@1x.jpg",
+	"imgDesktop2x": "assets/images/photo-2-desktop@2x.jpg"
+  },
+  {
+	"heading": "Большая корзинка для&nbsp;игрушек",
+	"description": "Диаметр 30&nbsp;см, высота 30&nbsp;см",
+	"price": "1&nbsp;500&nbsp;руб.",
+	"href": "#",
+	"imgAlt": "Большая корзинка для&nbsp;игрушек",
+	"imgMobile2x": "assets/images/photo-3-mobile@2x.jpg",
+	"imgTablet": "assets/images/photo-3-tablet@1x.jpg",
+	"imgTablet2x": "assets/images/photo-3-tablet@2x.jpg",
+	"imgDesktop": "assets/images/photo-3-desktop@1x.jpg",
+	"imgDesktop2x": "assets/images/photo-3-desktop@2x.jpg"
+  }
+]

@@ -1,4 +1,5 @@
 include ../blocks/lead/lead
+include ../blocks/goods/goods
 
 extends ../blocks/layout-default/layout-default
 
@@ -12,3 +13,4 @@ block lead
 	+lead
 		| Каталог товаров
 block main-content
+	+goods(getData('goods'))

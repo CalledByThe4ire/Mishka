@@ -1,0 +1,8 @@
+.goods {
+	display: flex;
+	flex-direction: column;
+
+	&__list {
+		@include list-clear();
+	}
+}

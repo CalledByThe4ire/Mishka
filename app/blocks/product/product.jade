@@ -1,0 +1,18 @@
+include ../icon/icon
+
+mixin product(item)
+	+b&attributes(attributes)
+		+b('article').product
+			picture
+				source( media='(min-width: 1150px)', srcset=item.imgDesktop + ' 1x, ' + item.imgDesktop2x + ' 2x' )
+				source( media='(min-width: 768px)', srcset=item.imgTablet + ' 1x, ' + item.imgTablet2x + ' 2x' )
+				+e('img').image(src=item.imgMobile2x, alt=item.imgAlt, title=item.imgAlt)
+			+e.info
+				+e('header').heading
+					| !{item.heading}
+				+e.description
+					| !{item.description}
+				+e.price
+					span !{item.price}
+					+e(a).link(href=item.href)
+						+icon('icon--cart', 'nav-cart', '20', '18', true)&attributes(attributes)
