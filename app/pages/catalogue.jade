@@ -1,0 +1,14 @@
+include ../blocks/lead/lead
+
+extends ../blocks/layout-default/layout-default
+
+block variables
+	- bodyClass = '--form';
+
+block head
+	- var pageTitle = 'Mishka';
+
+block lead
+	+lead
+		| Каталог товаров
+block main-content
