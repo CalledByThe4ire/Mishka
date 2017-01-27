@@ -1,0 +1,30 @@
+.video {
+	position: relative;
+	display: block;
+
+	&__controls {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: none;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	video {
+		width: 100%;
+		height: 100%;
+		background-image: url("../images/video-mobile@2x.png");
+		background-repeat: no-repeat;
+		background-position: center;
+
+		@media #{$tablet} {
+			background-image: url("../images/video-tablet.png");
+			@include retinaBackground(video-tablet);
+		}
+
+		@media #{$desktop} {
+			background-image: url("../images/video-desktop.png");
+			@include retinaBackground(video-desktop);
+		}
+	}
+ }

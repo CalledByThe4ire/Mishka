@@ -10,22 +10,22 @@
 	"content": "Вязание на заказ"
   },
   {
-	"href": "#",
+	"href": "javascript:void(0)",
 	"modClass": "--search",
 	"content": "Поиск по сайту"
   },
   {
-	"href": "#",
+	"href": "javascript:void(0)",
 	"modClass": "--cart",
 	"content": "Корзина: пока пуста"
   },
   {
-	"href": "#",
+	"href": "javascript:void(0)",
 	"modClass": "",
 	"content": "Новые поступления"
   },
   {
-	"href": "#",
+	"href": "javascript:void(0)",
 	"modClass": "",
 	"content": "Распродажа"
   }

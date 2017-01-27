@@ -1,0 +1,9 @@
+mixin video()
+	+b.video&attributes(attributes)
+		video(class='js_video', width='100%', height='100%', preload='none',
+		poster='assets/images/video-mobile@2x.png',
+		controls)
+			source(src='assets/video/video.mp4', type='video/mp4')
+		+e.controls(class='js_video__controls')
+			+b('a').btn(class='js_play', href='javascript:void(0)', role='button')
+				+icon('icon--play', 'production-process-play', '101', '77', true)
