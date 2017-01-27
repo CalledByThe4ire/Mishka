@@ -1,0 +1,21 @@
+include ../icon/icon
+
+mixin production-process()
+	+b.production-process&attributes(attributes)
+		+b.video
+			video(class='js_video', width='100%', height='100%', preload='none',
+			poster='assets/images/video-mobile@2x.jpg',
+			controls)
+				source(src='assets/video/video.mp4', type='video/mp4')
+			+e.controls
+				+b('a').btn(class='js_play', href='#', role='button')
+					+icon('icon--flag', 'production-process-play', '101', '77', true)
+		+e.info
+			+e('header').heading
+				+icon('icon--video', 'production-process-video', '32', '22', true)
+				span Процесс производства
+			+e.description
+				| По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+			+e('a').btn(href='#', role='button')
+				| Сделать заказ
+

@@ -1,5 +1,6 @@
 include ../blocks/lead/lead
 include ../blocks/goods/goods
+include ../blocks/production-process/production-process
 
 extends ../blocks/layout-default/layout-default
 
@@ -14,3 +15,4 @@ block lead
 		| Каталог товаров
 block main-content
 	+goods(getData('goods'))
+	+production-process
