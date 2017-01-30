@@ -3,13 +3,12 @@ include ../video/video
 
 mixin production-process()
 	+b.production-process&attributes(attributes)
+		+e('header').heading
+			+icon('icon--video', 'production-process-video', '32', '22', true)
+			span Процесс производства
 		+video
-		+e.info
-			+e('header').heading
-				+icon('icon--video', 'production-process-video', '32', '22', true)
-				span Процесс производства
-			+e.description
-				| По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-			+e('a').btn(href='#', role='button')
-				| Сделать заказ
+		+e.description
+			| По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+		+e('a').btn(href='javascript:void(0)', role='button')
+			| Сделать заказ
 

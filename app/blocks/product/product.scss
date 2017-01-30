@@ -1,8 +1,20 @@
 .product {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 3rem;
 	border: 1px solid #ececec;
+	cursor: pointer;
+
+	@media #{$tablet} {
+		flex-direction: row;
+	}
+
+	@media #{$desktop} {
+		flex-direction: column;
+
+		@include with-layout($large) {
+			flex-basis: calc(#{span(2)} - #{$offset--desktop / 2});
+		}
+	}
 
 	&:hover {
 		box-shadow: 0 6px 6px 0 rgba(#000, 0.1);
@@ -11,20 +23,6 @@
 
 	&:active {
 		box-shadow: 0 3px 3px 0 rgba(#000, 0.1);
-	}
-
-	@media #{$tablet} {
-		flex-direction: row;
-		margin-bottom: 5.5rem;
-	}
-
-	@media #{$desktop} {
-		flex-direction: column;
-		margin-bottom: 5.5rem;
-
-		@include with-layout($large) {
-			flex-basis: calc(#{span(2)} - #{$offset--desktop / 2});
-		}
 	}
 
 	&__image {
@@ -49,8 +47,8 @@
 	&__info {
 		display: flex;
 		flex-direction: column;
+		padding-top: 2.5rem;
 		@include padding-x(2.5rem);
-		background-color: #fff;
 
 		@media #{$tablet} {
 			@include with-layout($medium) {
@@ -64,7 +62,6 @@
 	}
 
 	&__container {
-		min-height: 100px;
 
 		@media #{$tab-desk} {
 			min-height: 120px;
@@ -72,7 +69,6 @@
 	}
 
 	&__heading {
-		padding-top: 2.5rem;
 		padding-bottom: 1rem;
 		font-family: Verdana, Tahoma, Arial, sans-serif;
 		font-size: $font-size / 0.875; //1.6rem
@@ -86,7 +82,7 @@
 	}
 
 	&__description {
-		margin-bottom: 2rem;
+		margin-bottom: 2.5rem;
 	}
 
 	&__price {

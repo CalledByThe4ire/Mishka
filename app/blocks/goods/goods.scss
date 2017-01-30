@@ -1,4 +1,9 @@
 .goods {
+	margin-bottom: 3rem;
+
+	@media #{$tab-desk} {
+		margin-bottom: 5.5rem;
+	}
 	&__list {
 		@include list-clear();
 		display: flex;
@@ -8,6 +13,18 @@
 			flex-direction: row;
 			flex-wrap: nowrap;
 			justify-content: space-between;
+		}
+	}
+
+	&__item {
+		margin-bottom: 3rem;
+
+		@media #{$tab-desk} {
+			margin-bottom: 5.5rem;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 }

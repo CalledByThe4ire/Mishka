@@ -1,6 +1,65 @@
 .production-process {
 	position: relative;
-	display: block;
-}
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	@include padding-x(2.5rem);
+	border: 1px solid #ececec;
+	cursor: pointer;
 
-// "../images/responses@2x.jpg"
+	&:hover {
+		box-shadow: 0 6px 6px 0 rgba(#000, 0.1);
+		transition-duration: 0.3s;
+	}
+
+	&:active {
+		box-shadow: 0 3px 3px 0 rgba(#000, 0.1);
+	}
+
+	@media #{$tab-desk} {
+		@include padding-x(4rem);
+	}
+
+	@media #{$desktop} {
+		flex-direction: row;
+	}
+
+	&__heading {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 3rem;
+		font-family: Verdana, Tahoma, Arial, sans-serif;
+		font-size: $font-size / 0.875; //1.6rem
+		line-height: $leading / 1.25; //2.4rem
+		font-weight: 700;
+		color: #000;
+
+		@media #{$tab-desk} {
+			justify-content: flex-start;
+			margin-bottom: 3.5rem;
+			font-size: $font-size / 0.77777777777778; //1.8rem
+		}
+
+		.icon {
+			margin-right: 2.5rem;
+		}
+
+	}
+
+	&__description {
+		margin-bottom: 2.5rem;
+		line-height: $leading / 1.25; //2.4rem
+
+		@media #{$tab-desk} {
+			margin-bottom: 3rem;
+			font-size: $font-size / 0.875; //1.6rem
+			line-height: $leading
+		}
+	}
+
+	&__btn {
+		@include btn();
+		margin-bottom: 3.5rem;
+	}
+}

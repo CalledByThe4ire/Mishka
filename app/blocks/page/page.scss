@@ -40,19 +40,29 @@
 		}
 	}
 
-	&--form {
+	&--form,
+	&--catalogue {
 		.page-header {
-			min-height: 267px;
+			min-height: 265px;
 			margin-bottom: 3rem;
 
 			@media #{$tablet} {
-				min-height: 316px;
+				min-height: 325px;
 				margin-bottom: 7rem;
 			}
 
 			@media #{$desktop} {
-				min-height: 345px;
+				min-height: 360px;
 				margin-bottom: 11rem;
+			}
+		}
+	}
+
+	&--catalogue {
+		.page-header {
+
+			@media #{$mobile} {
+				min-height: 255px;
 			}
 		}
 	}

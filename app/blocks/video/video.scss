@@ -1,6 +1,23 @@
 .video {
 	position: relative;
 	display: block;
+	@include padding-x(0.5rem); // container's 2.5rem + 0.5rem = 3rem
+	@include margin-x(-#{$offset--mobile}); // 3rem
+	margin-bottom: 2.5rem;
+	line-height: 0;
+	order: -1;
+
+	@media #{$tab-desk} {
+		@include padding-x(1rem);
+		@include margin-x(-#{$offset--desktop});
+		margin-bottom: 3.5rem;
+	}
+
+	@media #{$desktop} {
+		@include with-layout($large) {
+			width: #{span(4)};
+		}
+	}
 
 	&__controls {
 		position: absolute;
@@ -27,4 +44,4 @@
 			@include retinaBackground(video-desktop);
 		}
 	}
- }
+}
