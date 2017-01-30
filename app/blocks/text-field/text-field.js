@@ -2,7 +2,7 @@
 
 export default window.addEventListener('DOMContentLoaded', () => {
 
-	const textField = Array.prototype.slice.call( document.querySelectorAll('.text-field .text-field__input') );
+	const textField = Array.prototype.slice.call(document.querySelectorAll('.text-field .text-field__input'));
 	const email = document.querySelector('input[type=\'email\']');
 
 	const mqlMobile = window.matchMedia('only screen and (max-width: 767px)');
@@ -21,35 +21,30 @@ export default window.addEventListener('DOMContentLoaded', () => {
 		}
 	};
 
-	if (textField) {
-		textField.forEach(el => {
-			('focus blur'.split(' ')).forEach( evt => el.addEventListener(evt, toggleFocus) );
-		});
-	}
-
-	if (mqlMobile.matches) {
+	/**
+	 * Меняет значение атрибута в зависимости от размера окна браузера
+	 */
+	const matchMedia = () => {
 		if (email) {
-			email.setAttribute('placeholder', 'Ваш e-mail');
-		}
-	}
-
-	if (mqlTabDesk.matches) {
-		if (email) {
-			email.setAttribute('placeholder', 'Мы не будем спамить, честно!');
-		}
-	}
-
-	window.addEventListener('resize', () => {
-		if (mqlMobile.matches) {
-			if (email) {
+			if (mqlMobile.matches) {
 				email.setAttribute('placeholder', 'Ваш e-mail');
 			}
-		}
 
-		if (mqlTabDesk.matches) {
-			if (email) {
+			if (mqlTabDesk.matches) {
 				email.setAttribute('placeholder', 'Мы не будем спамить, честно!');
 			}
 		}
+	};
+
+	if (textField) {
+		textField.forEach(el => {
+			('focus blur'.split(' ')).forEach(evt => el.addEventListener(evt, toggleFocus));
+		});
+	}
+
+	matchMedia();
+
+	window.addEventListener('resize', () => {
+		matchMedia();
 	});
 });

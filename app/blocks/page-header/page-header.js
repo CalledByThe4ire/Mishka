@@ -49,33 +49,10 @@ export default window.addEventListener('DOMContentLoaded', () => {
 		logo.querySelector('use').setAttribute('xlink:href', iconLogoPath + 'logo-' + name);
 	};
 
-	icon.addEventListener('click', evt => {
-		toggleNav(evt);
-	});
-
-	if (mqlTabDesk.matches) {
-		if (!nav.classList.contains('nav--' + visibleMod)) {
-			nav.classList.add('nav--' + visibleMod);
-		}
-	}
-
-	if (mqlMobile.matches) {
-		setLogo('86px', '35px', 'mobile');
-
-		if (icon.classList.contains('icon--' + openMod)) {
-			nav.classList.remove('nav--' + visibleMod);
-		}
-	}
-
-	if (mqlTablet.matches) {
-		setLogo('114px', '48px', 'tablet');
-	}
-
-	if (mqlDesktop.matches) {
-		setLogo('150px', '74px', 'desktop');
-	}
-
-	window.addEventListener('resize', () => {
+	/**
+	 * Меняет значение атрибута в зависимости от размера окна браузера
+	 */
+	const matchMedia = () => {
 		if (mqlTabDesk.matches) {
 			if (!nav.classList.contains('nav--' + visibleMod)) {
 				nav.classList.add('nav--' + visibleMod);
@@ -97,6 +74,16 @@ export default window.addEventListener('DOMContentLoaded', () => {
 		if (mqlDesktop.matches) {
 			setLogo('150px', '74px', 'desktop');
 		}
+	};
+
+	icon.addEventListener('click', evt => {
+		toggleNav(evt);
+	});
+
+	matchMedia();
+
+	window.addEventListener('resize', () => {
+		matchMedia();
 	});
 
 });
