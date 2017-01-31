@@ -5,7 +5,7 @@
 	@include margin-x(-#{$offset--mobile}); // 3rem
 	margin-bottom: 2.5rem;
 	line-height: 0;
-	order: -1;
+	order: -5;
 
 	@media #{$tab-desk} {
 		@include padding-x(1rem);
@@ -14,8 +14,12 @@
 	}
 
 	@media #{$desktop} {
+		position: absolute;
+		left: 4rem;
+		top: 0;
+		margin-bottom: 0;
 		@include with-layout($large) {
-			width: #{span(4)};
+			flex-basis: calc(#{span(4)} + #{$offset--desktop});
 		}
 	}
 
@@ -25,6 +29,17 @@
 		left: 50%;
 		display: none;
 		transform: translateX(-50%) translateY(-50%);
+
+		& .icon:hover {
+			transform: scale(1.2);
+			transition-duration: 0.3s;
+		}
+
+		& .icon:active {
+			transform: scale(0.8);
+			opacity: 0.3;
+			transition-duration: 0.3s;
+		}
 	}
 
 	video {
@@ -40,6 +55,8 @@
 		}
 
 		@media #{$desktop} {
+			width: auto;
+			height: auto;
 			background-image: url("../images/video-desktop.png");
 			@include retinaBackground(video-desktop);
 		}

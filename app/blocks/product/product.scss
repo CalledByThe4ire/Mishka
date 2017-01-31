@@ -10,19 +10,37 @@
 
 	@media #{$desktop} {
 		flex-direction: column;
-
-		@include with-layout($large) {
-			flex-basis: calc(#{span(2)} - #{$offset--desktop / 2});
-		}
 	}
 
 	&:hover {
 		box-shadow: 0 6px 6px 0 rgba(#000, 0.1);
 		transition-duration: 0.3s;
+
+		& .product__heading,
+		& .product__price {
+			color: rgba($link-color, 0.6);
+			transition-duration: 0.3s;
+		}
+
+		& .product__link .icon use {
+			fill: $color-secondary;
+			transition-duration: 0.3s;
+		}
 	}
 
 	&:active {
 		box-shadow: 0 3px 3px 0 rgba(#000, 0.1);
+
+		& .product__heading,
+		& .product__price {
+			color: rgba($link-color, 0.3);
+			transition-duration: 0.3s;
+		}
+
+		& .product__link .icon use {
+			fill: rgba($color-secondary, 0.3);
+			transition-duration: 0.3s;
+		}
 	}
 
 	&__image {
@@ -103,18 +121,6 @@
 
 		@media #{$tablet} {
 			margin-top: auto;
-		}
-	}
-
-	&__link {
-		&:hover .icon use {
-			fill: $color-secondary;
-			transition-duration: 0.3s;
-		}
-
-		&:active .icon use {
-			fill: rgba($color-secondary, 0.3);
-			transition-duration: 0.3s;
 		}
 	}
 }
