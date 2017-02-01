@@ -232,7 +232,12 @@
 		background-color: transparent;
 
 		&:focus {
+			background-color: $color-primary;
 			color: #ffffff;
+			text-decoration: none;
+			outline: 0;
+			box-shadow: none;
+			transition-duration: 0.3s;
 		}
 
 		&:active {
