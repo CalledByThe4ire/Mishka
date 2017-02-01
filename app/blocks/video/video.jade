@@ -3,7 +3,7 @@ mixin video()
 		video(class='js_video', preload='none',
 		poster='assets/images/video-mobile@2x.png',
 		controls)
-			source(src='assets/video/video--hi-res.mp4', type='video/mp4', media="(min-width: 768px)", sizes="(max-width: 1149px) 100vw, (min-width: 1150px) calc(66.66667vw + 50px)")
+			source(src='assets/video/video--hi-res.mp4', type='video/mp4', media="(min-width: 768px)")
 			source(src='assets/video/video--low-res.mp4', type='video/mp4')
 		+e.controls(class='js_video__controls')
 			+b('a').btn(class='js_play', href='javascript:void(0)', role='button')
