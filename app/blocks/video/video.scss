@@ -19,7 +19,7 @@
 		top: 0;
 		margin-bottom: 0;
 		@include with-layout($large) {
-			flex-basis: calc(#{span(4)} + #{$offset--desktop});
+			width: calc(#{span(4)});
 		}
 	}
 
@@ -55,8 +55,6 @@
 		}
 
 		@media #{$desktop} {
-			width: auto;
-			height: auto;
 			background-image: url("../images/video-desktop.png");
 			@include retinaBackground(video-desktop);
 		}
