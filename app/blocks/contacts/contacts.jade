@@ -12,7 +12,8 @@ mixin contacts()
 			+e('div').address
 				span адрес:
 				span г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101
-		+e('a').btn(href='javascript:void(0)') Напишите нам
+		+e('a').feedback(class='btn', href='javascript:void(0)', onclick='return false', role='button')
+			| Напишите нам
 		+e('div').map(class='js_map')
 
 
