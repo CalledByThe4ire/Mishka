@@ -1,11 +1,6 @@
 {
-  "name": "csssr-project-template",
-  "version": "0.26.0",
-  "description": "A template for a quick start.",
+  "name": "Mishka",
   "keywords": [
-    "csssr-project-template",
-    "cpt",
-    "csssr",
     "project",
     "template",
     "frontend",
@@ -14,7 +9,9 @@
     "webpack",
     "babel",
     "jade",
-    "stylus"
+    "pug",
+    "sass",
+    "scss"
   ],
   "scripts": {
     "start": "gulp --debug",
@@ -36,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh@github.com:CalledByThe4ire/s-.git"
+    "url": "https://github.com/CalledByThe4ire/Mishka"
   },
   "author": "Andrey Karamnoff <karamnoff@gmail.com> (https://github.com/CalledByThe4ire)",
   "engines": {
@@ -46,7 +43,6 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.5.1",
-    "autoprefixer-stylus": "^0.9.0",
     "babel": "^6.5.0",
     "babel-cli": "^6.5.0",
     "babel-core": "^6.5.0",
@@ -90,7 +86,6 @@
     "happypack": "^2.1.1",
     "jade-get-data": "^1.0.0",
     "jade-injected": "^1.0.2",
-    "jquery": "^2.1.4",
     "lost": "^7.1.0",
     "merge-stream": "^1.0.0",
     "node-notifier": "^4.3.1",
@@ -111,6 +106,7 @@
     "webpack-stream": "^3.1.0"
   },
   "dependencies": {
+    "jquery": "^3.1.1",
     "lory.js": "^2.2.1",
     "susy": "^2.2.12",
     "svg4everybody": "^2.1.4"
