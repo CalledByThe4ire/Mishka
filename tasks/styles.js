@@ -9,8 +9,8 @@ import sass from 'gulp-sass';
 import syntaxScss from 'postcss-scss';
 import styleLint from 'stylelint';
 import autoprefixer from 'autoprefixer';
-import mqPacker from 'css-mqpacker';
-import nano from 'cssnano';
+import gcmq from 'gulp-group-css-media-queries';
+import nano from 'gulp-cssnano';
 import rename from 'gulp-rename';
 import sourcemaps from 'gulp-sourcemaps';
 import path from 'path';
@@ -37,7 +37,7 @@ gulp.task('styles', () => (
 			}),
 			lost()
 		]))
-		.pipe(gulpIf(!isDebug, mqPacker()))
+		.pipe(gulpIf(!isDebug, gcmq()))
 		.pipe(gulpIf(!isDebug, nano({zindex: false})))
 		.pipe(rename({suffix: '.min'}))
 		.pipe(gulpIf(isDebug, sourcemaps.write()))
