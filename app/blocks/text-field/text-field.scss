@@ -1,7 +1,7 @@
 .text-field {
 	display: flex;
 	flex-direction: column;
-	flex-basis: 100%;
+	flex-basis: #{percentage(2/2)};
 	margin-bottom: 2.5rem;
 
 	&:last-of-type {
@@ -15,7 +15,7 @@
 	&__container {
 		position: relative;
 		display: flex;
-		flex-basis: 100%;
+		flex-basis: #{percentage(2/2)};
 
 		& .icon {
 			position: absolute;

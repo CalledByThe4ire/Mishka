@@ -95,7 +95,7 @@
 		}
 
 		@media #{$tablet} {
-			flex-basis: percentage(2/4);
+			flex-basis: #{percentage(2/4)};
 			margin-bottom: 6rem;
 		}
 
@@ -152,7 +152,7 @@
 	}
 
 	&__map {
-		flex-basis: 100%;
+		flex-basis: #{percentage(2/2)};
 		min-height: 457px;
 		background-image: url("../images/map-tablet@1x.jpg");
 		background-position: center;

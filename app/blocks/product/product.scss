@@ -91,7 +91,7 @@
 		font-size: $font-size / 0.875; //1.6rem
 		line-height: $leading / 1.25; //2.4rem
 		font-weight: 700;
-		color: #000;
+		color: #000000;
 
 		@media #{$tab-desk} {
 			font-size: $font-size / 0.77777777777778; //1.8rem
@@ -115,7 +115,7 @@
 		font-size: $font-size;
 		line-height: $leading / 1.25; //2.4rem
 		font-weight: 700;
-		color: #000;
+		color: #000000;
 		border-top: 1px solid #ececec;
 
 		@media #{$tab-desk} {

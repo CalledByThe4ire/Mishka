@@ -1,10 +1,10 @@
 .nav {
 	display: none;
-	height: 100%;
+	height: #{percentage(2/2)};
 
 	&--visible {
 		display: block;
-		width: 100%;
+		width: #{percentage(2/2)};
 	}
 
 	&__list {
@@ -17,7 +17,7 @@
 
 		@media #{$mobile} {
 			position: absolute;
-			width: 100%;
+			width: #{percentage(2/2)};
 		}
 
 		@media #{$tab-desk} {
@@ -35,7 +35,7 @@
 		@include padding-x(0);
 		font-family: Verdana, Arial, sans-serif;
 		font-size: 1.6rem;
-		line-height: $leading / 1.25;
+		line-height: $leading / 1.25; // 2.4rem
 		font-weight: 700;
 		text-align: center;
 		border-bottom: 1px solid #ececec;
@@ -66,7 +66,7 @@
 
 			&:nth-child(1),
 			&:nth-child(2) {
-				flex-basis: calc(25% - 10px);
+				flex-basis: calc(#{percentage(1/4)} - 10px);
 			}
 		}
 
@@ -124,7 +124,7 @@
 				order: -2;
 				justify-content: center;
 				height: 90px;
-				margin-left: calc(50% - 2rem);
+				margin-left: calc(#{percentage(2/4)} - 2rem);
 				@include padding-y(0);
 				background-color: #ffffff;
 				border-left: 1px solid #ececec;

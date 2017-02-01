@@ -47,8 +47,8 @@
 	}
 
 	video {
-		width: 100%;
-		height: 100%;
+		width: #{percentage(2/2)};
+		height: #{percentage(2/2)};
 		object-fit: cover;
 		background-image: url("../images/video-mobile@2x.png");
 		background-repeat: no-repeat;

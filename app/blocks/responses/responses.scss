@@ -18,7 +18,7 @@
 
 	@media #{$desktop} {
 		@include with-layout($large) {
-			padding-left: calc(#{span(1)} + #{$offset--desktop} );
+			padding-left: calc( #{span(1)} + #{$offset--desktop} );
 		}
 		margin-bottom: 23rem;
 	}
@@ -48,7 +48,7 @@
 		@media #{$desktop} {
 			margin-left: #{$offset--desktop};
 			@include with-layout($large) {
-				width: calc(#{span(2)} - (#{$offset--desktop} * 2) / 3);
+				width: calc(#{ span(2)} - (#{$offset--desktop} * 2) / 3 );
 			}
 		}
 	}
@@ -101,13 +101,13 @@
 	&__list {
 		@include list-clear();
 		display: inline-block;
-		width: percentage(3/1);
+		width: #{percentage(3/1)};
 	}
 
 	&__item {
 		position: relative;
 		display: inline-block;
-		width: percentage(1/3);
+		width: #{percentage(1/3)};
 		margin-bottom: 3rem;
 	}
 
@@ -128,19 +128,19 @@
 
 		@media #{$tablet} {
 			@include with-layout($medium) {
-				width: calc(#{span(1)} - ((#{$offset--tablet} * 2) / 4));
+				width: calc( #{span(1)} - ((#{$offset--tablet} * 2) / 4) );
 			}
 		}
 
 		@media #{$desktop} {
 			@include with-layout($large) {
-				width: calc(#{span(1)} - (#{$offset--desktop} * 2) / 6);
+				width: calc( #{span(1)} - (#{$offset--desktop} * 2) / 6 );
 			}
 		}
 	}
 
 	&__control {
-		flex-basis: percentage(1/2);
+		flex-basis: #{percentage(1/2)};
 		@include padding-y(1rem);
 
 		& > svg {
@@ -188,13 +188,13 @@
 
 			@media #{$tablet} {
 				@include with-layout($medium) {
-					width: calc(#{span(1)} - ((#{$offset--tablet} * 2) / 4));
+					width: calc( #{span(1)} - ((#{$offset--tablet} * 2) / 4) );
 				}
 			}
 
 			@media #{$desktop} {
 				@include with-layout($large) {
-					width: calc(#{span(1)} - (#{$offset--desktop} * 2) / 6);
+					width: calc( #{span(1)} - (#{$offset--desktop} * 2) / 6 );
 				}
 			}
 		}

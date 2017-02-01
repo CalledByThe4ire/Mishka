@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-basis: percentage(2/2);
+	flex-basis: #{percentage(2/2)};
 	min-height: 80px;
 	cursor: pointer;
 

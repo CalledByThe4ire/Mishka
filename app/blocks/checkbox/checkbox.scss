@@ -1,11 +1,11 @@
 .checkbox {
 
 	@media #{$tablet} {
-		flex-basis: percentage(1/2);
+		flex-basis: #{percentage(1/2)};
 	}
 
 	@media #{$desktop} {
-		flex-basis: percentage(1/3);
+		flex-basis: #{percentage(1/3)};
 	}
 
 	&__caption {

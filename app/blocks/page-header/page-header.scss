@@ -19,7 +19,7 @@
 			content: "";
 			position: absolute;
 			bottom: 0;
-			width: 100%;
+			width: #{percentage(4/4)};
 			background-image: url("../images/page-header-zigzag.svg");
 			background-position: center;
 			background-repeat: repeat-x;
@@ -68,7 +68,7 @@
 			}
 
 			@media #{$desktop} {
-				width: 100%;
+				width: #{percentage(6/6)};
 			}
 		}
 	}

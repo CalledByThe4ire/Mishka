@@ -24,7 +24,7 @@
 		left: 0;
 		bottom: 0;
 		display: block;
-		width: 100%;
+		width: percentage(2/2);
 		height: 6px;
 		@include padding-x(0);
 		background-image: url("../images/bg-zigzag.svg");

@@ -28,7 +28,7 @@
 	&__author {
 		font-family: Verdana, Arial, sans-serif;
 		font-size: $font-size;
-		line-height: $leading * 0.8;
+		line-height: $leading / 1.25; // 2.4rem
 		font-weight: 700;
 		color: $link-color;
 

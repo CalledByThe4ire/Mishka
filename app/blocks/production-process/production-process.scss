@@ -59,10 +59,10 @@
 		align-items: center;
 		@include padding-y(2.5rem);
 		font-family: Verdana, Tahoma, Arial, sans-serif;
-		font-size: $font-size / 0.875; //1.6rem
-		line-height: $leading / 1.25; //2.4rem
+		font-size: $font-size / 0.875; // 1.6rem
+		line-height: $leading / 1.25; // 2.4rem
 		font-weight: 700;
-		color: #000;
+		color: #000000;
 
 		@media #{$mobile} {
 			order: -10;
@@ -75,7 +75,7 @@
 
 		@media #{$tab-desk} {
 			justify-content: flex-start;
-			font-size: $font-size / 0.77777777777778; //1.8rem
+			font-size: $font-size / 0.77777777777778; // 1.8rem
 		}
 
 		@media #{$tablet} {
@@ -107,11 +107,11 @@
 
 	&__description {
 		margin-bottom: 2.5rem;
-		line-height: $leading / 1.25; //2.4rem
+		line-height: $leading / 1.25; // 2.4rem
 
 		@media #{$tab-desk} {
-			font-size: $font-size / 0.875; //1.6rem
-			line-height: $leading
+			font-size: $font-size / 0.875; // 1.6rem
+			line-height: $leading;
 		}
 
 		@media #{$tablet} {
