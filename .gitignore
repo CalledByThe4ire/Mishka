@@ -41,4 +41,4 @@ _design
 node_modules
 npm-debug.log
 .happypack/
-.publish/
+.publish
