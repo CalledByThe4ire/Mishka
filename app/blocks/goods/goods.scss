@@ -19,17 +19,17 @@
 	&__item {
 		margin-bottom: 3rem;
 
+		&:last-child {
+			margin-bottom: 0;
+		}
+
 		@media #{$tab-desk} {
 			margin-bottom: 5.5rem;
-
-			&:last-child {
-				margin-bottom: 0;
-			}
 		}
 
 		@media #{$desktop} {
 			@include with-layout($large) {
-				flex-basis: calc(#{span(2)} - #{$offset--desktop});
+				flex-basis: calc(#{span(2)} - (#{$offset--desktop} / 2));
 			}
 			&:nth-last-child(1),
 			&:nth-last-child(2),

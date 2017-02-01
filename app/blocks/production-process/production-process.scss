@@ -3,6 +3,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	margin-bottom: 6rem;
 	@include padding-x(2.5rem);
 	border: 1px solid #ececec;
 	cursor: pointer;
@@ -56,17 +57,29 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 3rem;
+		@include padding-y(2.5rem);
 		font-family: Verdana, Tahoma, Arial, sans-serif;
 		font-size: $font-size / 0.875; //1.6rem
 		line-height: $leading / 1.25; //2.4rem
 		font-weight: 700;
 		color: #000;
 
+		@media #{$mobile} {
+			order: -10;
+
+			& .icon {
+				width: 42px;
+				height: 32px;
+			}
+		}
+
 		@media #{$tab-desk} {
 			justify-content: flex-start;
-			margin-bottom: 3.5rem;
 			font-size: $font-size / 0.77777777777778; //1.8rem
+		}
+
+		@media #{$tablet} {
+			margin-bottom: 1rem;
 		}
 
 		@media #{$desktop} {
@@ -77,6 +90,8 @@
 			align-items: flex-start;
 			order: 5;
 			margin-top: 1.5rem;
+			margin-bottom: 3rem;
+			@include padding-y(0);
 			@include padding-x(2.5rem);
 		}
 
@@ -95,9 +110,12 @@
 		line-height: $leading / 1.25; //2.4rem
 
 		@media #{$tab-desk} {
-			margin-bottom: 3rem;
 			font-size: $font-size / 0.875; //1.6rem
 			line-height: $leading
+		}
+
+		@media #{$tablet} {
+			margin-bottom: 3.5rem;
 		}
 
 		@media #{$desktop} {
@@ -106,6 +124,7 @@
 			}
 			align-items: flex-start;
 			order: 10;
+			margin-bottom: 5rem;
 			padding-left: 2.5rem;
 		}
 	}
@@ -114,12 +133,16 @@
 		@include btn();
 		margin-bottom: 3.5rem;
 
+		@media #{$tablet} {
+			margin-bottom: 4.5rem;
+		}
+
 		@media #{$desktop} {
 			@include with-layout($large) {
 				flex-basis: calc(#{span(2)} - #{$offset--desktop});
 			}
 			order: 15;
-			margin-bottom: 6rem;
+			margin-bottom: 5.5rem;
 		}
 	}
 

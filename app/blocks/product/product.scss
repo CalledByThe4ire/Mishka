@@ -80,9 +80,8 @@
 	}
 
 	&__container {
-
-		@media #{$tab-desk} {
-			min-height: 120px;
+		@media #{$desktop} {
+			min-height: 95px;
 		}
 	}
 
@@ -101,6 +100,10 @@
 
 	&__description {
 		margin-bottom: 2.5rem;
+
+		@media #{$tab-desk} {
+			margin-bottom: 0;
+		}
 	}
 
 	&__price {
