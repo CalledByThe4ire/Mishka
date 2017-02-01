@@ -18,5 +18,5 @@ gulp.task('icons', () => (
 		}))
 		.pipe(gulpIf(/\.scss$/, gulp.dest('app/styles/helpers')))
 		.pipe(gulpIf(/\.svg$/, rename('icon.svg')))
-		.pipe(gulpIf(/\.svg$/, gulp.dest('dist/assets/images/')))
+		.pipe(gulpIf(/\.svg$/, gulp.dest('dist/images/')))
 ));

@@ -33,7 +33,7 @@ gulp.task('sprites', () => {
 			}
 		}));
 
-	const imgStream = spriteData.img.pipe(gulp.dest('dist/assets/images/sprites'));
+	const imgStream = spriteData.img.pipe(gulp.dest('dist/images/sprites'));
 	const styleStream = spriteData.css.pipe(gulp.dest('app/styles/sprites'));
 
 	return merge(imgStream, styleStream);
