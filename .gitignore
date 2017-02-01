@@ -36,9 +36,9 @@ Thumbs.db
 .svn
 bower_components
 _design
-.publish
 
 # Node.JS
 node_modules
 npm-debug.log
 .happypack/
+.publish/
