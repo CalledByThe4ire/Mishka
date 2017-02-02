@@ -4,22 +4,22 @@ $small: (
 		columns:  2,
 		gutters: 0,
 		column-width: 130px,
-		global-box-sizing: border-box
-		//debug: (image: show)
+		global-box-sizing: border-box,
+		debug: (image: show)
 );
 
 $medium: (
 		columns: 4,
 		gutters: 0,
 		column-width: 167px,
-		global-box-sizing: border-box
-		//debug: (image: show)
+		global-box-sizing: border-box,
+		debug: (image: show)
 );
 
 $large: (
 		columns: 6,
 		gutters: 0,
 		column-width: 175px,
-		global-box-sizing: border-box
-		//debug: (image: show)
+		global-box-sizing: border-box,
+		debug: (image: show)
 );
