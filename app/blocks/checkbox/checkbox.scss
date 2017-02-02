@@ -54,7 +54,7 @@
 		&::after {
 			content: "";
 			position: absolute;
-			top: 50%;
+			top: 25px; // firefox bug fix ( instead of top: 50% + transform: translateY(-100%) )
 			left: 17px;
 			display: none;
 			width: 22px;
@@ -62,7 +62,7 @@
 			border: 2px solid $color-primary;
 			border-top-color: transparent;
 			border-right-color: transparent;
-			transform: rotate(-45deg) translateY(-100%);
+			transform: rotate(-45deg);
 
 			@media #{$tab-desk} {
 				left: 20px;
