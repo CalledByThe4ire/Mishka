@@ -111,7 +111,7 @@
 
 		&--search {
 			@media #{$tab-desk} {
-				flex-basis: 80px;
+				flex-basis: 84px;
 				justify-content: center;
 
 				& span {
@@ -124,7 +124,7 @@
 				order: -2;
 				justify-content: center;
 				height: 90px;
-				margin-left: calc(#{percentage(2/4)} - 2rem);
+				margin-left: calc(#{percentage(2/4)} - 42px);
 				@include padding-y(0);
 				background-color: #ffffff;
 				border-left: 1px solid #ececec;
@@ -140,23 +140,22 @@
 		&--cart {
 			@media #{$tablet} {
 				order: -1;
-				flex-grow: 1;
+				flex-basis: calc(#{percentage(2/4)} - 42px);
 				border-bottom: 1px solid #ececec;
 			}
 
 			@media #{$tab-desk} {
 				justify-content: flex-end;
+				flex-grow: 1;
 				height: 90px;
 				@include padding-y(0);
 				padding-right: $offset--desktop;
-				margin-left: auto;
 				margin-right: -#{$offset--desktop};
 				font-size: 1.6rem;
 				background-color: #ffffff;
 			}
 
 			@media #{$desktop} {
-				flex-grow: 1;
 				order: 0;
 				margin-left: initial;
 			}
