@@ -18,6 +18,7 @@
 		@media #{$tab-desk} {
 			content: "";
 			position: absolute;
+			left: 0;
 			bottom: 0;
 			width: #{percentage(4/4)};
 			background-image: url("../images/page-header-zigzag.svg");
