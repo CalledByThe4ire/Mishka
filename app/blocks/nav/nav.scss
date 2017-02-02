@@ -141,6 +141,7 @@
 			@media #{$tablet} {
 				order: -1;
 				flex-basis: calc(#{percentage(2/4)} - 42px);
+				padding-right: $offset--tablet;
 				border-bottom: 1px solid #ececec;
 			}
 
