@@ -24,8 +24,7 @@
 
 		@media #{$desktop} {
 			@include with-layout($large) {
-				padding-left: #{span(1)};
-				margin-right: #{span(1)};
+				@include padding-x(#{percentage(1/5)});
 			}
 		}
 
@@ -59,8 +58,8 @@
 
 			@media #{$desktop} {
 				justify-content: center;
-				width: #{percentage(1/5)};
-				margin-left: -#{percentage(1/5)};
+				flex-basis: #{percentage(1/4)};
+				margin-left: -#{percentage(1/4)};
 				text-align: center;
 			}
 		}
@@ -70,8 +69,11 @@
 			padding-top: 3.5rem;
 			padding-bottom: 3.5rem;
 
-			@media #{$tablet} {
+			@media #{$tab-desk} {
 				margin-bottom: 3.5rem;
+			}
+
+			@media #{$tablet} {
 				padding-right: #{$offset--tablet};
 			}
 
@@ -93,16 +95,9 @@
 				background-color: #f1f1f1;
 			}
 
-			@media #{$tablet} {
+			@media #{$tab-desk} {
 				@include padding-y(8rem);
 				padding-right: #{$offset--tablet};
-				margin-bottom: 0;
-			}
-
-			@media #{$desktop} {
-				@include with-layout($large) {
-					padding-right: #{span(1)};
-				}
 			}
 
 			&::before {
@@ -112,6 +107,11 @@
 					flex-basis: #{percentage(1/3)};
 					margin-left: -#{percentage(1/3)};
 				}
+
+				@media #{$desktop} {
+					flex-basis: #{percentage(1/5)};
+					margin-left: -#{percentage(1/5)};
+				}
 			}
 		}
 
@@ -119,7 +119,7 @@
 			@include padding-y(4rem);
 
 			@media #{$tab-desk} {
-				margin-bottom: $offset--tablet / 2;
+				margin-bottom: 3rem;
 			}
 
 			@media #{$tablet} {
@@ -152,17 +152,11 @@
 				}
 			}
 
-			@media #{$tablet} {
+			@media #{$tab-desk} {
 				margin-bottom: 0;
-				padding-top: #{$offset--tablet};
+				padding-top: 5rem;
 				padding-right: #{$offset--tablet};
 				padding-bottom: 0;
-			}
-
-			@media #{$desktop} {
-				@include with-layout($large) {
-					padding-right: #{span(1)};
-				}
 			}
 
 			&::before {
@@ -191,16 +185,10 @@
 				}
 			}
 
-			@media #{$tablet} {
+			@media #{$tab-desk} {
 				margin-bottom: $offset--tablet / 2;
 				padding-right: #{$offset--tablet};
 				padding-bottom: 6.5rem;
-			}
-
-			@media #{$desktop} {
-				@include with-layout($large) {
-					padding-right: #{span(1)};
-				}
 			}
 
 			&::before {
@@ -254,11 +242,6 @@
 				@include padding-x(0);
 				@include margin-x($offset--tablet);
 				margin-bottom: $offset--tablet;
-			}
-
-			@media #{$desktop} {
-				margin-bottom: 9.5rem;
-				margin-left: 0;
 			}
 		}
 
