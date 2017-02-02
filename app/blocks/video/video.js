@@ -19,15 +19,15 @@ export default window.addEventListener('DOMContentLoaded', () => {
 		 */
 		const matchMedia = () => {
 			if (mqlMobile.matches) {
-				video.setAttribute('poster', 'assets/images/video-mobile@2x.png');
+				video.setAttribute('poster', 'images/video-mobile@2x.png');
 			}
 
 			if (mqlTablet.matches) {
-				video.setAttribute('poster', 'assets/images/video-tablet.png');
+				video.setAttribute('poster', 'images/video-tablet.png');
 			}
 
 			if (mqlDesktop.matches) {
-				video.setAttribute('poster', 'assets/images/video-desktop.png');
+				video.setAttribute('poster', 'images/video-desktop.png');
 			}
 		};
 

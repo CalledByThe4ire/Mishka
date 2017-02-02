@@ -5,11 +5,11 @@
 	"price": "1&nbsp;200&nbsp;руб.",
 	"href": "javascript:void(0)",
 	"imgAlt": "Зайчик-попрыгайчик",
-	"imgMobile2x": "assets/images/photo-1-mobile@2x.jpg",
-	"imgTablet": "assets/images/photo-1-tablet@1x.jpg",
-	"imgTablet2x": "assets/images/photo-1-tablet@2x.jpg",
-	"imgDesktop": "assets/images/photo-1-desktop@1x.jpg",
-	"imgDesktop2x": "assets/images/photo-1-desktop@2x.jpg"
+	"imgMobile2x": "images/photo-1-mobile@2x.jpg",
+	"imgTablet": "images/photo-1-tablet@1x.jpg",
+	"imgTablet2x": "images/photo-1-tablet@2x.jpg",
+	"imgDesktop": "images/photo-1-desktop@1x.jpg",
+	"imgDesktop2x": "images/photo-1-desktop@2x.jpg"
   },
 
   {
@@ -18,11 +18,11 @@
 	"price": "690&nbsp;руб.",
 	"href": "javascript:void(0)",
 	"imgAlt": "Корзинка для белья",
-	"imgMobile2x": "assets/images/photo-2-mobile@2x.jpg",
-	"imgTablet": "assets/images/photo-2-tablet@1x.jpg",
-	"imgTablet2x": "assets/images/photo-2-tablet@2x.jpg",
-	"imgDesktop": "assets/images/photo-2-desktop@1x.jpg",
-	"imgDesktop2x": "assets/images/photo-2-desktop@2x.jpg"
+	"imgMobile2x": "images/photo-2-mobile@2x.jpg",
+	"imgTablet": "images/photo-2-tablet@1x.jpg",
+	"imgTablet2x": "images/photo-2-tablet@2x.jpg",
+	"imgDesktop": "images/photo-2-desktop@1x.jpg",
+	"imgDesktop2x": "images/photo-2-desktop@2x.jpg"
   },
   {
 	"heading": "Большая корзинка<br>для&nbsp;игрушек",
@@ -30,10 +30,10 @@
 	"price": "1&nbsp;500&nbsp;руб.",
 	"href": "javascript:void(0)",
 	"imgAlt": "Большая корзинка для игрушек",
-	"imgMobile2x": "assets/images/photo-3-mobile@2x.jpg",
-	"imgTablet": "assets/images/photo-3-tablet@1x.jpg",
-	"imgTablet2x": "assets/images/photo-3-tablet@2x.jpg",
-	"imgDesktop": "assets/images/photo-3-desktop@1x.jpg",
-	"imgDesktop2x": "assets/images/photo-3-desktop@2x.jpg"
+	"imgMobile2x": "images/photo-3-mobile@2x.jpg",
+	"imgTablet": "images/photo-3-tablet@1x.jpg",
+	"imgTablet2x": "images/photo-3-tablet@2x.jpg",
+	"imgDesktop": "images/photo-3-desktop@1x.jpg",
+	"imgDesktop2x": "images/photo-3-desktop@2x.jpg"
   }
 ]

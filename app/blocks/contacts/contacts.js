@@ -17,7 +17,7 @@ window.initMap = () => {
 	const map = new google.maps.Map(document.querySelector('.js_map'), mapOptions);
 
 	const markerImage = {
-		url: isIE11 ? '/assets/images/map-pin.png' : '/assets/images/map-pin.svg',
+		url: isIE11 ? 'images/map-pin.png' : 'images/map-pin.svg',
 		size: new google.maps.Size(100, 100),
 		origin: new google.maps.Point(0, 0),
 		anchor: new google.maps.Point(20, 20),

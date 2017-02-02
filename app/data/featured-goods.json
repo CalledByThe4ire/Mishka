@@ -8,9 +8,9 @@
 	"height": "15&nbsp;см",
 	"price": "990&nbsp;руб",
 	"imgAlt": "Вязаные корзинки",
-	"imgMobile": "assets/images/triple-set-mobile@1x.jpg",
-	"imgMobile2x": "assets/images/triple-set-mobile@2x.jpg",
-	"imgTabDesk": "assets/images/triple-set-tab-desk@1x.jpg",
-	"imgTabDesk2x": "assets/images/triple-set-tab-desk@2x.jpg"
+	"imgMobile": "images/triple-set-mobile@1x.jpg",
+	"imgMobile2x": "images/triple-set-mobile@2x.jpg",
+	"imgTabDesk": "images/triple-set-tab-desk@1x.jpg",
+	"imgTabDesk2x": "images/triple-set-tab-desk@2x.jpg"
   }
 ]

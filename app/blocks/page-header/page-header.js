@@ -11,7 +11,7 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	const logo = document.querySelector('.js_logo');
 	const icon = document.querySelector('.icon');
 
-	const iconPath = '/assets/images/icon.svg#icon_nav-toggle-';
+	const iconPath = 'images/icon.svg#icon_nav-toggle-';
 	const openMod = 'open';
 	const closeMod = 'close';
 	const visibleMod = 'visible';
@@ -42,7 +42,7 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	 * @param {String} name
 	 */
 	const setLogo = (width, height, name) => {
-		const iconLogoPath = '/assets/images/icon.svg#icon_';
+		const iconLogoPath = 'images/icon.svg#icon_';
 		logo.classList = 'logo js_logo logo--' + name;
 		logo.setAttribute('width', width);
 		logo.setAttribute('height', height);
