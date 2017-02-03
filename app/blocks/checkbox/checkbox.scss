@@ -1,5 +1,9 @@
 .checkbox {
 
+	&__input {
+		display: none;
+	}
+
 	@media #{$tablet} {
 		flex-basis: #{percentage(1/2)};
 	}
@@ -8,11 +12,18 @@
 		flex-basis: #{percentage(1/3)};
 	}
 
+	&:last-of-type {
+		.checkbox__caption {
+			margin-bottom: 0;
+		}
+	}
+
 	&__caption {
 		position: relative;
 		display: flex;
 		align-items: center;
-		margin-bottom: 4.5rem;
+		margin-bottom: 1.5rem;
+		@include padding-y(1.5rem);
 		padding-left: 6rem;
 		font-family: Verdana, Arial, sans-serif;
 		font-size: 1.7rem;
@@ -21,19 +32,21 @@
 		color: #000000;
 
 		@media #{$tab-desk} {
-			margin-bottom: 5.5rem;
+			margin-bottom: 2.7rem;
 			padding-left: 8rem;
 		}
 
 		&::before {
 			content: "";
 			position: absolute;
+			top: 50%;
 			left: 0;
 			display: block;
 			width: 40px;
 			height: 40px;
 			border: 2px solid $link-color;
 			background-color: transparent;
+			transform: translateY(-50%);
 
 			@media #{$tab-desk} {
 				width: 50px;
@@ -50,11 +63,10 @@
 				transition-duration: 0.3s;
 			}
 		}
-
 		&::after {
 			content: "";
 			position: absolute;
-			top: 25px; // firefox bug fix ( instead of top: 50% + transform: translateY(-100%) )
+			top: 50%;
 			left: 17px;
 			display: none;
 			width: 22px;
@@ -62,7 +74,7 @@
 			border: 2px solid $color-primary;
 			border-top-color: transparent;
 			border-right-color: transparent;
-			transform: rotate(-45deg);
+			transform: rotate(-45deg) translateY(-100%);
 
 			@media #{$tab-desk} {
 				left: 20px;
@@ -70,10 +82,6 @@
 				height: 15px;
 			}
 		}
-	}
-
-	&__input {
-		display: none;
 	}
 
 	&__input:checked + &__caption {

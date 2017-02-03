@@ -1,13 +1,24 @@
 .radio {
+	&__input {
+		display: none;
+	}
+
 	@media #{$tab-desk} {
 		flex-basis: percentage(4/4);
+	}
+
+	&:last-of-type {
+		.radio__caption {
+			margin-bottom: 0;
+		}
 	}
 
 	&__caption {
 		position: relative;
 		display: flex;
 		align-items: center;
-		margin-bottom: 3.5rem;
+		margin-bottom: 1.5rem;
+		@include padding-y(1rem);
 		padding-left: 6rem;
 		font-family: Verdana, Arial, sans-serif;
 		font-size: 1.7rem;
@@ -15,14 +26,22 @@
 		font-weight: 700;
 		color: #000000;
 
+		@media #{$tablet} {
+			margin-bottom: 3.5rem;
+		}
+
 		@media #{$tab-desk} {
-			margin-bottom: 6rem;
 			padding-left: 8rem;
+		}
+
+		@media #{$desktop} {
+			margin-bottom: 4rem;
 		}
 
 		&::before {
 			content: "";
 			position: absolute;
+			top: 50%;
 			left: 0;
 			display: block;
 			width: 40px;
@@ -30,6 +49,7 @@
 			border: 2px solid $link-color;
 			border-radius: 50%;
 			background-color: transparent;
+			transform: translateY(-50%);
 
 			@media #{$tab-desk} {
 				width: 50px;
@@ -46,17 +66,17 @@
 				transition-duration: 0.3s;
 			}
 		}
-
 		&::after {
 			content: "";
 			position: absolute;
 			left: 12px;
-			top: 25px; // firefox bug fix ( instead of top: 50% + transform: translateY(-50%) )
+			top: 50%;
 			display: none;
 			width: 15px;
 			height: 15px;
 			background-color: $color-secondary;
 			border-radius: 50%;
+			transform: translateY(-50%);
 
 			@media #{$tab-desk} {
 				left: 15px;
@@ -64,10 +84,6 @@
 				height: 20px;
 			}
 		}
-	}
-
-	&__input {
-		display: none;
 	}
 
 	&__input:checked + &__caption {
