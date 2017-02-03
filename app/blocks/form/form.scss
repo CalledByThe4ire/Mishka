@@ -242,6 +242,10 @@
 				@include margin-x($offset--tablet);
 				margin-bottom: $offset--tablet;
 			}
+
+			@media #{$desktop} {
+				margin-bottom: 9.5rem;
+			}
 		}
 
 		@media #{$tab-desk} {
