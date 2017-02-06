@@ -25,12 +25,16 @@ export default window.addEventListener('DOMContentLoaded', () => {
 		evt.target.classList.toggle('icon--' + closeMod);
 		nav.classList.toggle('nav--' + visibleMod);
 
-		if (!nav.classList.contains('nav--' + visibleMod)) {
-			icon.classList.add('icon--' + openMod);
-			icon.firstElementChild.setAttribute('xlink:href', iconPath + openMod);
-		}else {
-			icon.classList.remove('icon--' + openMod);
-			icon.firstElementChild.setAttribute('xlink:href', iconPath + closeMod);
+
+		if ( !(navigator.userAgent.match(/Edge/) || ( navigator.userAgent.match(/Trident/) && navigator.userAgent.match(/rv[ :]11/) ) ) ) {
+
+			if (!nav.classList.contains('nav--' + visibleMod)) {
+				icon.classList.add('icon--' + openMod);
+				icon.firstElementChild.setAttribute('xlink:href', iconPath + openMod);
+			}else {
+				icon.classList.remove('icon--' + openMod);
+				icon.firstElementChild.setAttribute('xlink:href', iconPath + closeMod);
+			}
 		}
 	};
 
@@ -43,10 +47,13 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	 */
 	const setLogo = (width, height, name) => {
 		const iconLogoPath = 'images/icon.svg#icon_';
-		logo.classList = 'logo js_logo logo--' + name;
-		logo.setAttribute('width', width);
-		logo.setAttribute('height', height);
-		logo.querySelector('use').setAttribute('xlink:href', iconLogoPath + 'logo-' + name);
+
+		if ( !(navigator.userAgent.match(/Edge/) || ( navigator.userAgent.match(/Trident/) && navigator.userAgent.match(/rv[ :]11/) ) ) ) {
+			logo.setAttribute('class', 'logo js_logo logo--' + name);
+			logo.setAttribute('width', width);
+			logo.setAttribute('height', height);
+			logo.querySelector('use').setAttribute('xlink:href', iconLogoPath + 'logo-' + name);
+		}
 	};
 
 	/**
