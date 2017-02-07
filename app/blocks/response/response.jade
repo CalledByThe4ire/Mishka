@@ -1,9 +1,0 @@
-mixin response(item)
-	+b('li').response&attributes(attributes)
-		+e('div').description
-			| !{item.description}
-		+e.author
-			| !{item.author}
-		+e('a').link(href=item.socialLink)
-			| !{item.socialName}
-		block

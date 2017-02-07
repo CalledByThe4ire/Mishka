@@ -1,4 +1,0 @@
-mixin toggleInput(item, inputType)
-	+b('label')(class=inputType)
-		+e('input').input(type=item.inputType, name=item.name, checked=item.isChecked, disabled=item.isDisabled)
-		+e.caption !{item.label}

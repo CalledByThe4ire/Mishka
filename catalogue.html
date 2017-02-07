@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="theme-color" content="#ffffff">
+		<meta name="application-name" content="">
+		<meta name="msapplication-tooltip" content="">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" sizes="16x16" type="image/png" href="favicon-16x16.png">
+		<link rel="icon" sizes="32x32" type="image/png" href="favicon-32x32.png">
+		<link rel="manifest" href="manifest.json">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<title>Mishka</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="styles/app.min.css" rel="stylesheet">
+	</head>
+
+	<body class="page page--catalogue">
+		<div class="container">
+			<header class="page-header">
+				<div class="page-header__logo page-header__logo--visible">
+					<a href="index.html" class="page-header__link">
+						<svg width="86" height="35" class="logo js_logo"><use xlink:href="images/icon.svg#icon_logo-mobile"></use></svg>
+					</a>
+					<a href="javascript:void(0)" onclick="return false" class="page-header__toggle page-header__toggle--close js_toggle">
+						<span class="page-header__icon"></span>
+					</a>
+				</div>
+				<nav class="nav nav--visible page-header__nav js_nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="catalogue.html" class="nav__link">
+								<span>Каталог товаров</span>
+							</a>
+						</li>
+						<li class="nav__item nav__item--order">
+							<a href="form.html" class="nav__link">
+								<span>Вязание на заказ</span>
+							</a>
+						</li>
+						<li class="nav__item nav__item--search">
+							<a href="javascript:void(0)" class="nav__link">
+								<svg width="18" height="18" class="icon icon--search"><use xlink:href="images/icon.svg#icon_nav-search"></use></svg>
+								<span>Поиск по сайту</span>
+							</a>
+						</li>
+						<li class="nav__item nav__item--cart">
+							<a href="javascript:void(0)" class="nav__link">
+								<svg width="20" height="18" class="icon icon--cart"><use xlink:href="images/icon.svg#icon_nav-cart"></use></svg>
+								<span>Корзина: пока пуста</span>
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="javascript:void(0)" class="nav__link">
+								<span>Новые поступления</span>
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="javascript:void(0)" class="nav__link">
+								<span>Распродажа</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="page-header__footnote">
+					<span>Бесплатная доставка по России</span>
+				</div>
+				<div class="lead">
+					<h1>Каталог товаров</h1>
+				</div>
+			</header>
+			<main class="main-content" role="main">
+				<section class="goods">
+					<ul class="goods__list">
+						<li class="goods__item">
+							<article class="product">
+								<div class="product__image">
+									<picture>
+										<source media="(min-width: 1150px)" srcset="images/photo-1-desktop@1x.jpg 1x, images/photo-1-desktop@2x.jpg 2x"
+										/>
+										<source media="(min-width: 768px)" srcset="images/photo-1-tablet@1x.jpg 1x, images/photo-1-tablet@2x.jpg 2x" />
+										<img src="images/photo-1-mobile@2x.jpg" alt="Зайчик-попрыгайчик" title="Зайчик-попрыгайчик" />
+									</picture>
+								</div>
+								<div class="product__info">
+									<div class="product__container">
+										<header class="product__heading">Зайчик-попрыгайчик</header>
+										<div class="product__description">Рост 30&nbsp;см, вес 200&nbsp;г</div>
+									</div>
+									<div class="product__price">
+										<span>1&nbsp;200&nbsp;руб.</span>
+										<a href="javascript:void(0)" class="product__link">
+											<svg width="20" height="18" class="icon icon--cart"><use xlink:href="images/icon.svg#icon_nav-cart"></use></svg>
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+						<li class="goods__item">
+							<article class="product">
+								<div class="product__image">
+									<picture>
+										<source media="(min-width: 1150px)" srcset="images/photo-2-desktop@1x.jpg 1x, images/photo-2-desktop@2x.jpg 2x"
+										/>
+										<source media="(min-width: 768px)" srcset="images/photo-2-tablet@1x.jpg 1x, images/photo-2-tablet@2x.jpg 2x" />
+										<img src="images/photo-2-mobile@2x.jpg" alt="Корзинка для белья" title="Корзинка для белья" />
+									</picture>
+								</div>
+								<div class="product__info">
+									<div class="product__container">
+										<header class="product__heading">Корзинка для&nbsp;белья</header>
+										<div class="product__description">Диаметр 15&nbsp;см, высота 10&nbsp;см</div>
+									</div>
+									<div class="product__price">
+										<span>690&nbsp;руб.</span>
+										<a href="javascript:void(0)" class="product__link">
+											<svg width="20" height="18" class="icon icon--cart"><use xlink:href="images/icon.svg#icon_nav-cart"></use></svg>
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+						<li class="goods__item">
+							<article class="product">
+								<div class="product__image">
+									<picture>
+										<source media="(min-width: 1150px)" srcset="images/photo-3-desktop@1x.jpg 1x, images/photo-3-desktop@2x.jpg 2x"
+										/>
+										<source media="(min-width: 768px)" srcset="images/photo-3-tablet@1x.jpg 1x, images/photo-3-tablet@2x.jpg 2x" />
+										<img src="images/photo-3-mobile@2x.jpg" alt="Большая корзинка для игрушек" title="Большая корзинка для игрушек"
+										/>
+									</picture>
+								</div>
+								<div class="product__info">
+									<div class="product__container">
+										<header class="product__heading">Большая корзинка
+											<br>для&nbsp;игрушек</header>
+										<div class="product__description">Диаметр 30&nbsp;см, высота 30&nbsp;см</div>
+									</div>
+									<div class="product__price">
+										<span>1&nbsp;500&nbsp;руб.</span>
+										<a href="javascript:void(0)" class="product__link">
+											<svg width="20" height="18" class="icon icon--cart"><use xlink:href="images/icon.svg#icon_nav-cart"></use></svg>
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+					</ul>
+				</section>
+				<div class="production-process">
+					<header class="production-process__heading">
+						<svg width="32" height="22" class="icon icon--video"><use xlink:href="images/icon.svg#icon_production-process-video"></use></svg>
+						<span>Процесс производства</span>
+					</header>
+					<div class="video">
+						<video preload="none" poster="images/video-mobile@2x.png" controls="controls" class="js_video">
+							<source src="video/video--hi-res.mp4" type="video/mp4" media="(min-width: 768px)" />
+							<source src="video/video--low-res.mp4" type="video/mp4" />
+						</video>
+						<div class="video__controls js_video__controls">
+							<a href="javascript:void(0)" role="button" class="btn js_play">
+								<svg width="101" height="77" class="icon icon--play"><use xlink:href="images/icon.svg#icon_production-process-play"></use></svg>
+							</a>
+						</div>
+					</div>
+					<div class="production-process__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</div>
+					<a href="javascript:void(0)"
+						onclick="return false" role="button" class="production-process__order btn">Сделать заказ</a>
+				</div>
+			</main>
+			<footer class="page-footer">
+				<div class="page-footer__logo">
+					<a href="#" class="page-footer__link">
+						<svg width="102" height="34" class="logo logo--footer"><use xlink:href="images/icon.svg#icon_logo-footer"></use></svg>
+					</a>
+				</div>
+				<ul class="socials">
+					<li class="socials__item">
+						<a target="_blank" href="https://www.instagram.com/" class="socials__link">
+							<svg width="22" height="22" class="icon icon--instagram"><use xlink:href="images/icon.svg#icon_footer-instagram"></use></svg>
+						</a>
+					</li>
+					<li class="socials__item">
+						<a target="_blank" href="https://www.facebook.com/" class="socials__link">
+							<svg width="15" height="28" class="icon icon--facebook"><use xlink:href="images/icon.svg#icon_footer-facebook"></use></svg>
+						</a>
+					</li>
+					<li class="socials__item">
+						<a target="_blank" href="https://twitter.com/" class="socials__link">
+							<svg width="23" height="20" class="icon icon--twitter"><use xlink:href="images/icon.svg#icon_footer-twitter"></use></svg>
+						</a>
+					</li>
+				</ul>
+				<div class="copyright">
+					<div class="copyright__text">Разработано:</div>
+					<a href="https://htmlacademy.ru/" target="_blank" class="copyright__link">
+						<svg width="27" height="34" class="icon icon--htmlacademy"><use xlink:href="images/icon.svg#icon_footer-htmlacademy"></use></svg>
+					</a>
+				</div>
+			</footer>
+		</div>
+		<script src="scripts/app.min.js"></script>
+	</body>
+
+</html>

@@ -1,8 +1,0 @@
-include ../icon/icon
-
-mixin socials(list)
-	+b('ul').socials&attributes(attributes)
-		each item in list
-			+e.item
-				+e('a').link(target="_blank", href=item.link)
-					+icon('icon--' + item.title, 'footer-' + item.title, item.width, item.height, true)&attributes(attributes)

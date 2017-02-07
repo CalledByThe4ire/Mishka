@@ -1,8 +1,0 @@
-include ../product/product
-
-mixin goods(list)
-	+b('section').goods&attributes(attributes)
-		+e('ul').list
-			each item in list
-				+product(item)(class='__item')
-
