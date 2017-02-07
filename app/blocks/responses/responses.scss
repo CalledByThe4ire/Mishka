@@ -150,18 +150,14 @@
 		&:hover {
 			cursor: pointer;
 			& > .icon--arrow {
-				use {
-					fill: $text-color;
-					transition-duration: 0.3s;
-				}
+				fill: $text-color;
+				transition-duration: 0.3s;
 			}
 		}
 
 		&:active {
 			& > .icon--arrow {
-				use {
-					fill: rgba($text-color, 0.3);
-				}
+				fill: rgba($text-color, 0.3);
 			}
 		}
 

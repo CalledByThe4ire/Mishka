@@ -17,7 +17,7 @@
 			transition-duration: 0.3s;
 		}
 
-		& .production-process__heading .icon use {
+		& .production-process__heading .icon {
 			fill: $color-secondary;
 			transition-duration: 0.3s;
 		}
@@ -31,7 +31,7 @@
 			transition-duration: 0.3s;
 		}
 
-		& .production-process__heading .icon use {
+		& .production-process__heading .icon {
 			fill: rgba($color-secondary, 0.3);
 			transition-duration: 0.3s;
 		}

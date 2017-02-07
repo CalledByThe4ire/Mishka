@@ -6,34 +6,21 @@
 	min-height: 80px;
 	cursor: pointer;
 
-	&:active use {
-		fill: rgba($color-secondary, 0.3);
-		transition-duration: 0.3s;
-	}
-
 	&:hover {
-		& > *:not([class*="text"]) {
-			color: rgba($link-color, 0.3);
+		& .icon {
 			transition-duration: 0.3s;
-
-			use {
-				fill: darken($color-secondary, 15%);
-				transition-duration: 0.3s;
-			}
+			fill: darken($color-secondary, 15%);
 		}
 	}
 
 	&:active {
-		& > *:not([class*="link"]) {
+		& .copyright__text {
 			color: rgba($link-color, 0.3);
 			transition-duration: 0.3s;
 		}
-
-		& > *:not([class*="text"]) {
-			use {
-				fill: rgba($color-secondary, 0.3);
-				transition-duration: 0.3s;
-			}
+		& .icon {
+			fill: rgba($color-secondary, 0.3);
+			transition-duration: 0.3s;
 		}
 	}
 

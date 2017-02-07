@@ -1,10 +1,6 @@
 .icon {
 	display: block;
-
-	use {
-		fill: $link-color;
-		pointer-events: none;
-	}
+	fill: $link-color;
 
 	&--cart {
 		width: 20px;
@@ -17,9 +13,7 @@
 
 	&--cart,
 	&--search {
-		use {
-			fill: rgba($link-color, 0.3);
-		}
+		fill: rgba($link-color, 0.3);
 	}
 
 	&--interior {
@@ -34,9 +28,7 @@
 
 	&--interior,
 	&--toy {
-		use {
-			fill: #149080;
-		}
+		fill: #149080;
 	}
 
 	&--flower {
@@ -75,18 +67,13 @@
 	&--loupe,
 	&--rocket,
 	&--gift {
-		use {
-			fill: $color-secondary;
-		}
+		fill: $color-secondary;
 	}
 
 	&--arrow {
 		width: 50px;
 		height: 26px;
-
-		use {
-			fill: $link-color;
-		}
+		fill: $link-color;
 	}
 
 	&--flag {
@@ -112,12 +99,12 @@
 	&--facebook,
 	&--instagram,
 	&--twitter {
-		&:hover use {
+		&:hover {
 			fill: $color-secondary;
 			transition-duration: 0.3s;
 		}
 
-		&:active use {
+		&:active {
 			fill: rgba($color-secondary, 0.3);
 			transition-duration: 0.3s;
 		}
@@ -126,9 +113,7 @@
 	&--htmlacademy {
 		width: 27px;
 		height: 34px;
-		use {
-			fill: $color-secondary;
-		}
+		fill: $color-secondary;
 	}
 
 	&--tel {
@@ -143,17 +128,12 @@
 
 	&--tel,
 	&--email {
-		use {
-			fill: rgba($color-primary, 0.3);
-		}
+		fill: rgba($color-primary, 0.3);
 	}
 
 	&--video {
 		width: 32px;
 		height: 22px;
-
-		use {
-			fill: rgba($link-color, 0.3);
-		}
+		fill: rgba($link-color, 0.3);
 	}
 }

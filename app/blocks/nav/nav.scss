@@ -178,12 +178,12 @@
 			transition-duration: 0.3s;
 		}
 
-		&:hover .icon use {
+		&:hover .icon {
 			fill: $color-secondary;
 			transition-duration: 0.3s;
 		}
 
-		&:active .icon use {
+		&:active .icon {
 			fill: rgba($color-secondary, 0.3);
 			transition-duration: 0.3s;
 		}

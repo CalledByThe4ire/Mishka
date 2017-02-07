@@ -1,17 +1,14 @@
 .logo {
 	display: block;
 	z-index: 5;
+	fill: $link-color;
 
-	use {
-		fill: $link-color;
-	}
-
-	&:hover use {
+	&:hover {
 		fill: $link-color--hover;
 		transition-duration: 0.3s;
 	}
 
-	&:active use {
+	&:active {
 		fill: $link-color--active;
 		transition-duration: 0.3s;
 	}
@@ -35,12 +32,12 @@
 		width: 102px;
 		height: 34px;
 
-		&:hover use {
+		&:hover {
 			fill: $color-secondary;
 			transition-duration: 0.3s;
 		}
 
-		&:active use {
+		&:active {
 			fill: rgba($color-secondary, 0.3);
 			transition-duration: 0.3s;
 		}

@@ -27,10 +27,8 @@
 
 		&:hover .icon,
 		&--focus .icon {
-			use {
-				fill: $color-secondary;
-				transition-duration: 0.3s;
-			}
+			fill: $color-secondary;
+			transition-duration: 0.3s;
 		}
 	}
 
