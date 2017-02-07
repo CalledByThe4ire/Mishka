@@ -115,6 +115,10 @@
 		&--full-name {
 			@include padding-y(4rem);
 
+			& .text-field__input {
+				padding-right: 0;
+			}
+
 			@media #{$tab-desk} {
 				margin-bottom: 3rem;
 			}
