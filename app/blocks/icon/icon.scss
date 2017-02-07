@@ -6,31 +6,6 @@
 		pointer-events: none;
 	}
 
-	&--open {
-		width: 20px;
-		height: 14px;
-	}
-
-	&--close {
-		@include size(21px);
-	}
-
-	&--open,
-	&--close {
-
-		&:hover use {
-			fill: $link-color--hover;
-		}
-
-		&:active use {
-			fill: $link-color--active;
-		}
-
-		@media#{$tab-desk} {
-			display: none;
-		}
-	}
-
 	&--cart {
 		width: 20px;
 		height: 18px;
