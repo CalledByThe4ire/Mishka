@@ -9,10 +9,8 @@ export default window.addEventListener('DOMContentLoaded', () => {
 
 	const nav = document.querySelector('.js_nav');
 	const logo = document.querySelector('.js_logo');
-	const icon = document.querySelector('.icon');
+	const toggle = document.querySelector('.js_toggle');
 
-	const iconPath = 'images/icon.svg#icon_nav-toggle-';
-	const openMod = 'open';
 	const closeMod = 'close';
 	const visibleMod = 'visible';
 
@@ -22,19 +20,13 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	 * @param {MouseEvent} evt
 	 */
 	const toggleNav = evt => {
-		evt.target.classList.toggle('icon--' + closeMod);
+		evt.target.classList.toggle('page-header__toggle--' + closeMod);
 		nav.classList.toggle('nav--' + visibleMod);
 
-
-		if ( !(navigator.userAgent.match(/Edge/) || ( navigator.userAgent.match(/Trident/) && navigator.userAgent.match(/rv[ :]11/) ) ) ) {
-
-			if (!nav.classList.contains('nav--' + visibleMod)) {
-				icon.classList.add('icon--' + openMod);
-				icon.firstElementChild.setAttribute('xlink:href', iconPath + openMod);
-			}else {
-				icon.classList.remove('icon--' + openMod);
-				icon.firstElementChild.setAttribute('xlink:href', iconPath + closeMod);
-			}
+		if (!nav.classList.contains('nav--' + visibleMod)) {
+			toggle.classList.remove('page-header__toggle--' + closeMod);
+		}else {
+			toggle.classList.add('page-header__toggle--' + closeMod);
 		}
 	};
 
@@ -48,7 +40,8 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	const setLogo = (width, height, name) => {
 		const iconLogoPath = 'images/icon.svg#icon_';
 
-		if ( !(navigator.userAgent.match(/Edge/) || ( navigator.userAgent.match(/Trident/) && navigator.userAgent.match(/rv[ :]11/) ) ) ) {
+		if (!(navigator.userAgent.match(/Edge/) || ( navigator.userAgent.match(/Trident/) && navigator.userAgent.match(/rv[ :]11/) ) )) {
+			// for an SVG element, className is not a string, but an instance of SVGAnimatedString
 			logo.setAttribute('class', 'logo js_logo logo--' + name);
 			logo.setAttribute('width', width);
 			logo.setAttribute('height', height);
@@ -69,8 +62,8 @@ export default window.addEventListener('DOMContentLoaded', () => {
 		if (mqlMobile.matches) {
 			setLogo('86px', '35px', 'mobile');
 
-			if (icon.classList.contains('icon--' + openMod)) {
-				nav.classList.remove('nav--' + visibleMod);
+			if (nav.classList.contains('nav--' + visibleMod)) {
+				toggle.classList.add('page-header__toggle--' + closeMod);
 			}
 		}
 
@@ -83,7 +76,7 @@ export default window.addEventListener('DOMContentLoaded', () => {
 		}
 	};
 
-	icon.addEventListener('click', evt => {
+	toggle.addEventListener('click', evt => {
 		toggleNav(evt);
 	});
 
